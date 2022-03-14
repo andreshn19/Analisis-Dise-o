@@ -1,126 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Inicio</title>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'><link rel="stylesheet" href="/CSS/Home.css">
-<head><link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/CSS/Usuarios.css">
 
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="/CSS/ListaUsuarios.css">
-</head> <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
-<body>
-<!-- partial:index.partial.html -->
-<!-- menu vertical -->
-<nav id="menu" class="left show">
-  <ul>
-    <li><a href="#" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-    <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-    <li>
-      <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-      <ul>
-        <li><a href="/Html/Usuarios.html">Personas </a> </li>
-        <li><a href="/Html/Ventas.html">Ventas</a></li>
-        <li><a href="/Html/Compras.html">Compras</a></li>
-        <li><a href="/Html/Inventarios.html">Inventario</a></li>
-        <li><a href="/Html/Finanzas.html">Finanzas</a></li>
-        <li><a href="/Html/Produccion.html">Producción</a></li>
-      </ul>
-    </li>
-    <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-  </ul>
-  <a href="#" id="showmenu">
-    <i class="fa fa-align-justify"></i>
-  </a>
-</nav>
-<!-- /menu vertical -->
-<!-- contenido de pagina, realmente no importa -->
-<div id="container">
-    <h1 class="capital" style="font-size: 25px;">Empresa de Servicios Multiples Jovenes Profesionales Lencas de la Sierra de La Paz!</h1>
-</div>
-<!-- /contenido de pagina, realmente no importnnnnnnnnnnnnnnnnnnnnnnnnnna -->
-<html ng-app="listaCompras">
-<head>
-  <title>Gastos - AngularJS</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    </link>
+
 </head>
 
 <body>
-  <div class="container" ng-controller="listaComprasController">
-    
-    <div class="row">
-      
-      <div class="col-md-12">
-        <div class="page-header">
-          <h1>Lista de personas</h1>
+  <!-- partial:index.partial.html -->
+  <!-- menu vertical -->
+  <nav id="menu" class="left show">
+    <ul>
+      <li><a href="#" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+      <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+      <li>
+        <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li><a href="/Html/Usuarios.html">Personas </a> </li>
+          <li><a href="/Html/Ventas.html">Ventas</a></li>
+          <li><a href="/Html/Compras.html">Compras</a></li>
+          <li><a href="/Html/Inventarios.html">Inventario</a></li>
+          <li><a href="/Html/Finanzas.html">Finanzas</a></li>
+          <li><a href="/Html/Produccion.html">Producción</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+    </ul>
+    <a href="#" id="showmenu">
+      <i class="fa fa-align-justify"></i>
+    </a>
+  </nav>
+  <!-- /menu vertical -->
+  <!-- contenido de pagina, realmente no importa -->
+  <div class="container">
+    <div class="consulta">
+      <div class="row">
+        <div class="col-6">
+          <h3 class="text-success">Registros</h3><br><br>
         </div>
-      </div>
-      
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="pesquisa">Busqueda</label>
-          <input id="pesquisa" ng-model="comprasFilter" class="form-control">
+        <div class="col-6">
         </div>
-        
-        <table id="lista-compras" class="table table-striped">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Tipo de usuario</th>
-              <th>Nombre completo</th>
-              <th>telefono</th>
-              <th>Direccion</th>
-            </tr>
-          </thead>
-        </table>
-
-
-      </div>
-    </div>
-    
-    <hr>
-    
-    <div class="row">
-      <div class="col-md-12">
-        <div class="page-header">
-          <h1>Cadastrar Compras</h1>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <form class="form-inline" ng-submit="submitForm()" name="formItem" novalidate>
-          
-          <div class="form-group" ng-class="{ 'has-error': formItem.data.$touched && formItem.data.$invalid }">
-            <label for="data">Data</label>
-            <input id="data" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-            <div ng-show="formItem.$submitted || formItem.data.$touched">
-              <p ng-show="formItem.data.$error.required" class="help-block">O campo data é obrigatório.</p>
-            </div>
-          </div>
-          
-          <div class="form-group" ng-class="{ 'has-error': formItem.valor.$touched && formItem.valor.$invalid }">
-            <label for="valor">Valor</label>
-            <input id="valor" type="number" name="valor" ng-model="item.valor" placeholder="Valor" class="form-control" required>
-            <div ng-show="formItem.$submitted || formItem.valor.$touched">
-              <p ng-show="formItem.valor.$error.required" class="help-block">O campo valor é obrigatório.</p>
-            </div>
-          </div>
-          
-          <div class="form-group" ng-class="{ 'has-error': formItem.descricao.$touched && formItem.descricao.$invalid }">
-            <label for="descricao">Descricao</label>
-            <input id="descricao" type="text" name="descricao" ng-model="item.descricao" placeholder="Descrição" class="form-control" required>
-            <div ng-show="formItem.$submitted || formItem.descricao.$touched">
-              <p ng-show="formItem.descricao.$error.required" class="help-block">O campo descrição é obrigatório.</p>
-            </div>
-          </div>
-          
-          <button class="btn btn-primary" type="submit" ng-disabled="formItem.$invalid">Novo</button>
-        </form>
       </div>
     </div>
   </div>
-<!-- partiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script><script  src="/JS/listaUsuarios.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/JS/Home.js"></script>
-</body>
-</html>
+  <!-- /contenido de pagina, realmente no importnnnnnnnnnnnnnnnnnnnnnnnnnna -->
+ 
+  <div class="container" ng-controller="listaComprasController">
+    <div class="form-group">
+      <label class="control-label col-sm-4">Tipo de usuario</label>
+      <div class="col-sm-7">
+        <select class="form-control tabber" id="metodo_pago">
+          <option value="Efectivo">Clientes</option>
+          <option value="Vale Vista">Jefe de area</option>
+          <option value="Transbank">Socios </option>
+        </select>
+      </div>
+  </div><br>
+
+  <div class="form-group Efectivo Vale Vista Transbank">
+    <label class="control-label col-sm-4">Busqueda</label>
+    <div class="col-sm-7">
+        <input type="text" class="form-control" />
+    </div>
+  </div><br><br><br>
+
+
+  <div class="form-group cheque vale-vista">
+    <div class="container" ng-controller="listaComprasController">
+      <div class="form-group">
+        <div class="col-sm-7">
+          <table id="lista-compras" class="table table-striped ">
+            <thead>
+              <tr>
+                <th>Fecha de registro</th>
+                <th>Tipo de usuario</th>
+                <th>Nombre completo</th>
+                <th>Area asignada</th>
+                <th>Estado</th>
+                <th>telefono</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+    </div><br>  
+  </div>
+
+    <!-- partiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/JS/Usuarios.js"></script>
+    <script src='https://nosir.github.io/cleave.js/dist/cleave.min.js'></script>
+    <script src="/CSS/Usuarios.css"></script>
+    <script src="/JS/Listausuario.js"></script>
+  </body>
+  </html>
