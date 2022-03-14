@@ -1,0 +1,30 @@
+input#ot, input#saldo {
+    height: 1.9em;
+    font-size: 5em;
+    text-align: center;
+    width: 70%;
+    margin-bottom: px;
+  }
+  .saldo > .control-label,
+  .informativo > .control-label {
+    margin: 8px 0px;
+  }
+  input#monto {
+    height: 1.3em;
+    font-size: 3em;
+  }
+  .monto > label.control-label {
+    height: 4em;
+    padding-top: 2em;
+    
+   
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+  }
+  .panel-body {
+    min-height: 250px;
+   
+  }
