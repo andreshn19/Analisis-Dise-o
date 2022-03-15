@@ -43,37 +43,34 @@
   <!-- contenido de pagina, realmente no importa -->
   <div class="container">
     <div class="btn-group btn-group-justified ">
-      <a href="/Html/Usuariosocio.html" class="btn btn-primary btn-success" aria-current="page"> Registro Socios 
-          <span
-              class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
-      <a href="/Html/Usuariojefe.html" class="btn btn-primary btn btn-danger">Registro jefes de area <span
-              class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
-      <a href="/Html/usuariocliente.html" class="btn btn-primary">Registros Clientes
-          <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
-      </a>
-  </div>
+        <a href="/Html/Usuariosocio.html" class="btn btn-primary btn-success" aria-current="page"> Registro Socios 
+            <span
+                class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
+        <a href="/Html/Usuariojefe.html" class="btn btn-primary btn btn-danger">Registro jefes de area <span
+                class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
+        <a href="/Html/usuariocliente.html" class="btn btn-primary">Registros Clientes
+            <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+        </a>
+    </div>
     <div class="consulta">
       <div class="row">
         <div class="col-6">
-          <h3 class="text-success">Registros clientes</h3><br><br>
-        </div>
-        <div class="col-6">
+          <h3 class="text-success">Registros Jefes de area</h3><br><br>
         </div>
       </div>
     </div>
-    
   </div>
   <!-- /contenido de pagina, realmente no importnnnnnnnnnnnnnnnnnnnnnnnnnna -->
   <div class="container" style="margin-top:8px;">
     <div class="">
         <div class="panel panel-primary ">
             <div class="panel-heading">
-                <h3 class="panel-title">Ingrese datos de cliente <span class="pull-right"><b></b></span>
+                <h3 class="panel-title">Ingrese datos de jefes de area <span class="pull-right"><b></b></span>
                 </h3>
             </div><br>
             <form id="frmPerson" class="form-horizontal">
               <div class="form-group">
-                  <label for="txtID" class="col-sm-2 control-label">Nombre</label>
+                  <label for="txtID" class="col-sm-2 control-label">Nombre jefe de area</label>
                   <div class="col-sm-4">
                       <input type="text" id="Nome" class="form-control" placeholder="Nome">
                   </div>
@@ -97,7 +94,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="txtPhone" class="col-lg-2 control-label">Fecha</label>
+                  <label for="txtPhone" class="col-lg-2 control-label">Fecha de registro</label>
                   <div class="col-sm-4">
                       <input type="date" id="Lat" class="form-control"  ng-model="item.data" placeholder="Latitude"
                       class="form-control" placeholder="dd-MM-yyyy" required>
@@ -105,7 +102,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="txtEmail" class="col-lg-2 control-label">Nota</label>
+                  <label for="txtEmail" class="col-lg-2 control-label">Estado</label>
                   <div class="col-sm-4">
                       <input type="text" id="Lng" class="form-control" placeholder="Longitude">
                   </div>
@@ -147,6 +144,6 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/JS/usuariocliente.js"></script>
+    <script src="/JS/usuariojefe.js"></script>
   </body>
   </html>
