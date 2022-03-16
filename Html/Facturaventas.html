@@ -13,7 +13,7 @@
     
 	<nav id="menu" class="left show">
 		<ul>
-		  <li><a href="#" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+		  <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
 		  <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
 		  <li>
 			<a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
@@ -44,23 +44,45 @@
 						<form class="form-horizontal">
 							<fieldset>
 								<legend class="text-primary">Ingrese los datos</legend>
+							
 								<div class="form-group">
-									<label for="inp-producto" class="col-md-2 col-lg-2 control-label text-primary">Producto1</label>
+									<label for="select" class="col-md-2 col-lg-2 control-label">Tipo de carne</label>
 									<div class="col-md-10 col-lg-10">
-										<input type="text" class="form-control" id="inp-producto" placeholder="Producto...">
+										<select class="form-control" id="sel-tipopago">
+											<option id="elija">Carne de res</option>
+											<option id="efectivo">Carne de Cerdo</option>
+											<option id="credito">Carne de pollo</option>
+										</select>
 									</div>
-                                    <div class="form-group">
-                                        <label for="inp-producto" class="col-md-2 col-lg-2 control-label text-primary">Producto2</label>
-                                        <div class="col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" id="inp-producto" placeholder="Producto...">
-                                        </div>
 								</div>
-                                <div class="form-group">
-                                    <label for="inp-producto" class="col-md-2 col-lg-2 control-label text-primary">Producto3</label>
-                                    <div class="col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" id="inp-producto" placeholder="Producto...">
-                                    </div>
-                            </div>
+								<div class="form-group">
+									<label for="select" class="col-md-2 col-lg-2 control-label">Derivados</label>
+									<div class="col-md-10 col-lg-10"><h5>Res</h5>
+										<select class="form-control" id="sel-tipopago">
+											<option id="elija">Lomo</option>
+											<option id="efectivo">Costilla</option>
+											<option id="credito">Molida</option>
+										</select>
+									</div>
+									<div class="col-md-10 col-lg-10"><h5>Cerdo</h5>
+										<label for="select" class="col-md-2 col-lg-2 control-label"></label>
+										<select class="form-control" id="sel-tipopago">
+											<option id="elija">Lomo</option>
+											<option id="efectivo">Costilla</option>
+											<option id="credito">Molida</option>
+										</select>
+									</div>
+									<div class="col-md-10 col-lg-10"><h5>Pollo</h5>
+										<label for="select" class="col-md-2 col-lg-2 control-label"></label>
+										<select class="form-control" id="sel-tipopago">
+											<option id="elija">Entero</option>
+											<option id="efectivo">Piezas</option>
+											<option id="credito">Menudos</option>
+										</select>
+									</div>
+								</div>
+
+                               
 								<div class="form-group">
 									<label for="inp-precio" class="col-md-2 col-lg-2 control-label">Precio</label>
 									<div class="col-md-10 col-lg-10">
@@ -81,7 +103,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="select" class="col-md-2 col-lg-2 control-label">Periodo de pago</label>
+									<label  class="col-md-2 col-lg-2 control-label">Periodo de pago</label>
 									<div class="col-md-10 col-lg-10">
 										<select class="form-control" id="sel-periodo" disabled>
 											<option>Elija un periodo...</option>
@@ -121,7 +143,7 @@
 								<div class="form-group frm-buttons">
 									<div class="col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
 										<button type="button" class="btn btn-default btn-raised btn-sm" id="limpiar">Limpiar</button>
-										<button type="button" class="btn btn-primary btn-raised btn-sm" id="enviar">Enviar</button>
+										<a href="/Html/ImpresionFactura.html"><button type="button" class="btn btn-primary btn-raised btn-sm" id="enviar">Imprimir Factura</button></a>
 									</div>
 								</div>
 							</fieldset>
