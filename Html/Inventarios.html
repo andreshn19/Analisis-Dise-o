@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Articulos</title>
+    <title>Inventario</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
     <link rel="stylesheet" href="/CSS/Inventarios.css">
@@ -42,80 +42,66 @@
         </a>
     </nav>
 
-
-    <div class="container">
-        <div class="consulta">
+    <div class="container"> 
+        <div class="consulta"> 
             <div class="row">
                 <div class="col-12">
-                    <h3 class="p-3 mb-2 bg-dark text-white text-center">Lista de Articulos</h3>
-                </div>
-                <div class="col-12">
+                    <h3 class="p-3 mb-2 bg-secondary text-white text-center"> Lista de Inventario</h3>
+                    </div>
+                    <div class="col-12"> 
                 </div>
             </div>
-        </div>
-        <div class="box-body">
+        </div>  
+        <div class="box-body"> 
             <div class="table table-reponsive">
-                <table class="table table-sm">
-                    <caption></caption>
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>DESCRIPCION</th>
-                            <th>UNIDAD</th>
-                            <th>COSTO</th>
-                            <th>PRECIO</th>
-                            <th>APLICA_ISV</th>
-                            <th>PORCENTAJE_ISV</th>
-                            <th>ESTADO</th>
-                            <th>ID_SOCIO</th>
-                        </tr>
+                            <th>IdInventario</th>
+                            <th>IdProducto</th>
+                            <th>IdUsuario</th>
+                            <th>FechaEntrante</th>
+                            <th>Cantidad</th>
+                            </tr>
                     </thead>
-                    <tbody class="articulos">
-                    </tbody>
+                <tbody class="Inventario">
+                </tbody>
                 </table>
             </div>
-        </div>
+        </div>  
+
+    <div class="formulario">
+        <div class="row">
+            <div class="col-12">
+                <h3 class= "text-success"> Inventario</h3>
+            </div>
+            <div class="col-12">
+                <form class="Inventario">
+                    <label for="">IdInventario</label>
+                    <input type="text" id="IdInventario" class="form-control" placeholder="Ingrese su IdInventario">
+
+                    <label for="">IdProducto</label>
+                    <input type="text" id="IdProducto" class="form-control" placeholder="Ingrese su IdProducto">
+
+                    <label for="">IdUsuario</label>
+                    <input type="text" id="IdUsuario" class="form-control" placeholder="Ingrese su IdUsuario">
+
+                    <label for="">FechaEntrante</label>
+                     <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
+                    <div ng-show="formItem.$submitted || formItem.data.$touched">
+                      <p ng-show="formItem.data.$error.required" class="help-block">Campo obligatorio</p>
+                    </div>
 
 
-        <div class="formulario">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="text-success">Agregar Articulos</h3>
-                </div>
-                <div class="col-12">
-                    <form class="articulo">
-                        <label for="">ID</label>
-                        <input type="text" id="ID" class="form-control" placeholder="Ingrese su ID">
+                    <label for="">Cantidad</label>
+                    <input type="text" id="Cantidad" class="form-control" placeholder="Ingrese su Cantidad">
 
-                        <label for="">DESCRIPCION</label>
-                        <input type="text" id="DESCRIPCION" class="form-control" placeholder="Ingrese su DESCRIPCION">
-
-                        <label for="">UNIDAD</label>
-                        <input type="text" id="UNIDAD" class="form-control" placeholder="Ingrese su UNIDAD">
-
-                        <label for="">COSTO</label>
-                        <input type="text" id="COSTO" class="form-control" placeholder="Ingrese su COSTO">
-
-                        <label for="">PRECIO</label>
-                        <input type="text" id="PRECIO" class="form-control" placeholder="Ingrese su PRECIO">
-
-                        <label for="">APLICA_ISV</label>
-                        <input type="text" id="APLICA_ISV" class="form-control" placeholder="Ingrese su APLICA_ISV">
-
-                        <label for="">PORCENTAJE_ISV</label>
-                        <input type="text" id="PORCENTAJE_ISV" class="form-control" placeholder="Ingrese su PORCENTAJE_ISV">
-
-                        <label for="">ESTADO</label>
-                        <input type="text" id="ESTADO" class="form-control" placeholder="Ingrese su ESTADO">
-
-                        <label for="">ID_SOCIO</label>
-                        <input type="text" id="ID_SOCIO" class="form-control" placeholder="Ingrese su ID_SOCIO">
-
-                        <Hr>
-                        <div class="button">
-                            <input type="submit" id="btnagregar" onclick="AgregarArticulo()" value="Ingresar Articulo" class="btn btn-success">
+                   
+                    <Hr>
+                        <div class="button"> 
+                            <input type="submit" id="btnagregar" onclick="AgregarInventario()" value="Ingresar Inventario" class= "btn btn-dark">
                         </div>
-                        </Hr>
+                    </Hr>
                     </form>
                 </div>
             </div>
