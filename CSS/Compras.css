@@ -1,4 +1,16 @@
-#menu{
+#lista-compras {
+	width: 100%;
+  }
+  
+  #lista-compras td, #lista-compras th {
+	text-align: center;
+  }
+  
+  form input.ng-touched.ng-valid {
+	background-color: rgba(50, 200, 50, 0.15);
+  }
+  
+  #menu{
 	position:fixed;
 	background-color:#222;
 	height:100%;
@@ -18,8 +30,10 @@
 	margin-top:0;
 	padding:0
 }
+
 #menu ul li{border-bottom: 1px solid #2a2a2a;}
 #menu>ul>li>a{border-left:4px solid #222;}
+
 #menu ul li a{
 	color:inherit;
 	font-size:16px;
@@ -31,18 +45,21 @@
 	transition: all 0.3s ease;
 	font-weight: 600;
 }
+
 #menu ul a i{
 	margin-right:10px;
 	font-size: 18px;
 	margin-top: 3px;
 	width: 20px;
 }
+
 #menu ul a i[class*='fa-caret']{float: right;}
 #menu ul a:hover,#menu ul a.active{
 	background-color:#111;
 	border-left-color: #00a4a2;
 	color:#FFCC33;
 }
+
 #menu ul a:hover i:first-child{color:#00a4a2;}
 
 	/* Submenu */
@@ -73,15 +90,3 @@
 }
 
 #container{padding: 50px;}
-
-#lista-compras {
-	width: 100%;
-}
-  
-#lista-compras td, #lista-compras th {
-	text-align: center;
-}
-  
-form input.ng-touched.ng-valid {
-	background-color: rgba(50, 200, 50, 0.15);
-}
