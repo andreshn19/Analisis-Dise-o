@@ -9,7 +9,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'><link rel="stylesheet" href="/CSS/Compras.css">
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="/CSS/LoginVentas.css">
+    
   </head>
 </head>
 <body>
@@ -62,7 +62,7 @@
       
       <div class="col-md-12">
         <div class="page-header">
-          <h1>Ingresar Compra</h1>
+          <center><h3 class="text-success">Ingresar compra</h3></center><br>
         </div>
       </div>
       
@@ -105,6 +105,8 @@
 
           <br> </br> 
 
+
+          
           <div class="form-group" ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
             <label for="nombreproducto">Nombre Producto</label>
             <input id="nombreproducto" type="text" name="nombreproducto" ng-model="item.nombreproducto" placeholder="Nombre producto" class="form-control" required>
@@ -175,20 +177,19 @@
               <p ng-show="formItem.totalCompra.$error.required" class="help-block">Campo Total Compra es Obligatorio.</p>
             </div>
           </div>
-          <p></p>
+          <p>
           <button class="btn btn-primary" type="submit" ng-disabled="formItem.$invalid">Guardar</button>
         </form>
       </div>
     </div>
     
     <div class="row">
-      
+
       <div class="col-md-12">
         <div class="page-header">
-          <h1>Lista de Compras</h1>
+          <center><h3 class="text-success">Lista de compras</h3></center><br>
         </div>
       </div>
-      
       <div class="col-md-12">
         <div class="form-group">
           <label for="busqueda">Busque una compra</label>
