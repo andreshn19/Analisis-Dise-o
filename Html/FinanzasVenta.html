@@ -14,41 +14,42 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+    <link rel="stylesheet" href="/CSS/Menu.css">
 </head>
 
 <body>
 
-    <nav id="menu" class="left show">
+    <nav id="menu" class="left">
         <ul>
-            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-
-            <li>
-                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+          <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+         
+          <li>
+            <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
                 <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="/Html/LoginVentas.html">Ventas</a></li>
-                    <li><a href="/Html/LoginCompras.html">Compras</a></li>
-                    <li><a href="/Html/Inventarios.html">Inventario</a></li>
-                    <li><a href="/Html/Finanzas.html">Finanzas</a></li>
-                    <li><a href="/Html/loginProduc.html">Producción</a></li>
+                  <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                  <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                  <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
                 </ul>
-            </li>
-            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+              </li>
+              
+              <li ><a href="/Html/LoginVentas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+              <li><a href="/Html/Compras.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Compras</a></li>
+              <li><a href="/Html/Inventarios.html"><i class="fa fa-cubes" aria-hidden="true"></i>Inventario</a></li>
+              <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
+              <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a></li>
+            </ul>
+          </li>
+          <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+          <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
         <a href="#" id="showmenu">
-            <i class="fa fa-align-justify"></i>
+          <i class="fa fa-align-justify"></i>
         </a>
-    </nav>
-
+      </nav>
     <center>
         <font face="times new roman">
             <h3>Reporte Gráfico De Ventas</h3>
@@ -102,5 +103,6 @@
         }
     });
 </script>
+<script src="/JS/Menu.js"></script>
 
 </html>

@@ -93,18 +93,6 @@
     color: rgb(9, 94, 30);
     text-align: center;
   }
-  
-  @keyframes animacion {
-    25% {
-      background: url("https://c8.alamy.com/compes/kp775f/la-carne-de-cerdo-se-cortan-y-preparado-en-una-planta-de-procesamiento-de-carne-kp775f.jpg");
-    }
-    50% {
-      background: url("https://www.diariodequeretaro.com.mx/incoming/oy70dn-en-queretaro.jpg/ALTERNATES/LANDSCAPE_1140/EN%20QUER%C3%89TARO.JPG");
-    }
-    75% {
-      background: url("https://www.gob.mx/cms/uploads/article/main_image/62218/_MG_0357.JPG");
-    }
-  }
 
   .teal {
     color: rgb(10, 10, 10);
