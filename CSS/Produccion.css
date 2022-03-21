@@ -1,0 +1,173 @@
+/*Presentation*/
+
+body {
+    background: #f0f3f7;
+}
+
+
+/*Actual code*/
+
+
+/*Container*/
+
+#produccion {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+#produccion .linea-container {
+    margin-bottom: 3em;
+}
+
+#produccion h3 {
+    font-size: 1.4em;
+    margin: 12px 0 1em 0;
+}
+
+#produccion * {
+    box-sizing: border-box;
+}
+
+
+/*Date range*/
+
+#produccion .date-range {
+    font-size: 0;
+}
+
+#produccion .date-range fieldset {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    border: 0;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+#produccion .date-range label {
+    font-weight: bold;
+}
+
+#produccion .date-range input {
+    display: block;
+    width: 90%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+/*Table*/
+
+#produccion table {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#produccion thead {
+    border-bottom: 3px solid #aaa;
+}
+
+#produccion tbody tr:hover {
+    background: #ddd;
+}
+
+#produccion th {
+    padding: 1em 10px;
+}
+
+#produccion td {
+    padding: 1em 10px;
+}
+
+#produccion .linea {
+    text-align: right;
+}
+
+#produccion .fecha,
+#produccion .orden {
+    text-align: center;
+}
+
+
+/*Pagination*/
+
+#produccion .pagination {
+    list-style: none;
+    display: block;
+    margin: 1em 0 10px 0;
+    padding: 0;
+}
+
+#produccion .pagination li {
+    display: inline-block;
+    background: #ccc;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 3px;
+    margin: 3px 3px 3px 0;
+}
+
+#produccion .pagination li:hover,
+#produccion .pagination li.current {
+    background: #aaa;
+    cursor: pointer;
+}
+
+
+/*Button*/
+
+#produccion .button-container {
+    width: 100%;
+    text-align: right;
+}
+
+#produccion .button {
+    margin: 0;
+    padding: 0.8em 1em;
+    background: rgb(0, 90, 255);
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#produccion .button:hover {
+    background: rgb(0, 120, 255);
+}
+
+#produccion .button:active {
+    box-shadow: inset 0 0 0 1px #27496d, inset 0 1px 10px #193047;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 430px) {
+    #produccion .date-range fieldset {
+        display: block;
+        width: 100%;
+    }
+    #produccion .date-range input {
+        width: 100%;
+    }
+    #produccion .linea {
+        display: none;
+    }
+    #produccion .button-container {
+        margin-top: 25px;
+    }
+}

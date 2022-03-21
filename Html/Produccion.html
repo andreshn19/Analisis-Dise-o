@@ -18,74 +18,229 @@
 
 <body>
 
-  <nav id="menu" class="left">
-    <ul>
-      <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-     
-      <li>
-        <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+    <nav id="menu" class="left">
         <ul>
-          <li>
-            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-              <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-              <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-            </ul>
-          </li>
-          
-          <li ><a href="/Html/LoginVentas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-          <li><a href="/Html/Compras.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Compras</a></li>
-          <li><a href="/Html/Inventarios.html"><i class="fa fa-cubes" aria-hidden="true"></i>Inventario</a></li>
-          <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
-          <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a></li>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+            <li>
+                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Html/LoginVentas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                    <li><a href="/Html/Compras.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Compras</a></li>
+                    <li><a href="/Html/Inventarios.html"><i class="fa fa-cubes" aria-hidden="true"></i>Inventario</a></li>
+                    <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
+                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a></li>
+                </ul>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
-      </li>
-      <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-      <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-    </ul>
-    <a href="#" id="showmenu">
-      <i class="fa fa-align-justify"></i>
-    </a>
-  </nav>
+        <a href="#" id="showmenu">
+            <i class="fa fa-align-justify"></i>
+        </a>
+    </nav>
 
 
-    <div class="container">
-        <div class="consulta">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="p-3 mb-2 bg-dark text-white text-center"> Lista de Producción</h3>
+    <!-- diseño produccción -->
+    <form id="formulario">
+        <div id="produccion">
+            <div class="linea-container">
+                <h2>Linea 1 Produccción</h2>
+                <div class="date-range">
+                    <fieldset>
+                        <label for="linea1-from">ID DEL PRODUCTO:</label>
+                        <input type="text" placeholder="ingrese id producto" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-to">TIPO DE INVENTARIO:</label>
+                        <input type="text" placeholder="ingrese inventario" />
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="linea1-from">NOMBRE DEL PRODUCTO:</label>
+                        <input type="text" placeholder="ingrese producto" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-from">FECHA EMISION:</label>
+                        <input type="date" placeholder="Date" />
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="linea1-to">FECHA VENCIMIENTO:</label>
+                        <input type="date" placeholder="Date" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-from">USUARIO:</label>
+                        <input type="text" placeholder="Ingrese Username" />
+                    </fieldset>
                 </div>
-                <div class="col-12">
-                </div>
-            </div>
-        </div>
-        <div class="box-body">
-            <div class="table table-reponsive">
-                <table class="table table-sm">
-                    <caption></caption>
+                <table>
                     <thead>
                         <tr>
-                            <th>ID DEL PRODUCTO</th>
-                            <th>TIPO DE INVENTARIO</th>
-                            <th>NOMBRE DEL PRODUCTO</th>
-                            <th>FECHA EMISION</th>
-                            <th>FECHA VENCIMIENTO</th>
-                            <th>USUARIO</th>
+                            <th class="pieza">Id del producto</th>
+                            <th class="fecha">Tipo de inventario</th>
+                            <th class="orden">Nombre del producto</th>
+                            <th class="linea">Emision</th>
+                            <th class="linea">Vencimiento</th>
+                            <th class="linea">Usuario</th>
                         </tr>
                     </thead>
-                    <tbody class="produccion">
+                    <tbody>
+                        <tr>
+                            <pre> 
+                  <td class="Id del prodcuto">5000</td>
+                  <td class="Tipo de inventario">Venta</td>
+                  <td class="nombre del producto">Costilla de cerdo</td>
+                  <td class="fecha emision">15/03/2022</td>
+                  <td class="fecha vencimiento">01/03/2023</td>
+                  <td class="usuario">RJ45@gmail.com</td>
+                </pre>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">6000</td>
+                            <td class="Tipo de inventario">Compra</td>
+                            <td class="nombre del producto">Cerdo entero</td>
+                            <td class="fecha emision">20/03/2022</td>
+                            <td class="fecha vencimiento">10/11/2023</td>
+                            <td class="usuario">carmen@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">7000</td>
+                            <td class="Tipo de inventario">Compra</td>
+                            <td class="nombre del producto">Tajo de res</td>
+                            <td class="fecha emision">11/11/2022</td>
+                            <td class="fecha vencimiento">12/05/2023</td>
+                            <td class="usuario">raul@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">8000</td>
+                            <td class="Tipo de inventario">Venta</td>
+                            <td class="nombre del producto">vaca entera</td>
+                            <td class="fecha emision">03/03/2022</td>
+                            <td class="fecha vencimiento">02/03/2023</td>
+                            <td class="usuario">lagoss@gmail.com</td>
+                        </tr>
                     </tbody>
                 </table>
+                <ul class="pagination">
+                    <li class="current">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="button-container" onclick=" validar()">
+                    <a class="button" href="#">Imprimir Reporte</a>
+                </div>
+
             </div>
-        </div>
+            <!-- ARREGLAR DE AQUI EN ADELANTE -->
+            <div class="linea-container">
+                <h2>Linea 2 Producción</h2>
+                <div class="date-range">
+                    <fieldset>
+                        <label for="linea1-from">ID DEL PRODUCTO:</label>
+                        <input type="text" placeholder="ingrese id producto" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-to">TIPO DE INVENTARIO:</label>
+                        <input type="text" placeholder="ingrese inventario" />
+                    </fieldset>
 
+                    <fieldset>
+                        <label for="linea1-from">NOMBRE DEL PRODUCTO:</label>
+                        <input type="text" placeholder="ingrese producto" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-from">FECHA EMISION:</label>
+                        <input type="date" placeholder="Date" />
+                    </fieldset>
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="/JS/Produccion.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        </script>
-        <script src="/JS/Menu.js"></script>
+                    <fieldset>
+                        <label for="linea1-to">FECHA VENCIMIENTO:</label>
+                        <input type="date" placeholder="Date" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="linea1-from">USUARIO:</label>
+                        <input type="text" placeholder="Ingrese Username" />
+                    </fieldset>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="pieza">Id del producto</th>
+                            <th class="fecha">Tipo de inventario</th>
+                            <th class="orden">Nombre del producto</th>
+                            <th class="linea">Emision</th>
+                            <th class="linea">Vencimiento</th>
+                            <th class="linea">Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="Id del prodcuto">30000</td>
+                            <td class="Tipo de inventario">Venta</td>
+                            <td class="nombre del producto">Tajo de cerdo</td>
+                            <td class="fecha emision">15/03/2022</td>
+                            <td class="fecha vencimiento">01/03/2023</td>
+                            <td class="usuario">Andres@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">40000</td>
+                            <td class="Tipo de inventario">Venta</td>
+                            <td class="nombre del producto">Huesos</td>
+                            <td class="fecha emision">20/03/2022</td>
+                            <td class="fecha vencimiento">10/11/2023</td>
+                            <td class="usuario">Esperanza@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">50000</td>
+                            <td class="Tipo de inventario">Compra</td>
+                            <td class="nombre del producto">Mobilario y equipo</td>
+                            <td class="fecha emision">11/11/2022</td>
+                            <td class="fecha vencimiento">12/05/2023</td>
+                            <td class="usuario">Fanny@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="Id del prodcuto">60000</td>
+                            <td class="Tipo de inventario">Compra</td>
+                            <td class="nombre del producto">Ganado</td>
+                            <td class="fecha emision">03/03/2022</td>
+                            <td class="fecha vencimiento">02/03/2023</td>
+                            <td class="usuario">Isaac@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li>1</li>
+                    <li class="current">2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="button-container" onclick=" validar()">
+                    <a class="button" href="#">Imprimir Reporte</a>
+                </div>
+
+            </div>
+    </form>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/JS/Produccion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="/JS/Menu.js"></script>
 </body>
 
 </html>
