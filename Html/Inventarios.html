@@ -3,180 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>Inventario</title>
+    <br><br>
+    <title>InventarioMenu</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-    <link rel="stylesheet" href="/CSS/Inventarios.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/Finanzas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    </link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/CSS/Menu.css">
 
+    <link rel="stylesheet" href="/CSS/Menu.css">
+    <link rel="stylesheet" href="/CSS/Inventarios.css">
 </head>
 
 <body>
 
     <nav id="menu" class="left">
         <ul>
-          <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-         
-          <li>
-            <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+            <li>
+                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
                 <ul>
-                  <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                  <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                  <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Html/LoginVentas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                    <li><a href="/Html/Compras.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Compras</a>
+                    </li>
+                    <li><a href="/Html/Inventarios.html"><i class="fa fa-cubes" aria-hidden="true"></i>Inventario</a>
+                    </li>
+                    <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
+                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
+                                aria-hidden="true"></i></i>Producción</a></li>
                 </ul>
-              </li>
-              
-              <li ><a href="/Html/LoginVentas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-              <li><a href="/Html/Compras.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Compras</a></li>
-              <li><a href="/Html/Inventarios.html"><i class="fa fa-cubes" aria-hidden="true"></i>Inventario</a></li>
-              <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
-              <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a></li>
-            </ul>
-          </li>
-          <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-          <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
         <a href="#" id="showmenu">
-          <i class="fa fa-align-justify"></i>
+            <i class="fa fa-align-justify"></i>
         </a>
-      </nav>
+    </nav>
 
-    <div class="container"> 
-        <div class="consulta"> 
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="p-3 mb-2 bg-secondary text-white text-center"> Inventario</h3>
-                    </div>
-                    <div class="col-12"> 
-                </div>
-            </div>
-        </div>  
-        
-    <div class="formulario">
-        <div class="row">
-            <div class="col-12">
-                <h3 class= "text-success">Ingresar datos de Producto</h3>
-            </div>
-            <div class="col-12">
-                <form class="Inventario">
-                    <label for="" class="text-black">IdInventario:</label>
-                    <input type="text" id="IdInventario" class="form-control" placeholder="Ingrese su IdInventario">
+    <center>
+        <font face="times new roman">
+            <h1>Menú Inventarios</h1>
+        </font>
 
-                    <label for=""class="text-black">IdProducto:</label>
-                    <input type="text" id="IdProducto" class="form-control" placeholder="Ingrese su IdProducto">
+        <Hr>
+            <a href="/HTML/InventarioProductos.html" class="btn btn-outline-dark" aria-current="page"> Inventario de Productos</a>
+            <a href="/HTML/InventarioMateriaP.html" class="btn btn-outline-dark" aria-current="page">Inventario de Materia Prima</a>
+          
+           
 
-                    <label for=""class="text-black">IdUsuario:</label>
-                    <input type="text" id="IdUsuario" class="form-control" placeholder="Ingrese su IdUsuario">
-
-                    <label for=""class="text-black">FechaEntrante:</label>
-                     <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-                  
-                    <label for=""class="text-black">Cantidad:</label>
-                    <input type="text" id="Cantidad" class="form-control" placeholder="Ingrese su Cantidad">
-                   
-                                   
-                    <Hr>
-                        <div class="button"> 
-                            <input type="submit" id="btnagregar" onclick="AgregarInventario()" value="Ingresar Inventario" class= "btn btn-dark">
-                        </div>
-                    </Hr>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
- <!-- Tabla -->
- <div class="container"> 
-    <div class="consulta"> 
-        <div class="row">
-            <div class="col-12">
-                <h3 class="p-3 mb-2 bg-secondary text-white text-center">Lista de Inventario</h3>
-                </div>
-                <div class="col-12"> 
-            </div>
-        </div>
-    </div>  
-
- <section class="container mt-5 table-responsive-md">
-    <table class="table text-center">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">IdInventario</th>
-            <th scope="col">Producto</th>
-            <th scope="col">IdUsuario</th>
-            <th scope="col">Fecha Entrante</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Sumar</th>
-            <th scope="col">Restar</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(Inventario, indice) of Inventario">
-                <th scope="row">101010</th>
-                <td> Res </td>
-                <td> 1111111 </td>
-                <td> 17/03/2022 </td>
-                <td> 0010 </td>
-                
-                <!--  Stock -->
-                <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad < 0">SI</td>
-         
-
-                <!-- Botones -->
-                <td>
-                    <button @click="Inventario.cantidad++" class="btn btn btn-outline-info btn-sm">+</button>
-                </td>
-                <td>
-                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">-</button>
-                </td>
-            </tr>
-            
-            <tr v-for="(Inventario, indice) of Inventario">
-                <th scope="row">123456</th>
-                <td> Cerdo </td>
-                <td> 1212121 </td>
-                <td> 17/03/2022 </td>
-                <td> 0005 </td>
-               
-                <!--  Stock -->
-                <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad < 0">SI</td>
-         
-
-                <!-- Botones -->
-                <td>
-                    <button @click="Inventario.cantidad++" class="btn btn btn-outline-info btn-sm">+</button>
-                </td>
-                <td>
-                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">-</button>
-                </td>
-            </tr>
-
-        </tbody>
-      </table>
-      <!-- Total -->
-      <h4>Cantidad de Productos: <b class="text-danger">002</b></h4>
-    
-</section>
-
-</section>
-
+      
+    </center>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="/JS/Inventarios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="/JS/Menu.js"></script>
-  
 </body>
 
 </html>
