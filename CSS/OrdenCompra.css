@@ -1,0 +1,90 @@
+@media screen, print {
+    img[alt="icon"]{
+      pointer-events:none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      opacity: .15;
+      visibility: visible;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      padding: 10rem;
+    }
+    img[alt="badged"]{
+      pointer-events:none;
+      position: absolute;
+      left: 1%;
+      bottom: 25%;
+      transform: rotate(-8deg);
+      opacity: .65;
+      visibility: visible;
+      z-index: 999;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+  @media screen {
+    html{
+      background: #c7c7c7;
+    }
+    body{
+      position: relative;
+      margin: 0 auto;
+      display: table;
+      width: 80%;
+      max-width: 21cm;
+      border: 1px solid black;
+      box-shadow: 0px 0px 18px #000000;
+    }
+    .logo{
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 120px;
+    }
+  
+    #factura{
+      text-align: center;
+      background: none;
+      border: none;
+      font-size: 1.6em;
+      color:#ffffff !important;
+    }
+  
+  }
+  @media print {
+    body {-webkit-print-color-adjust: exact;}
+    .form-control{
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      /*line-height: 0 !important;*/
+      height: initial !important;
+      background: none !important;
+      /*resize:none;*/
+    }
+    #control.form-control{
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    #factura.form-control,
+    #total.form-control{
+      font-size: 1.6em;
+      font-weight: bold;
+      text-align: center;
+      color:#ffffff !important;
+    }
+    #factura{color:#ffffff !important;}
+    .form-group {
+      margin-bottom: 0px;
+    }
+    .noprint{display: none}
+  
+  }
