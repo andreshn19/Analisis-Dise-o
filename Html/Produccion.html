@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #f0ff99 100%);">
 
     <nav id="menu" class="left">
         <ul>
@@ -52,17 +52,23 @@
 
     <!-- diseño produccción -->
     <form id="formulario">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-3 mb-2 bg-body text-dark text-center">Registro De Produccción</h3>
+            </div>
+            <div class="col-12">
+            </div>
+        </div>
         <div id="produccion">
             <div class="linea-container">
-                <h2>Linea 1 Produccción</h2>
                 <div class="date-range">
                     <fieldset>
                         <label for="linea1-from">ID DEL PRODUCTO:</label>
                         <input type="text" placeholder="ingrese id producto" />
                     </fieldset>
                     <fieldset>
-                        <label for="linea1-to">TIPO DE INVENTARIO:</label>
-                        <input type="text" placeholder="ingrese inventario" />
+                        <label for="linea1-to">CANTIDAD PRODUCTO:</label>
+                        <input type="text" placeholder="ingrese su cantidad" />
                     </fieldset>
 
                     <fieldset>
@@ -83,147 +89,57 @@
                         <input type="text" placeholder="Ingrese Username" />
                     </fieldset>
                 </div>
+
                 <table>
+
                     <thead>
                         <tr>
-                            <th class="pieza">Id del producto</th>
-                            <th class="fecha">Tipo de inventario</th>
-                            <th class="orden">Nombre del producto</th>
-                            <th class="linea">Emision</th>
-                            <th class="linea">Vencimiento</th>
-                            <th class="linea">Usuario</th>
+                            <th class="pieza text-center">Id del producto</th>
+                            <th class="fecha text-center">Cantidad del producto</th>
+                            <th class="orden text-center">Nombre del producto</th>
+                            <th class="linea text-center">Emision</th>
+                            <th class="linea text-center">Vencimiento</th>
+                            <th class="linea text-center">Usuario</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <pre> 
-                  <td class="Id del prodcuto">5000</td>
-                  <td class="Tipo de inventario">Venta</td>
-                  <td class="nombre del producto">Costilla de cerdo</td>
-                  <td class="fecha emision">15/03/2022</td>
-                  <td class="fecha vencimiento">01/03/2023</td>
-                  <td class="usuario">RJ45@gmail.com</td>
-                </pre>
+                            <td class="Id del prodcuto text-center">5000</td>
+                            <td class="Tipo de inventario text-center">17</td>
+                            <td class="nombre del producto text-center">Costilla de cerdo</td>
+                            <td class="fecha emision text-center">15/03/2022</td>
+                            <td class="fecha vencimiento text-center">01/03/2023</td>
+                            <td class="usuario text-center">RJ45@gmail.com</td>
                         </tr>
                         <tr>
-                            <td class="Id del prodcuto">6000</td>
-                            <td class="Tipo de inventario">Compra</td>
-                            <td class="nombre del producto">Cerdo entero</td>
-                            <td class="fecha emision">20/03/2022</td>
-                            <td class="fecha vencimiento">10/11/2023</td>
-                            <td class="usuario">carmen@gmail.com</td>
+                            <td class="Id del prodcuto text-center">6000</td>
+                            <td class="Tipo de inventario text-center">20</td>
+                            <td class="nombre del producto text-center">Tajo de cerdo</td>
+                            <td class="fecha emision text-center">20/03/2022</td>
+                            <td class="fecha vencimiento text-center">10/11/2023</td>
+                            <td class="usuario text-center">carmen@gmail.com</td>
                         </tr>
                         <tr>
-                            <td class="Id del prodcuto">7000</td>
-                            <td class="Tipo de inventario">Compra</td>
-                            <td class="nombre del producto">Tajo de res</td>
-                            <td class="fecha emision">11/11/2022</td>
-                            <td class="fecha vencimiento">12/05/2023</td>
-                            <td class="usuario">raul@gmail.com</td>
+                            <td class="Id del prodcuto text-center">7000</td>
+                            <td class="Tipo de inventario text-center">55</td>
+                            <td class="nombre del producto text-center">Tajo de res</td>
+                            <td class="fecha emision text-center">11/11/2022</td>
+                            <td class="fecha vencimiento text-center">12/05/2023</td>
+                            <td class="usuario text-center">raul@gmail.com</td>
                         </tr>
                         <tr>
-                            <td class="Id del prodcuto">8000</td>
-                            <td class="Tipo de inventario">Venta</td>
-                            <td class="nombre del producto">vaca entera</td>
-                            <td class="fecha emision">03/03/2022</td>
-                            <td class="fecha vencimiento">02/03/2023</td>
-                            <td class="usuario">lagoss@gmail.com</td>
+                            <td class="Id del prodcuto text-center">8000</td>
+                            <td class="Tipo de inventario text-center">100</td>
+                            <td class="nombre del producto text-center">Molida</td>
+                            <td class="fecha emision text-center">03/03/2022</td>
+                            <td class="fecha vencimiento text-center">02/03/2023</td>
+                            <td class="usuario text-center">lagoss@gmail.com</td>
                         </tr>
                     </tbody>
                 </table>
                 <ul class="pagination">
-                    <li class="current">1</li>
+                    <li class="current" style="background: linear-gradient(to bottom, #f1ff330e 0%, #99a3ff 100%);">1</li>
                     <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                </ul>
-                <div class="button-container" onclick=" validar()">
-                    <a class="button" href="#">Imprimir Reporte</a>
-                </div>
-
-            </div>
-            <!-- ARREGLAR DE AQUI EN ADELANTE -->
-            <div class="linea-container">
-                <h2>Linea 2 Producción</h2>
-                <div class="date-range">
-                    <fieldset>
-                        <label for="linea1-from">ID DEL PRODUCTO:</label>
-                        <input type="text" placeholder="ingrese id producto" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-to">TIPO DE INVENTARIO:</label>
-                        <input type="text" placeholder="ingrese inventario" />
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="linea1-from">NOMBRE DEL PRODUCTO:</label>
-                        <input type="text" placeholder="ingrese producto" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-from">FECHA EMISION:</label>
-                        <input type="date" placeholder="Date" />
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="linea1-to">FECHA VENCIMIENTO:</label>
-                        <input type="date" placeholder="Date" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-from">USUARIO:</label>
-                        <input type="text" placeholder="Ingrese Username" />
-                    </fieldset>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="pieza">Id del producto</th>
-                            <th class="fecha">Tipo de inventario</th>
-                            <th class="orden">Nombre del producto</th>
-                            <th class="linea">Emision</th>
-                            <th class="linea">Vencimiento</th>
-                            <th class="linea">Usuario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="Id del prodcuto">30000</td>
-                            <td class="Tipo de inventario">Venta</td>
-                            <td class="nombre del producto">Tajo de cerdo</td>
-                            <td class="fecha emision">15/03/2022</td>
-                            <td class="fecha vencimiento">01/03/2023</td>
-                            <td class="usuario">Andres@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto">40000</td>
-                            <td class="Tipo de inventario">Venta</td>
-                            <td class="nombre del producto">Huesos</td>
-                            <td class="fecha emision">20/03/2022</td>
-                            <td class="fecha vencimiento">10/11/2023</td>
-                            <td class="usuario">Esperanza@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto">50000</td>
-                            <td class="Tipo de inventario">Compra</td>
-                            <td class="nombre del producto">Mobilario y equipo</td>
-                            <td class="fecha emision">11/11/2022</td>
-                            <td class="fecha vencimiento">12/05/2023</td>
-                            <td class="usuario">Fanny@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto">60000</td>
-                            <td class="Tipo de inventario">Compra</td>
-                            <td class="nombre del producto">Ganado</td>
-                            <td class="fecha emision">03/03/2022</td>
-                            <td class="fecha vencimiento">02/03/2023</td>
-                            <td class="usuario">Isaac@gmail.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ul class="pagination">
-                    <li>1</li>
-                    <li class="current">2</li>
                     <li>3</li>
                     <li>4</li>
                     <li>5</li>
