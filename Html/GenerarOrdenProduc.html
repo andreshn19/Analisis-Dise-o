@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+    <link rel="stylesheet" href="/CSS/Menu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/CSS/GenerarProduccion.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        </link>
+
+
+    </head>
+
+    <body>
+
+        <!-- partial:index.partial.html -->
+        <!-- menu vertical -->
+        <nav id="menu" class="left">
+            <ul>
+                <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+                <li>
+                    <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart" ></i>Compras<i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="/Html/Compras.html">
+                                        <aria-hidden="true">
+                                            </i>Mis Compras</a>
+                                </li>
+                                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
+                        <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i></i>Producción</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+            </ul>
+            <a href="#" id="showmenu">
+                <i class="fa fa-align-justify"></i>
+            </a>
+        </nav>
+        <!-- /menu vertical -->
+
+        <div class="toolbar noprint">
+            <section class="container-fluid">
+                <div class="form-group">
+                    <label for="taxval">Reporte:</label>
+                </div>
+                </article>
+                <article class="col-xs-2">
+                    <button type="button" onclick="window.print();" class="btn btn-primary"><span
+                            class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir</button>
+                </article>
+        </div>
+        </section>
+        </div>
+        <form>
+            <section class="container-fluid">
+                <div class="row" style="padding:1rem 0;">
+                    <article class="col-xs-12" style="background:#000000 !important;">
+                        <h4 class="text-center" style="color:#ffffff !important;font-weight: bold">
+                            <input type="text" class="form-control" id="factura" name="factura[]" placeholder="Reporte de Producción">
+                        </h4>
+                    </article>
+                    <!-- ldoev -->
+                    <article class="col-xs-4 text-center">
+                        <img src="\Logo.jpeg" alt="logo" style="height:100px;width:270px;">
+                    </article>
+                    <article class="col-xs-4">&nbsp;</article>
+                    <article class="col-xs-4">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><b>#</b></td>
+                                    <td class="form-group">
+                                        <input type="text" class="form-control" id="control" name="control[]" placeholder="control" value="000000000000">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fecha</td>
+                                    <td class="form-group">
+                                        <input type="date" class="form-control" id="date" name="date[]" value="">
+
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </article>
+
+                </div>
+
+
+                <div class="row " style="padding:1rem 0;background:rgba(199,199,199,.0);border-top:1px solid black">
+                    <article class="col-xs-12 ">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="pieza text-center">Id del producto</th>
+                                    <th class="fecha text-center">Cantidad del producto</th>
+                                    <th class="orden text-center">Nombre del producto</th>
+                                    <th class="linea text-center">Emision</th>
+                                    <th class="linea text-center">Vencimiento</th>
+                                    <th class="linea text-center">Usuario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="Id del prodcuto text-center">5000</td>
+                                    <td class="Tipo de inventario text-center">17</td>
+                                    <td class="nombre del producto text-center">Costilla de cerdo</td>
+                                    <td class="fecha emision text-center">15/03/2022</td>
+                                    <td class="fecha vencimiento text-center">01/03/2023</td>
+                                    <td class="usuario text-center">RJ45@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="Id del prodcuto text-center">6000</td>
+                                    <td class="Tipo de inventario text-center">20</td>
+                                    <td class="nombre del producto text-center">Tajo de cerdo</td>
+                                    <td class="fecha emision text-center">20/03/2022</td>
+                                    <td class="fecha vencimiento text-center">10/11/2023</td>
+                                    <td class="usuario text-center">carmen@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="Id del prodcuto text-center">7000</td>
+                                    <td class="Tipo de inventario text-center">55</td>
+                                    <td class="nombre del producto text-center">Tajo de res</td>
+                                    <td class="fecha emision text-center">11/11/2022</td>
+                                    <td class="fecha vencimiento text-center">12/05/2023</td>
+                                    <td class="usuario text-center">raul@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="Id del prodcuto text-center">8000</td>
+                                    <td class="Tipo de inventario text-center">100</td>
+                                    <td class="nombre del producto text-center">Molida</td>
+                                    <td class="fecha emision text-center">03/03/2022</td>
+                                    <td class="fecha vencimiento text-center">02/03/2023</td>
+                                    <td class="usuario text-center">lagoss@gmail.com</td>
+                                </tr>
+                                <tr class="noprint">
+                                    <td colspan="4">
+                                        <button type="button" onclick="addrow()" class="btn btn-primary"><span
+                                                    class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
+                                    </td>
+                                </tr>
+                                <!--  -->
+                            </tbody>
+                        </table>
+
+
+                    </article>
+                </div>
+
+                <div class="row " style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
+                    <article class="col-xs-12">
+                        <div class="form-group">
+                            <label for="notes">Nota:</label>
+                            <textarea class="form-control" name="notes" rows="5">
+- Para mayor información o dudas contáctenos.
+                      </textarea>
+                        </div>
+                    </article>
+                </div>
+                <div class="row " style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
+                    <article class="col-xs-2 text-center">
+                        <img src="\Logo.jpeg" alt="logo" style="height:50px;width:100px;">
+                    </article>
+                </div>
+                <article class="col-xs-12">
+                    <small>
+                    <p class="pull-left*" style="margin-bottom: -1px"><b>RIF: J-40705120-2 </b></p>
+                </small>
+                    <small>
+                    <p class="pull-left*" style="margin-bottom: -1px"><b>www.lodevelopers.com |
+                            info@lodeveloper.com</b></p>
+                </small>
+                </article>
+            </section>
+        </form>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="/JS/Menu.js"></script>
+    </body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="/JS/Produccion.js"></script>
+
+</html>
