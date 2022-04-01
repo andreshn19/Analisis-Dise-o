@@ -11,7 +11,40 @@
     <link rel="stylesheet" href="/CSS/Menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
+
+
     </link>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+ 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/CSS/usuariojefe.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet">
+    </link>
+  
+  
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css'>
+    <link rel="stylesheet" href="/CSS/usuariosocio.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+  
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
 </head>
 
@@ -65,77 +98,471 @@
   <!-- contenido de pagina, realmente no importa -->
   
   <!-- /contenido de pagina, realmente no importnnnnnnnnnnnnnnnnnnnnnnnnnna -->
-  <div class="container" style="margin-top:8px;">
-  <center><h3 class="text-success">Registros Jefes de area</h3><br></center>
-    <div class="">
-        <div class="panel panel-primary ">
-            <div class="panel-heading">
-                <h3 class="panel-title">Ingrese datos de jefes de area <span class="pull-right"><b></b></span>
-                </h3>
-            </div><br>
-            <form id="frmPerson" class="form-horizontal">
-              <div class="form-group">
-                  <label for="txtID" class="col-sm-2 control-label">Nombre jefe de area</label>
-                  <div class="col-sm-4">
-                      <input type="text" id="Nome" class="form-control" placeholder="Nome">
-                  </div>
-              </div>                    
-              <div class="form-group">
-                  <label for="txtName" class="col-lg-2 control-label">Dirección</label>
-                  <div class="col-sm-4">
-                      <input type="text" id="CPF" class="form-control" placeholder="CPF">
-                  </div>
-              </div>
-            <div class="form-group">
-                  <label for="txtName" class="col-lg-2 control-label">Telefono</label>
-                  <div class="col-sm-4">
-                      <input type="text" id="Telefone" class="form-control" placeholder="Telefone">
-                  </div>
-              </div>
-            <div class="form-group">
-                  <label for="txtName" class="col-lg-2 control-label">Email</label>
-                  <div class="col-sm-4">
-                      <input type="email" id="Email" class="form-control" placeholder="Email">
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="txtPhone" class="col-lg-2 control-label">Fecha de registro</label>
-                  <div class="col-sm-4">
-                      <input type="date" id="Lat" class="form-control"  ng-model="item.data" placeholder="Latitude"
-                      class="form-control" placeholder="dd-MM-yyyy" required>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js CRUD application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="txtEmail" class="col-lg-2 control-label">Estado</label>
-                  <div class="col-sm-4">
-                      <input type="text" id="Lng" class="form-control" placeholder="Longitude">
-                  </div>
-              </div>
-              <div class="form-group">
-                  <div class="col-lg-offset-2 col-sm-4">
-                      <input type="submit" value="Insertar" id="btnSave" class="btn btn-success"/>
-                  </div>
-              </div>
-          </form><br><br>
 
-          
-              </div>    
-                        
-              <a href="#" class="btn btn-primary " aria-current="page"> Buscar <span
-                class="glyphicon glyphicon-search" aria-hidden="true"></span>
-              </a>  <div class="col-sm-11">
-                <input type="text" class="form-control" />
+  <div class="container">
+    <header class="page-header">
+      <div class="branding">
+        <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+        <h1>Registro de jefes de área</h1>
+        <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+      </div>
+    </header>
+
+
+    <div class="modal fade" id="add-produc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">X</span>
+        </button>
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4><b>Añadir Nuevo socio</b></h4>
+          </div>
+
+          <div class="modal-body">
+            <div>
+              <form v-on:submit="createProduct">
+                <div class="form-group">
+                  <label for="add-name">
+                    <h5><b>Nombre completo</b> </h5>
+                  </label>
+                  <input class="form-control" id="add-name" v-model="product.name" required
+                    placeholder="Nombre completo.." />
+                </div>
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Dirección</b> </h5>
+                  </label>
+                  <textarea class="form-control" id="add-name" rows="1" v-model="product.description"
+                    placeholder="Dirección.."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="add-price">
+                    <h5><b>Telefono</b> </h5>
+                  </label>
+                  <input type="number" class="form-control" id="add-price" v-model="product.price"
+                    placeholder="+504 00000000" />
+                </div>
+                <div class="form-group">
+                  <label for="add-price">
+                    <h5><b> Email</b></h5>
+                  </label>
+                  <input type="text" class="form-control" id="add-email" v-model="product.email"
+                    placeholder="micorreo@gmail.com" />
+                </div>
+
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Fecha de registro</b> </h5>
+                  </label>
+                  <input type="date" id="Lat" class="form-control" v-model="product.date" placeholder="Fecha registro"
+                    class="form-control" placeholder="dd-MM-yyyy" required>
+
+                </div>
+
+           
+                
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Area asignada</b> </h5>
+                  </label>
+                  <select  class="form-control" id="add-name" rows="1" v-model="product.nota">
+                    <option id="elija">..Elija el área asignada..</option>
+                    <option id="cheque">Producción</option>
+                    <option id="efectivo">Finanzas</option>
+                    <option id="credito">Compras</option>
+                    <option id="credito">Ventas</option>
+                    <option id="credito">Inventario</option>
+                  </select> 
+                 
+                </div>
+
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Observación</b> </h5>
+                  </label>
+                  <textarea class="form-control" id="add-name" rows="1" v-model="product.obs"
+                    placeholder="Observación.."></textarea>
+                </div>
+                
+               
+
+                <center>
+                  <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                  <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                    Cancelar</button>
+                </center>
+
+
+              </form>
             </div>
 
-            <div class="container">
-              <table id="tblList" class="table table-bordered"></table>
-          </div> 
-            </div>
+
+          </div>
+
+          <div class="modal-footer">
+
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
+
+
+    <main id="app">
+      <router-view>
+      </router-view>
+    </main>
+
+
+    <div class="container">
+      <br>
+      <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <center>
+                <h2><b>Descripción</b></h2>
+              </center>
+
+            </div>
+
+            <div class="modal-body">
+              <div class="row" style="padding:15px">
+
+                <template id="product">
+                  <div>
+                    <h3> <b>{{ product.name }}</b></h3><br>
+
+                    <h4> <b>Dirección:</b>
+                    </h4>
+                    <h4>
+                      <div>{{ product.description }}</div><br>
+                    </h4>
+
+                    <h4><b>Telefono:</b></h4>
+
+                    <h4>
+                      <div>{{ product.price }}</div><br>
+                    </h4>
+
+                    <h4><b>Email:</b></h4>
+                    <h4>
+                      <div>{{ product.email }}</div><br>
+                    </h4>
+
+                    <h4><b>Fecha de registro:</b></h4>
+                    <h4>
+                      <div>{{ product.date }}</div><br>
+                    </h4>
+
+                    <h4><b>Nota:</b></h4>
+                    <h4>
+                      <div>{{ product.nota }}</span></div><br>
+                    </h4>
+
+
+                    <h4> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                      <router-link v-bind:to="'/'"><b>Volver a la lista de socios</b> </router-link>
+                    </h4>
+                  </div>
+                </template>
+
+
+              </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <template id="product-list">
+    <div>
+
+      <div class="actions">
+        <DIV align="right">
+          <button data-toggle="modal" href="#add-produc" class="btn btn-success glyphicon glyphicon-plus"><b>
+              Nuevo registro</b> </button>
+        </DIV>
+      </div>
+
+      <div class="filters row">
+        <div class="form-group col-sm-6">
+          <label for="search-element">Busqueda por nombre</label>
+          <input v-model="searchKey" class="form-control" id="search-element" requred />
+        </div>
+      </div>
+
+      <table class="table  table-striped caption-top  ">
+        <thead>
+          <tr class="table-success">
+            <th>
+              <center>
+                <h5><b>Nombre completo</b> </h5>
+              </center>
+            </th>
+
+            <th>
+              <center>
+                <h5><b>Dirección</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Telefono</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Email</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Fecha de registro</b> </h5>
+              </center>
+            </th>
+
+         
+
+            <th>
+              <center>
+                <h5><b>Area asignada</b> </h5>
+              </center>
+            </th>
+            
+            <th>
+              <center>
+                <h5><b>Observación</b> </h5>
+              </center>
+            </th>
+            
+
+            <th class="col-sm-2">
+              <center>
+                <h5><b></b> </h5>
+              </center>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in filteredProducts">
+            <td>
+              <router-link v-bind:to="{name: 'product', params: {product_id: product.id}}">
+                <h5><b>{{ product.name }}</b></h5>
+              </router-link>
+            </td>
+
+            <td>
+              <h5>{{ product.description }}</h5>
+            </td>
+            
+            <td>
+              <h5> {{ product.price }}</h5>
+            </td>
+            <td>
+              <h5> {{ product.email }}</h5>
+            </td>
+            <td>
+              <h5>{{ product.date}}</h5>
+            </td>
+
+        
+
+            <td>
+              
+              <h5> {{ product.nota}}</h5>
+            </td>
+
+            <td>
+              
+              <h5> {{ product.obs}}</h5>
+            </td>
+          
+            <td>
+
+              <button data-toggle="modal" href="#mi_moda" class="btn btn-primary glyphicon glyphicon-pencil"></button>
+              <div class="modal fade" id="mi_moda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                  </button>
+
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <center>
+                        <h3><b>Editar Jefe de area</b> </h3>
+                      </center>                    
+                    </div>
+
+                    <div class="modal-body">
+                      <template id="product-edit">
+                        <div>
+                          <form v-on:submit="updateProd">
+                            <div class="form-group">
+                              <label for="edit-name">
+                                <h5><b>Nombre completo</b> </h5>
+                              </label>
+                              <input class="form-control" id="edit-name" v-model="product.name" required  />
+                            </div>
+
+
+                            <div class="form-group">
+                              <label for="edit-description">
+                                <h5><b>Dirección</b> </h5>
+                              </label>
+                              <textarea class="form-control" id="edit-description" rows="1"
+                                v-model="product.description"></textarea>
+                            </div>
+
+
+                            <div class="form-group">
+                              <label for="edit-price">
+                                <h5><b>Telefono</b> </h5>
+                              </label>
+                              <input type="number" class="form-control" id="edit-price" v-model="product.price" />
+                            </div>
+
+                            <div class="form-group">
+                              <label for="add-price">
+                                <h5><b>Email</b> </h5>
+                              </label>
+                              <input type="text" class="form-control" id="add-price" v-model="product.email" />
+                            </div>
+                            <div class="form-group">
+                              <label for="add-description">
+                                <h5><b>Fecha de registro</b> </h5>
+                              </label>
+                              <input type="text" id="Lat" class="form-control" v-model="product.date" readonly
+                                placeholder="Fecha registro" class="form-control" placeholder="dd-MM-yyyy" required>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="add-description">
+                                <h5><b>Area asignada</b> </h5>
+                              </label>
+                  
+                         
+                            <select class="form-control"   id="add-nota" rows="1" v-model="product.nota" >
+                              <option v-model="product.nota">..Elija el área asignada..</option>
+                              <option id="cheque">Producción</option>
+                              <option id="efectivo">Finanzas</option>
+                              <option id="credito">Compras</option>
+                              <option id="credito">Ventas</option>
+                              <option id="credito">Inventario</option>
+                            </select> 
+
+                            
+                            
+                            </div>
+                          
+
+                            
+                            <div class="form-group">
+                              <label for="add-description">
+                                <h5><b>Observación</b></h5>
+                              </label>
+                              <textarea class="form-control" id="add-obs" rows="1" v-model="product.obs"></textarea>
+                            </div>
+
+                            <center>
+                              <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                              <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                                Cancelar</button>
+                            </center>
+
+                           
+
+                          </form>
+                        </div>
+                      </template>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button data-toggle="modal" href="#mi_modal" class="btn btn-danger glyphicon glyphicon-trash "></button>
+              <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                  </button>
+                  <div class="modal-content">
+
+
+                    <div class="modal-body"  >
+                      <center>
+                        <h3><b>¿Esta seguro que desea eliminar registro?</b> </h3>
+                      </center>
+                      <div class="row" style="padding:15px">
+                        <template id="product-delete">
+                          <div>
+                            <form v-on:submit="deleteProduct">
+                              <h4>
+                                Recuerde que la acción no se podrá deshacer..
+                              </h4><br>
+                              <center>
+                                <button type="submit" class="btn btn-danger glyphicon glyphicon-trash "> Eliminar</button>
+                                <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                                  Cancelar</button>
+                              </center>
+                             
+                            </form>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
+
+
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>
   <!--Tabela com a lista de dados-->
  
 

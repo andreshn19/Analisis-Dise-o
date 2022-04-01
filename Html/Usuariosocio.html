@@ -29,6 +29,13 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+
 </head>
 
 <body>
@@ -85,6 +92,15 @@
 
   <!--Tabela com a lista de dados-->
 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js CRUD application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+
   <div class="container">
     <header class="page-header">
       <div class="branding">
@@ -94,388 +110,374 @@
       </div>
     </header>
 
-    <div class="container">
-      <div class="modal fade" id="add-product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-          <button type="button" class="close" data-dismiss="modal">
-            <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
-          </button>
-          <div class="modal-content">
-            <div class="header">
-              <center>
-                <h3>Añadir Nuevo socio</h3>
-              </center>
-            </div>
-            <div class="modal-body">
-              <div class="row" style="padding:15px">
-                <template id="add-product">
-                  <div>
-                    <form v-on:submit="createProduct">
-                      <div class="form-group">
-                        <label for="add-name">
-                          <h5><b>Nombre completo</b>
-                          </h5>
-                        </label>
-                        <input class="form-control" id="add-name" v-model="product.name" required />
-                      </div>
-                      <div class="form-group">
-                        <label for="add-description">
-                          <h5><b>Dirección</b>
-                          </h5>
-                        </label>
-                        <textarea class="form-control" id="add-name" rows="1" v-model="product.description"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="add-price">
-                          <h5><b>Telefono</b>
-                          </h5>
-                        </label>
-                        <input type="number" class="form-control" id="add-price" v-model="product.price" />
-                      </div>
-                      <div class="form-group">
-                        <label for="add-price">
-                          <h5><b>Email</b>
-                          </h5>
-                        </label>
-                        <input type="text" class="form-control" id="add-email" v-model="product.email" />
-                      </div>
-                      <div class="form-group">
-                        <label for="add-description">
-                          <h5><b>Fecha de registro</b>
-                          </h5>
-                        </label>
-                        <input type="date" id="Lat" class="form-control" v-model="product.date"
-                          placeholder="Fecha registro" class="form-control" placeholder="dd-MM-yyyy" required>
 
-                      </div>
-                      <div class="form-group">
-                        <label for="add-description">
-                          <h5><b> Nota</b>
-                          </h5>
-                        </label>
-                        <textarea class="form-control" id="add-name" rows="1" v-model="product.nota"></textarea>
-                      </div>
-                      <center>
-                        <button type="submit" class="btn btn-primary">
-                          <h5>Crear</h5>
-                        </button>
-                        <router-link class="btn btn-success" v-bind:to="'/'">
-                          <h5>Cancelar</h5>
-                        </router-link>
-                      </center>
-
-                    </form>
-                  </div>
-                </template>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-      <div class="modal fade" id="product-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-          <button type="button" class="close" data-dismiss="modal">
-            <span aria-hidden="true">&times;</span><span class="sr-only">
-              <h5>Cerrar</h5>
-            </span>
-          </button>
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>Editar socio</h2>
-            </div>
-            <div class="modal-body">
-              <div class="row" style="padding:15px">
-                <template id="product-edit">
-                  <div>
-                    <form v-on:submit="updateProd">
-
-                      <div class="form-group">
-                      </div>
-
-                  </div>
-
-                  <div class="form-group">
-                    <label for="edit-name" class="col-sm-2 control-label">
-                      <h5><b>Nombre </b>
-                      </h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <input type="text" id="edit-name" class="form-control" placeholder="Nome" rows="1"
-                        v-model="product.name">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="edit-description" class="col-sm-2 control-label">
-                      <h5><b>Dirección</b>
-                      </h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <input type="text" id="edit-description" class="form-control" placeholder="Nome" rows="1"
-                        v-model="product.description">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="edit-price" class="col-sm-2 control-label">
-                      <h5><b>Telefono</b>
-                      </h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <input type="number" class="form-control" id="edit-price" v-model="product.price" />
-                    </div>
-
-                  </div>
-
-                  <div class="form-group">
-                    <label for="add-price" class="col-sm-2 control-label">
-                      <h5><b>Email</b>
-                      </h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="add-price" v-model="product.email" />
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="add-description" class="col-sm-2 control-label">
-                      <h5><b>Fecha registro</b></h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <input type="text" id="Lat" class="form-control" v-model="product.date"
-                        placeholder="Fecha registro" class="form-control" placeholder="dd-MM-yyyy" required>
-                    </div>
-
-                  </div>
-
-                  <div class="form-group">
-                    <label for="add-description" class="col-sm-2 control-label">
-                      <h5><b>Nota</b></h5>
-                    </label>
-                    <div class="col-sm-10">
-                      <textarea class="form-control" id="add-name" rows="1" v-model="product.nota"></textarea>
-                    </div>
-
-                  </div>
-
-
-                  <center><button type="submit" class="btn btn-primary">
-                      <h5>Guardar</h5>
-                    </button>
-                    <router-link class="btn btn-success" v-bind:to="'/'">
-                      <h5>Cancelar</h5>
-                    </router-link>
-                  </center>
-                  </form>
-              </div>
-              </template>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="container">
-    <div class="modal fade" id="product-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div class="modal fade" id="add-produc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true">
       <div class="modal-dialog">
         <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span><span class="sr-only">
-            <h5>Cerrar</h5>
-          </span>
+          <span aria-hidden="true">&times;</span><span class="sr-only">X</span>
         </button>
-        <div class="modal-content"><br>
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4><b>Añadir Nuevo socio</b></h4>
+          </div>
+
           <div class="modal-body">
-            <center>
-              <h4>¿Esta seguro que desea eliminar a {{ product.name }} ?</h4>
-            </center>
-            <template id="product-delete">
-              <div>
-                <form v-on:submit="deleteProduct">
-                  <h5>
-                    <p>La acción no se podrá deshacer..</p>
-                  </h5>
-                  <center><button type="submit" class="btn btn-danger">
-                      <h5>Eliminar</h5>
-                    </button>
-                    <router-link class="btn btn-success" v-bind:to="'/'">
-                      <h5>Cancelar</h5>
-                    </router-link>
-                  </center>
-                </form>
-              </div>
-            </template>
+            <div>
+              <form v-on:submit="createProduct">
+                <div class="form-group">
+                  <label for="add-name">
+                    <h5><b>Nombre completo</b> </h5>
+                  </label>
+                  <input class="form-control" id="add-name" v-model="product.name" required
+                    placeholder="Nombre completo.." />
+                </div>
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Dirección</b> </h5>
+                  </label>
+                  <textarea class="form-control" id="add-name" rows="1" v-model="product.description"
+                    placeholder="Dirección.."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="add-price">
+                    <h5><b>Telefono</b> </h5>
+                  </label>
+                  <input type="number" class="form-control" id="add-price" v-model="product.price"
+                    placeholder="+504 00000000" />
+                </div>
+                <div class="form-group">
+                  <label for="add-price">
+                    <h5><b> Email</b></h5>
+                  </label>
+                  <input type="text" class="form-control" id="add-email" v-model="product.email"
+                    placeholder="micorreo@gmail.com" />
+                </div>
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Fecha de registro</b> </h5>
+                  </label>
+                  <input type="date" id="Lat" class="form-control" v-model="product.date" placeholder="Fecha registro"
+                    class="form-control" placeholder="dd-MM-yyyy" required>
+
+                </div>
+                <div class="form-group">
+                  <label for="add-description">
+                    <h5><b>Nota</b> </h5>
+                  </label>
+                  <textarea class="form-control" id="add-name" rows="1" v-model="product.nota"
+                    placeholder="Observación.."></textarea>
+                </div>
+                
+                <center>
+                  <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                  <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                    Cancelar</button>
+                </center>
+
+
+              </form>
+            </div>
+
+
+          </div>
+
+          <div class="modal-footer">
+
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <main id="app">
-    <router-view>
-    </router-view>
-  </main>
 
 
 
-  <div class="container">
+    <main id="app">
+      <router-view>
+      </router-view>
+    </main>
 
-    <div class="modal fade  " id="product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-      aria-hidden="true">
 
-      <div class="modal-dialog ">
+    <div class="container">
+      <br>
+      <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
 
-        <div class="modal-content ">
+        <div class="modal-dialog">
 
-          <div><a href="#close" title="cerrar" class="cerrar">X</a>
+
+          <div class="modal-content">
+
             <div class="modal-header">
-
               <center>
-                <h3 class="modal-title" id="myModalLabel"> Descripción </h3>
+                <h2><b>Descripción</b></h2>
               </center>
+
             </div>
+
             <div class="modal-body">
-              <div class="row " style="padding:15px">
+              <div class="row" style="padding:15px">
 
                 <template id="product">
                   <div>
                     <h3> <b>{{ product.name }}</b></h3><br>
 
                     <h4> <b>Dirección:</b>
-                      <h4>
-                        <div>{{ product.description }}</div><br>
+                    </h4>
+                    <h4>
+                      <div>{{ product.description }}</div><br>
+                    </h4>
 
-                        <h4><b>Telefono:</b></h4>
-                        <div>{{ product.price }}</div><br>
+                    <h4><b>Telefono:</b></h4>
 
-                        <h4><b>Email:</b></h4>
-                        <div>{{ product.email }}</div><br>
+                    <h4>
+                      <div>{{ product.price }}</div><br>
+                    </h4>
 
-                        <h4><b>Fecha de registro:</b></h4>
-                        <div>{{ product.date }}</div><br>
+                    <h4><b>Email:</b></h4>
+                    <h4>
+                      <div>{{ product.email }}</div><br>
+                    </h4>
 
-                        <h4><b>Nota:</b></h4>
-                        <div>{{ product.nota }}</span></div><br>
+                    <h4><b>Fecha de registro:</b></h4>
+                    <h4>
+                      <div>{{ product.date }}</div><br>
+                    </h4>
+
+                    <h4><b>Nota:</b></h4>
+                    <h4>
+                      <div>{{ product.nota }}</span></div><br>
+                    </h4>
 
 
-                        <h4> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                          <router-link v-bind:to="'/'">Volver a la lista de socios</router-link>
-                        </h4>
+                    <h4> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                      <router-link v-bind:to="'/'"><b>Volver a la lista de socios</b> </router-link>
+                    </h4>
                   </div>
                 </template>
+
+
               </div>
             </div>
+            <div class="modal-footer">
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 
 
   <template id="product-list">
     <div>
 
-      <div class="filters row">
-          <label for="search-element" class=" control-label" >
-            <h4>Busqueda por nombre</h4>
-          </label>
-          <div class="col-sm-5">
-            <input v-model="searchKey" class="form-control " id="search-element" requred />
-          </div>
+      <div class="actions">
+        <DIV align="right">
+          <button data-toggle="modal" href="#add-produc" class="btn btn-success glyphicon glyphicon-plus"><b>Nuevo socio</b> </button>
+        </DIV>
       </div>
 
-        <div class="actions">
-          <DIV align="right">
-            <router-link class="btn btn-primary  " v-bind:to="{path: '/add-product'}">
-              Añadir nuevo socio
-            </router-link>
-          </DIV>
+      <div class="filters row">
+        <div class="form-group col-sm-6">
+          <label for="search-element">Busqueda por nombre</label>
+          <input v-model="searchKey" class="form-control" id="search-element" requred />
         </div>
+      </div>
 
-        <table class="table  table-striped caption-top  ">
-          <thead>
-            <tr class="table-success">
-              <th>
-                <h5><b>Nombre completo</b></h5>
-              </th>
-              <th>
-                <h5><b>Dirección</b></h5>
-              </th>
-              <th>
-                <h5><b>Telefono</b>
-                </h5>
-              </th>
-              <th>
-                <h5><b>Email</b></h5>
-              </th>
-              <th>
-                <h5><b> Fecha de registro</b></h5>
-              </th>
-              <th>
-                <h5><b>Estado</b></h5>
-              </th>
-              <th class="col-sm-2">
-                <h5><b> Actions</b>
-                </h5>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="product in filteredProducts">
-              <td>
-                <router-link v-bind:to="{name: 'product', params: {product_id: product.id}}">
-                  <h5><b>{{ product.name }}</b></h5>
-                </router-link>
-              </td>
-              <td>
-                <h5>{{ product.description }}</h5>
-              </td>
-              <td>
-                <h5> {{ product.price }}</h5>
+      <table class="table  table-striped caption-top  ">
+        <thead>
+          <tr class="table-success">
+            <th>
+              <center>
+                <h5><b>Nombre completo</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Dirección</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Telefono</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Email</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Fecha de registro</b> </h5>
+              </center>
+            </th>
+            <th>
+              <center>
+                <h5><b>Nota</b> </h5>
+              </center>
+            </th>
+            
+            <th class="col-sm-2">
+              <center>
+                <h5><b></b> </h5>
+              </center>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in filteredProducts">
+            <td>
+              <router-link v-bind:to="{name: 'product', params: {product_id: product.id}}">
+                <h5><b>{{ product.name }}</b></h5>
+              </router-link>
+            </td>
+            <td>
+              <h5>{{ product.description }}</h5>
+            </td>
+            <td>
+              <h5> {{ product.price }}</h5>
+            </td>
+            <td>
+              <h5> {{ product.email }}</h5>
+            </td>
+            <td>
+              <h5>{{ product.date}}</h5>
+            </td>
+            <td>
+              <h5> {{ product.nota}}</h5>
+            </td>
+          
+            <td>
 
-              </td>
-              <td>
-                <h5> {{ product.email }}</h5>
+              <button data-toggle="modal" href="#mi_moda" class="btn btn-primary glyphicon glyphicon-pencil"></button>
+              <div class="modal fade" id="mi_moda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                  </button>
 
-              </td>
-              <td>
-                <h5>{{ product.date}}</h5>
+                  <div class="modal-content">
 
-              </td>
-              <td>
-                <h5> {{ product.nota}}</h5>
+                    <div class="modal-header">
+                      <center>
+                        <h3><b>Editar socio</b> </h3>
+                      </center>                    
+                    </div>
+
+                    <div class="modal-body">
+                      <template id="product-edit">
+                        <div>
+                          <form v-on:submit="updateProd">
+                            <div class="form-group">
+                              <label for="edit-name">
+                                <h5><b>Nombre completo</b> </h5>
+                              </label>
+                              <input class="form-control" id="edit-name" v-model="product.name" required  readonly/>
+                            </div>
+                            <div class="form-group">
+                              <label for="edit-description">
+                                <h5><b>Dirección</b> </h5>
+                              </label>
+                              <textarea class="form-control" id="edit-description" rows="1"
+                                v-model="product.description"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="edit-price">
+                                <h5><b>Telefono</b> </h5>
+                              </label>
+                              <input type="number" class="form-control" id="edit-price" v-model="product.price" />
+                            </div>
+
+                            <div class="form-group">
+                              <label for="add-price">
+                                <h5><b>Email</b> </h5>
+                              </label>
+                              <input type="text" class="form-control" id="add-price" v-model="product.email" />
+                            </div>
+                            <div class="form-group">
+                              <label for="add-description">
+                                <h5><b>Fecha de registro</b> </h5>
+                              </label>
+                              <input type="text" id="Lat" class="form-control" v-model="product.date" readonly
+                                placeholder="Fecha registro" class="form-control" placeholder="dd-MM-yyyy" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="add-description">
+                                <h5><b> Nota</b></h5>
+                              </label>
+                              <textarea class="form-control" id="add-nota" rows="1" v-model="product.nota"></textarea>
+                            </div>
+
+                            <center>
+                              <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                              <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                                Cancelar</button>
+                            </center>
+
+                           
+
+                          </form>
+                        </div>
+                      </template>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button data-toggle="modal" href="#mi_modal" class="btn btn-danger glyphicon glyphicon-trash "></button>
+              <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                  </button>
+                  <div class="modal-content">
 
 
-              </td>
-              <td>
-                <router-link class="btn btn-success btn-xs"
-                  v-bind:to="{name: 'product-edit', params: {product_id: product.id}}">
-                  <h5>Editar</h5>
-                </router-link>
-                <router-link class="btn btn-danger btn-xs"
-                  v-bind:to="{name: 'product-delete', params: {product_id: product.id}}">
-                  <h5>Eliminar</h5>
-                </router-link>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                    <div class="modal-body"  >
+                      <center>
+                        <h3><b>¿Esta seguro que desea eliminar socio ?</b> </h3>
+                      </center>
+                      <div class="row" style="padding:15px">
+                        <template id="product-delete">
+                          <div>
+                            <form v-on:submit="deleteProduct">
+                              <h4>
+                                Recuerde que la acción no se podrá deshacer..
+                              </h4><br>
+                              <center>
+                                <button type="submit" class="btn btn-danger glyphicon glyphicon-trash "> Eliminar</button>
+                                <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                                  Cancelar</button>
+                              </center>
+                             
+                            </form>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
     </div>
   </template>
-
 
 
 
