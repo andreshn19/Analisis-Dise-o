@@ -52,9 +52,11 @@
 
             <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
             <li>
-              <a href="#"><i class="fa fa-shopping-cart" ></i>Compras<i class="fa fa-caret-down"></i></a>
+              <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
               <ul>
-                <li><a href="/Html/Compras.html"><aria-hidden="true"></i>Mis Compras</a></li>
+                <li><a href="/Html/Compras.html">
+                    <aria-hidden="true"></i>Mis Compras
+                  </a></li>
                 <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
               </ul>
             </li>
@@ -64,7 +66,7 @@
                 <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
                 <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
               </ul>
-            </li>    
+            </li>
             <li><a href="/Html/Finanzas.html"><i class="fa fa-usd" aria-hidden="true"></i>Finanzas</a></li>
             <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
                   aria-hidden="true"></i></i>Producción</a></li>
@@ -80,116 +82,6 @@
 
     <div class="container" ng-controller="listaComprasController">
 
-      <div class="row">
-
-        <div class="col-md-12">
-          <div class="page-header">
-            <center>
-              <h3 class="text-success">Ingresar compra</h3>
-            </center><br>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <form class="form-inline" ng-submit="submitForm()" name="formItem" novalidate>
-
-            <div class="form-group" ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
-              <label for="fecha">Fecha</label>
-              <input id="fecha" type="date" name="fecha" ng-model="item.fecha" placeholder="fecha" class="form-control"
-                placeholder="dd-MM-yyyy" required>
-            </div>
-
-
-            <div class="form-group" ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
-              <label for="precio">Precio/Unitario</label>
-              <input id="precio" type="number" name="precio" ng-model="item.precio" placeholder="precio"
-                class="form-control" required>
-            </div>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
-              <label for="cantidad">Cantidad</label>
-              <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad" placeholder="cantidad"
-                class="form-control" required>
-            </div>
-
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
-              <label for="observacion">Observación</label>
-              <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
-                placeholder="observacion" class="form-control" required>
-            </div>
-
-            <br> </br>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
-              <label for="nombreproducto">Nombre Producto</label>
-              <input id="nombreproducto" type="text" name="nombreproducto" ng-model="item.nombreproducto"
-                placeholder="Nombre producto" class="form-control" required>
-            </div>
-
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
-              <label for="IDCompra">ID Compra</label>
-              <input id="IDCompra" type="text" name="IDCompra" ng-model="item.IDCompra" placeholder="IDCompra"
-                class="form-control" required>
-            </div>
-
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
-              <label for="IDInventario">ID Inventario</label>
-              <input id="IDInventario" type="text" name="IDInventario" ng-model="item.IDInventario"
-                placeholder="IDInventario" class="form-control" required>
-            </div>
-
-            <br> </br>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
-              <label for="IDUsuario">ID Usuario</label>
-              <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario" placeholder="IDUsuario"
-                class="form-control" required>
-            </div>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
-              <label for="tipoCompra">Tipo de Compra</label>
-              <select class="form-control" id="tipoCompra">
-                <option id="elija">..Elija el tipo de compra..</option>
-                <option id="cheque">Cheque</option>
-                <option id="efectivo">Efectivo</option>
-                <option id="credito">Crédito</option>
-              </select>
-            </div>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
-              <label for="tipoProducto">Tipo de Producto</label>
-              <select class="form-control" id="tipoProducto">
-                <option id="elija">..Elija el tipo de producto..</option>
-                <option id="efectivo">Insumo Oficina</option>
-                <option id="efectivo">Insumo Venta</option>
-              </select>
-            </div>
-
-            <br> </br>
-
-            <div class="form-group"
-              ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
-              <label for="totalCompra">Total Compra</label>
-              <input id="totalCompra" type="number" name="totalCompra" ng-model="item.totalCompra"
-                placeholder="totalCompra" class="form-control" required>
-            </div>
-
-            <br> </br>
-            <button class="btn btn-primary" type="submit" ng-disabled="formItem.$invalid">Guardar</button>
-          </form>
-        </div>
-      </div>
 
       <div class="row">
 
@@ -197,7 +89,7 @@
           <div class="page-header">
             <center>
               <h3 class="text-success">Lista de compras</h3>
-            </center><br>
+            </center>
           </div>
         </div>
         <div class="col-md-12">
@@ -206,235 +98,427 @@
             <input id="busqueda" ng-model="comprasFilter" class="form-control">
           </div>
 
-          <table id="lista-compras" class="table table-striped">
-            <thead>
-              <tr>
-                <th>Fecha/Ingreso</th>
-                <th>Precio/unitario</th>
-                <th>Cantidad</th>
-                <th>Observación</th>
-                <th>Detalle</th>
-                <th>IDCompra</th>
-                <th>IDInventario</th>
-                <th>IDUsuario</th>
-                <th>Tipo de Compra</th>
-                <th>Tipo de Producto</th>
-                <th>Total/Compra</th>
+          <div>
+            <td>
+              <DIV align="right"> <a href="#openModal1" class="btn btn-success glyphicon glyphicon-plus"> Nueva </a>
+              </DIV>
+              <div id="openModal1" class="modalDialogo">
+                <div><a href="#close" title="cerrar" class="cerrar">X</a>
 
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr ng-repeat="item in items | filter:comprasFilter"> -->
-              <tr ng-repeat="item in filteredItem = (items | filter:comprasFilter) | orderBy:'fecha'">
-                <td>{{ item.fecha | date: "dd/MM/yyyy"}}</td>
-                <td>{{ item.precio | currency:"L. "}}</td>
-                <td>{{ item.cantidad}}</td>
-                <td>{{ item.observacion }}</td>
-                <td>{{ item.nombreproducto }}</td>
-                <td>{{ item.IDCompra }}</td>
-                <td>{{ item.IDInventario }}</td>
-                <td>{{ item.IDUsuario }}</td>
-                <td>{{ item.tipoCompra }}</td>
-                <td>{{ item.tipoProducto }}</td>
-                <td>{{ item.totalCompra | currency:"L. "}}</td>
-                <div>
-                  <td>
-                    <a href="#openModal" class="btn btn-warning">Editar</a>
-                    <div id="openModal" class="modalDialogo">
-                      <div><a href="#close" title="cerrar" class="cerrar">X</a>
+                  <!--Modal Boton de insertar-------------------->
+                  <table border="0" width="900" style="margin: 0 auto;">
+                    <tr>
 
-                        <!--Modal-------------------->
-                        <table border="0" width="900" style="margin: 0 auto;">
+                      <td>
+                        <center>
+                          <h3 class="text-success">Complete los campos de compra</h3>
+                        </center><br>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <table border="0">
+                          <!--ESPACIO-->
                           <tr>
-
                             <td>
-                              <center>
-                                <h3 class="text-success">Editar compra #1</h3>
-                              </center><br>
+                              <br>
                             </td>
                           </tr>
 
+                          <!--FIN ESPACIO-->
+                          <tr>
+
+                            <td></td>
+                            <td><label for="fecha">Fecha:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
+                                <input id="fecha" type="date" name="fecha" ng-model="item.fecha" placeholder="fecha"
+                                  class="form-control" placeholder="dd-MM-yyyy" required>
+                              </div>
+                            </td>
+
+
+                            <td><label for="precio">Precio/Unitario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
+                                <input id="precio" type="number" name="precio" ng-model="item.precio"
+                                  placeholder="precio" class="form-control" required>
+                              </div>
+                            </td>
+
+                            <td><label for="cantidad">Cantidad:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
+                                <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad"
+                                  placeholder="cantidad" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!--ESPACIO-->
                           <tr>
                             <td>
-                              <table border="0">
-                                <!--ESPACIO-->
-                                <tr>
-                                  <td>
-                                    <br>
-                                  </td>
-                                </tr>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
 
-                                <!--FIN ESPACIO-->
-                                <tr>
+                          <tr>
 
-                                  <td></td>
-                                  <td><label for="fecha">Fecha:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
-                                      <input id="fecha" type="date" name="fecha" ng-model="item.fecha"
-                                        placeholder="fecha" class="form-control" placeholder="dd-MM-yyyy" required>
-                                    </div>
-                                  </td>
+                            <td></td>
+                            <td><label for="observacion">Observación:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
+                                <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
+                                  placeholder="observacion" class="form-control" required>
+                              </div>
+                            </td>
 
+                            <td><label for="nombreproducto">Nombre Producto:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
+                                <input id="nombreproducto" type="text" name="nombreproducto"
+                                  ng-model="item.nombreproducto" placeholder="Nombre producto" class="form-control"
+                                  required>
+                              </div>
+                            </td>
 
-                                  <td><label for="precio">Precio/Unitario:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
-                                      <input id="precio" type="number" name="precio" ng-model="item.precio"
-                                        placeholder="precio" class="form-control" required>
-                                    </div>
-                                  </td>
+                            <td><label for="IDCompra">ID Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
+                                <input id="IDCompra" type="text" name="IDCompra"
+                                  ng-model="item.IDCompra" placeholder="IDCompra" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
 
-                                  <td><label for="cantidad">Cantidad:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
-                                      <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad"
-                                        placeholder="cantidad" class="form-control" required>
-                                    </div>
-                                  </td>
-                                </tr>
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
 
-                                <!--ESPACIO-->
-                                <tr>
-                                  <td>
-                                    <br>
-                                  </td>
-                                </tr>
-                                <!--FIN ESPACIO-->
+                          <tr>
 
-                                <tr>
-
-                                  <td></td>
-                                  <td><label for="observacion">Observación:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
-                                      <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
-                                        placeholder="observacion" class="form-control" required>
-                                    </div>
-                                  </td>
-
-                                  <td><label for="nombreproducto">Nombre Producto:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
-                                      <input id="nombreproducto" type="text" name="nombreproducto"
-                                        ng-model="item.nombreproducto" placeholder="Nombre producto"
-                                        class="form-control" required>
-                                    </div>
-                                  </td>
-
-                                  <td><label for="IDCompra">ID Compra:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
-                                      <input id="IDCompra" type="text" readonly =»readonly» name="IDCompra" ng-model="item.IDCompra"
-                                        placeholder="IDCompra" class="form-control" required>
-                                    </div>
-                                  </td>
-                                </tr>
-
-                                <!--ESPACIO-->
-                                <tr>
-                                  <td>
-                                    <br>
-                                  </td>
-                                </tr>
-                                <!--FIN ESPACIO-->
-
-                                <tr>
-
-                                  <td></td>
-                                  <td><label for="IDInventario">ID Inventario:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
-                                      <input id="IDInventario" type="text" name="IDInventario"
-                                        ng-model="item.IDInventario" placeholder="IDInventario" class="form-control"
-                                        required>
-                                    </div>
-                                  </td>
+                            <td></td>
+                            <td><label for="IDInventario">ID Inventario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
+                                <input id="IDInventario" type="text" name="IDInventario" ng-model="item.IDInventario"
+                                  placeholder="IDInventario" class="form-control" required>
+                              </div>
+                            </td>
 
 
-                                  <td><label for="IDUsuario">ID Usuario:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
+                            <td><label for="IDUsuario">ID Usuario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
 
-                                      <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario"
-                                        placeholder="IDUsuario" class="form-control" required>
-                                    </div>
-                                  </td>
+                                <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario"
+                                  placeholder="IDUsuario" class="form-control" required>
+                              </div>
+                            </td>
 
-                                  <td><label for="tipoCompra">Tipo de Compra:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
+                            <td><label for="tipoCompra">Tipo de Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
 
-                                      <select class="form-control" id="tipoCompra">
-                                        <option id="elija">..Elija el tipo de compra..</option>
-                                        <option id="cheque">Cheque</option>
-                                        <option id="efectivo">Efectivo</option>
-                                        <option id="credito">Crédito</option>
-                                      </select>
-                                    </div>
-                                  </td>
-                                </tr>
+                                <select class="form-control" id="tipoCompra">
+                                  <option id="elija">..Elija el tipo de compra..</option>
+                                  <option id="cheque">Cheque</option>
+                                  <option id="efectivo">Efectivo</option>
+                                  <option id="credito">Crédito</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
 
-                                <!--ESPACIO-->
-                                <tr>
-                                  <td>
-                                    <br>
-                                  </td>
-                                </tr>
-                                <!--FIN ESPACIO-->
-
-
-                                <tr>
-
-                                  <td></td>
-                                  <td><label for="tipoProducto">Tipo de Producto:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
-                                      <select class="form-control" id="tipoProducto">
-                                        <option id="elija">..Elija el tipo de producto..</option>
-                                        <option id="efectivo">Insumo Oficina</option>
-                                        <option id="efectivo">Insumo Venta</option>
-                                      </select>
-                                    </div>
-                                  </td>
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
 
 
-                                  <td><label for="totalCompra">Total Compra:</label></td>
-                                  <td>
-                                    <div class="form-group"
-                                      ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
-                                      <input id="totalCompra" type="number" name="totalCompra"
-                                        ng-model="item.totalCompra" placeholder="totalCompra" class="form-control"
-                                        required>
-                                    </div>
-                                  </td>
-                                </tr>
-                      </div>
+                          <tr>
 
-            </tbody>
-          </table>
-          <br>
-          <button class="btn btn-success" type="submit">Modificar</button>
+                            <td></td>
+                            <td><label for="tipoProducto">Tipo de Producto:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
+                                <select class="form-control" id="tipoProducto">
+                                  <option id="elija">..Elija el tipo de producto..</option>
+                                  <option id="efectivo">Insumo Oficina</option>
+                                  <option id="efectivo">Insumo Venta</option>
+                                </select>
+                              </div>
+                            </td>
+
+
+                            <td><label for="totalCompra">Total Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
+                                <input id="totalCompra" type="number" name="totalCompra" ng-model="item.totalCompra"
+                                  placeholder="totalCompra" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
+                </div>
+
+                </tbody>
+                </table>
+                <br>
+                <center><button class="btn btn-success" type="submit">Listo</button></center>
+              </div>
+            </td>
+            </td>
+            </tr>
+            </table>
+
+          </div>
         </div>
         </td>
-        </td>
-        </tr>
-        </table>
-
       </div>
+
+      <table id="lista-compras" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Fecha/Ingreso</th>
+            <th>Precio/unitario</th>
+            <th>Cantidad</th>
+            <th>Observación</th>
+            <th>Detalle</th>
+            <th>IDCompra</th>
+            <th>IDInventario</th>
+            <th>IDUsuario</th>
+            <th>Tipo de Compra</th>
+            <th>Tipo de Producto</th>
+            <th>Total/Compra</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr ng-repeat="item in items | filter:comprasFilter"> -->
+          <tr ng-repeat="item in filteredItem = (items | filter:comprasFilter) | orderBy:'fecha'">
+            <td>{{ item.fecha | date: "dd/MM/yyyy"}}</td>
+            <td>{{ item.precio | currency:"L. "}}</td>
+            <td>{{ item.cantidad}}</td>
+            <td>{{ item.observacion }}</td>
+            <td>{{ item.nombreproducto }}</td>
+            <td>{{ item.IDCompra }}</td>
+            <td>{{ item.IDInventario }}</td>
+            <td>{{ item.IDUsuario }}</td>
+            <td>{{ item.tipoCompra }}</td>
+            <td>{{ item.tipoProducto }}</td>
+            <td>{{ item.totalCompra | currency:"L. "}}</td>
+            <td>
+
+              <!--Modal PARA EDITAR-------------------->
+              <a href="#openModal2" class="btn btn-warning">Editar</a>
+              <div id="openModal2" class="modalDialogo">
+                <div><a href="#close" title="cerrar" class="cerrar">X</a>
+
+                  <!--Modal-------------------->
+                  <table border="0" width="900" style="margin: 0 auto;">
+                    <tr>
+
+                      <td>
+                        <center>
+                          <h3 class="text-success">Editar compra #1</h3>
+                        </center><br>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <table border="0">
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+
+                          <!--FIN ESPACIO-->
+                          <tr>
+
+                            <td></td>
+                            <td><label for="fecha">Fecha:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
+                                <input id="fecha" type="date" name="fecha" ng-model="item.fecha" placeholder="fecha"
+                                  class="form-control" placeholder="dd-MM-yyyy" required>
+                              </div>
+                            </td>
+
+
+                            <td><label for="precio">Precio/Unitario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
+                                <input id="precio" type="number" name="precio" ng-model="item.precio" readonly
+                                  placeholder="precio" class="form-control" required>
+                              </div>
+                            </td>
+
+                            <td><label for="cantidad">Cantidad:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
+                                <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad"
+                                  placeholder="cantidad" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
+
+                          <tr>
+
+                            <td></td>
+                            <td><label for="observacion">Observación:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
+                                <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
+                                  placeholder="observacion" class="form-control" required>
+                              </div>
+                            </td>
+
+                            <td><label for="nombreproducto">Nombre Producto:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
+                                <input id="nombreproducto" type="text" name="nombreproducto"
+                                  ng-model="item.nombreproducto" placeholder="Nombre producto" class="form-control"
+                                  required>
+                              </div>
+                            </td>
+
+                            <td><label for="IDCompra">ID Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
+                                <input id="IDCompra" type="text" readonly=»readonly» name="IDCompra"
+                                  ng-model="item.IDCompra" placeholder="IDCompra" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
+
+                          <tr>
+
+                            <td></td>
+                            <td><label for="IDInventario">ID Inventario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
+                                <input id="IDInventario" type="text" name="IDInventario" ng-model="item.IDInventario"
+                                  placeholder="IDInventario" class="form-control" required>
+                              </div>
+                            </td>
+
+
+                            <td><label for="IDUsuario">ID Usuario:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
+
+                                <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario"
+                                  placeholder="IDUsuario" class="form-control" required>
+                              </div>
+                            </td>
+
+                            <td><label for="tipoCompra">Tipo de Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
+
+                                <select class="form-control" id="tipoCompra">
+                                  <option id="elija">..Elija el tipo de compra..</option>
+                                  <option id="cheque">Cheque</option>
+                                  <option id="efectivo">Efectivo</option>
+                                  <option id="credito">Crédito</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <!--ESPACIO-->
+                          <tr>
+                            <td>
+                              <br>
+                            </td>
+                          </tr>
+                          <!--FIN ESPACIO-->
+
+
+                          <tr>
+
+                            <td></td>
+                            <td><label for="tipoProducto">Tipo de Producto:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
+                                <select class="form-control" id="tipoProducto">
+                                  <option id="elija">..Elija el tipo de producto..</option>
+                                  <option id="efectivo">Insumo Oficina</option>
+                                  <option id="efectivo">Insumo Venta</option>
+                                </select>
+                              </div>
+                            </td>
+
+
+                            <td><label for="totalCompra">Total Compra:</label></td>
+                            <td>
+                              <div class="form-group"
+                                ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
+                                <input id="totalCompra" type="number" name="totalCompra" ng-model="item.totalCompra" readonly
+                                  placeholder="totalCompra" class="form-control" required>
+                              </div>
+                            </td>
+                          </tr>
+                </div>
+
+        </tbody>
+      </table>
+      <br>
+      <button class="btn btn-success" type="submit">Modificar</button>
     </div>
     </td>
-    </div>
+    </td>
+    </tr>
+    </table>
 
     <td><button type="button" class="btn btn-danger">Borrar</button></td>
     </tr>
