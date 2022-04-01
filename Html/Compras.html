@@ -81,16 +81,18 @@
     </nav>
 
     <div class="container" ng-controller="listaComprasController">
-
+      <header class="page-header">
+        <div class="branding">
+          <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+          <h1>Registro de compras</h1>
+          <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+        </div>
+      </header>
 
       <div class="row">
 
         <div class="col-md-12">
-          <div class="page-header">
-            <center>
-              <h3 class="text-success">Lista de compras</h3>
-            </center>
-          </div>
+      
         </div>
         <div class="col-md-12">
           <div class="form-group">
@@ -296,9 +298,9 @@
         </td>
       </div>
 
-      <table id="lista-compras" class="table table-striped">
+      <table id="lista-compras" class="table  table-striped caption-top">
         <thead>
-          <tr>
+          <tr class="table-success">
             <th>Fecha/Ingreso</th>
             <th>Precio/unitario</th>
             <th>Cantidad</th>
