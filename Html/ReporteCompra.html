@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Reporte Compras</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'>
+    <link rel="stylesheet" href="/CSS/Finanzas.css">
+    <link rel="stylesheet" href="/CSS/Menu.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+
+  </head>
+
+  <body>
+
+    <body style="background-color:#EEF7E9;"></body>
+
+    <nav id="menu" class="left">
+      <ul>
+        <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+        <li>
+          <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/Compras.html">
+                    <aria-hidden="true"></i>Mis Compras
+                  </a></li>
+                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/ReporteCompra.html">
+                    <aria-hidden="true"></i>Reporte de Compras
+                  </a></li>
+                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+              </ul>
+            </li> 
+            <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+        <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+      </ul>
+      <a href="#" id="showmenu">
+        <i class="fa fa-align-justify"></i>
+      </a>
+    </nav>
+
+    <center>
+      <font face="times new roman">
+        <h1> ---- Compras ---- <img src="\Logo.jpeg" alt="logo" style="height:50px;width:130px;" aling="left"> </h1>
+      </font>
+    </center>
+
+
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Orden</th>
+          <th>Nombre</th>
+          <th>Fecha</th>
+          <th>Tipo de pago</th>
+          <th>Tipo de producto</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Chuleta</td>
+          <td>2016/01/15</td>
+          <td>Cheque</td>
+          <td>Insumo Venta</td>
+          <td data-order="1000">L.200.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Papeleria</td>
+          <td>2016/01/31</td>
+          <td>Cheque</td>
+          <td>Insumo Oficina</td>
+          <td data-order="1834">L.1,834.00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Impresora</td>
+          <td>2016/01/23</td>
+          <td>Efectivo</td>
+          <td>Insumo Oficina</td>
+          <td data-order="1500">L.1,850.00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Carnes</td>
+          <td>2016/02/26</td>
+          <td>Cheque</td>
+          <td>Insumo Venta</td>
+          <td data-order="1200">L.12,200.00</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Maquinaria</td>
+          <td>2016/02/26</td>
+          <td>Credito</td>
+          <td>Insumo Oficina</td>
+          <td data-order="2100">L.500,100.00</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    
+    <div>
+      <DIV align="center">
+        <a class="btn btn-primary" style="float:left;margin-right:20px;" href="/HTML/GraficoCompra.html" target="_blank">Ver Gráfico de Compra</a>
+      </DIV>
+    </div>
+
+    
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+    <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+    <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+    <script src="/JS/FinanzasCV.js"></script>
+    <script src="/JS/Menu.js"></script>
+  </body>
+
+</html>

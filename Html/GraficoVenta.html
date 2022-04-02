@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Reporte Gráfico</title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+        <link rel="stylesheet" href="/CSS/GraficoCV.css">
+        <link rel="stylesheet" href="/CSS/Menu.css">
+
+    </head>
+
+    <body>
+
+
+        <body style="background-color:#EEF7E9;"></body>
+
+        <nav id="menu" class="left">
+            <ul>
+                <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+                <li>
+                    <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/Compras.html">
+                                        <aria-hidden="true"></i>Mis Compras
+                                    </a></li>
+                                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="/Html/ReporteCompra.html">
+                                        <aria-hidden="true"></i>Reporte de Compras
+                                    </a></li>
+                                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+                            </ul>
+                        </li>
+                        <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
+                                    aria-hidden="true"></i></i>Producción</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+            </ul>
+            <a href="#" id="showmenu">
+                <i class="fa fa-align-justify"></i>
+            </a>
+        </nav>
+
+        <!-- partial:index.partial.html -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <font face="times new roman">
+                    <h1><img src="\Logo.jpeg" alt="logo" style="height:50px;width:130px;"> --- Gráfico Mensual De Ventas</h1>
+                </font>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <hr />
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-6">
+                <div id="chart_div1" class="chart"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="chart_div2" class="chart"></div>
+            </div>
+        </div>
+
+        <center>
+            <Hr>
+            <font face="times new roman">
+                <h4>----------------Detalles----------------</h4>
+            </font>
+            <p><b>---> Total de Ventas Anual: </b> 200 </p>
+            <p><b>---> Total de Ingreso Anual en Lempiras: </b> 200,000 </p>
+            </Hr>
+        </center>
+        </center>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://www.google.com/jsapi'></script>
+        <script src="/JS/GraficoV.js"></script>
+        <script src="/JS/Menu.js"></script>
+    </body>
+
+</html>
