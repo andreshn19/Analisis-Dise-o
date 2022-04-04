@@ -13,9 +13,118 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/CSS/Menu.css">
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
 </head>
 
-<body>
+<body><br>
+
+   <!-- Button trigger modal -->
+    <button type="button" id="btnmodal" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal" data-nom="jose" data-ape="mendez">
+     Ingresar Datos de Inventario
+    </button>
+    
+    <script >
+        $(document).on("click", "#btnmodal",function () {
+            
+               var nombre =$(this).data('nom');
+              var apellido =$(this).data('ape');
+    
+            $("#nombre").val(nombre);
+            $("#apellido").val(apellido);
+            
+        })
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Inventario de Materia Prima</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div>
+                <form v-on:submit="createProduct">
+                  <div class="form-group">
+                    <label for="add-name">
+                      <h5><b>Codigo Producto</b> </h5>
+                    </label>
+                    <input class="form-control" id="add-name" v-model="product.name" required
+                      placeholder="CodigoProducto.." />
+                  </div>
+                  <div class="form-group">
+                    <label for="add-description">
+                      <h5><b>Descripción</b> </h5>
+                    </label>
+                    <textarea class="form-control" id="add-name" rows="1" v-model="product.description"
+                      placeholder="Descripción."></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="add-price">
+                      <h5><b>Precio de Compra</b> </h5>
+                    </label>
+                    <input type="text" class="form-control" id="add-price" v-model="product.price"
+                      placeholder="0000" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="add-price">
+                      <h5><b> Cantidad</b></h5>
+                    </label>
+                    <input type="text" class="form-control" id="add-email" v-model="product.email"
+                      placeholder="0000" />
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="add-description">
+                      <h5><b>Total</b> </h5>
+                    </label>
+                    <textarea class="form-control" id="add-name" rows="1" v-model="product.nota"
+                      placeholder="0000.."></textarea>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="add-description">
+                      <h5><b>Fecha de Ingreso</b> </h5>
+                    </label>
+                   
+                      <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
+
+                  </div>
+
+                 
+                  <center>
+                    <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                    <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                      Cancelar</button>
+                  </center>
+  
+  
+                </form>
+              </div>
+
+
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
   <nav id="menu" class="left">
     <ul>
@@ -72,65 +181,7 @@
     </a>
 </nav>
 
-    <div class="container"> 
-        <div class="consulta"> 
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="p-3 mb-2 bg-dark text-white text-center"> Inventario Materia Prima</h3>
-                    </div>
-                    <div class="col-12"> 
-                </div>
-            </div>
-        </div>  
-        
-    <div class="formulario">
-        <div class="row">
-            <div class="col-12">
-                <h3 class= "text-danger">Ingrese datos de Materia Prima</h3>
-            </div>
-            <div class="col-12">
-                <form class="Inventario">
-                   
-                     <div class="form-floating mb-3">
-                        <input type="CodigoProducto" class="form-control" id="floatingInput" placeholder="112233">
-                        <label for="floatingInput">CodigoProducto</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="Descripcion" class="form-control" id="floatingPassword" placeholder="Portatil">
-                        <label for="floatingPassword">Descripción</label>
-                      </div> 
-                      <div class="form-floating mb-3">
-                        <input type="PrecioDeCompra" class="form-control" id="floatingInput" placeholder="20000">
-                        <label for="floatingInput">PrecioDeCompra</label>
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input type="Cantidad" class="form-control" id="floatingPassword" placeholder="001">
-                        <label for="floatingPassword">Cantidad</label>
-                      </div> 
-
-                      <div class="form-floating mb-3">
-                        <input type="Total" class="form-control" id="floatingInput" placeholder="20000">
-                        <label for="floatingInput">Total</label>
-                      </div>
-           
-                      <div class="form-floating mb-3"></div>
-                      <label for=""class="text-black">Fecha de Ingreso:</label>
-                      <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-                    </div> 
-
-
-
-                    <Hr>
-                        <div class="button"> 
-                            <input type="submit" id="btnagregar" onclick="AgregarInventario()" value="Ingresar Inventario de Materia Prima" class= "btn btn-danger">
-                        </div>
-                    </Hr>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <br>
 </br>
  <!-- Tabla -->
@@ -204,6 +255,27 @@
                 </td>
             </tr>
 
+
+            <tr v-for="(Inventario, indice) of Inventario">
+                <th scope="row">32145</th>
+                <td> Silla </td>
+                <td> 500 </td>
+                <td> 005</td>
+                <td> 2500 </td>
+                <td> 21/03/2022 </td>
+               
+                <!--  Stock -->
+                <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad < 0">SI</td>
+         
+
+                <!-- Botones -->
+                <td>
+                    <button @click="Inventario.cantidad++" class="btn btn btn-outline-info btn-sm">+</button>
+                </td>
+                <td>
+                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">-</button>
+                </td>
+            </tr>
         </tbody>
       </table>
       <!-- Total -->
