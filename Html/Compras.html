@@ -10,7 +10,10 @@
 
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-  <link rel="stylesheet" href="/CSS/Menu.css"></link>
+  <link rel="stylesheet" href="/CSS/Menu.css">
+  </link>
+
+
 
 
 </head>
@@ -30,58 +33,58 @@
 
     <nav id="menu" class="left">
       <ul>
-          <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+        <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
 
-          <li>
-              <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+        <li>
+          <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
               <ul>
-                  <li>
-                      <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                          <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                          <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                      </ul>
-                  </li>
-
-                  <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                  <li>
-                      <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="/Html/Compras.html">
-                                  <aria-hidden="true"></i>Mis Compras
-                              </a></li>
-                          <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                          <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="/Html/ReporteCompra.html">
-                                  <aria-hidden="true"></i>Reporte de Compras
-                              </a></li>
-                          <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                      </ul>
-                  </li>
-                  <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
-                              aria-hidden="true"></i></i>Producción</a>
-                  </li>
+                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
               </ul>
-          </li>
-          <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-          <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+            </li>
+
+            <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/Compras.html">
+                    <aria-hidden="true"></i>Mis Compras
+                  </a></li>
+                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/ReporteCompra.html">
+                    <aria-hidden="true"></i>Reporte de Compras
+                  </a></li>
+                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+              </ul>
+            </li>
+            <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o"
+                  aria-hidden="true"></i></i>Producción</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+        <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
       </ul>
       <a href="#" id="showmenu">
-          <i class="fa fa-align-justify"></i>
+        <i class="fa fa-align-justify"></i>
       </a>
-  </nav>
+    </nav>
 
     <div class="container" ng-controller="listaComprasController">
       <header class="page-header">
@@ -95,7 +98,7 @@
       <div class="row">
 
         <div class="col-md-12">
-      
+
         </div>
         <div class="col-md-12">
           <div class="form-group">
@@ -105,7 +108,8 @@
 
           <div>
             <td>
-              <DIV align="right"> <a href="#openModal1" class="btn btn-success glyphicon glyphicon-plus"> Nueva compra </a>
+              <DIV align="right"> <a href="#openModal1" class="btn btn-success glyphicon glyphicon-plus"> Nueva compra
+                </a>
               </DIV>
               <br>
               <div id="openModal1" class="modalDialogo">
@@ -176,14 +180,6 @@
                           <tr>
 
                             <td></td>
-                            <td><label for="observacion">Observación:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
-                                <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
-                                  placeholder="observacion" class="form-control" required>
-                              </div>
-                            </td>
 
                             <td><label for="nombreproducto">Nombre Producto:</label></td>
                             <td>
@@ -199,8 +195,8 @@
                             <td>
                               <div class="form-group"
                                 ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
-                                <input id="IDCompra" type="text" name="IDCompra"
-                                  ng-model="item.IDCompra" placeholder="IDCompra" class="form-control" required>
+                                <input id="IDCompra" type="text" name="IDCompra" ng-model="item.IDCompra"
+                                  placeholder="IDCompra" class="form-control" required>
                               </div>
                             </td>
                           </tr>
@@ -308,7 +304,6 @@
             <th>Fecha/Ingreso</th>
             <th>Precio/unitario</th>
             <th>Cantidad</th>
-            <th>Observación</th>
             <th>Detalle</th>
             <th>IDCompra</th>
             <th>IDInventario</th>
@@ -325,7 +320,6 @@
             <td>{{ item.fecha | date: "dd/MM/yyyy"}}</td>
             <td>{{ item.precio | currency:"L. "}}</td>
             <td>{{ item.cantidad}}</td>
-            <td>{{ item.observacion }}</td>
             <td>{{ item.nombreproducto }}</td>
             <td>{{ item.IDCompra }}</td>
             <td>{{ item.IDInventario }}</td>
@@ -337,213 +331,254 @@
 
               <!--Modal PARA EDITAR-------------------->
               <a href="#openModal2" class="btn btn-warning">Editar</a>
-              <div id="openModal2" class="modalDialogo">
-                <div><a href="#close" title="cerrar" class="cerrar">X</a>
+            <td><a href="#openModal3" class="btn btn-danger">Borrar</a></td>
 
-                  <!--Modal-------------------->
-                  <table border="0" width="900" style="margin: 0 auto;">
-                    <tr>
-
-                      <td>
-                        <center>
-                          <h3 class="text-success">Editar compra #1</h3>
-                        </center><br>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <table border="0">
-                          <!--ESPACIO-->
-                          <tr>
-                            <td>
-                              <br>
-                            </td>
-                          </tr>
-
-                          <!--FIN ESPACIO-->
-                          <tr>
-
-                            <td></td>
-                            <td><label for="fecha">Fecha:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
-                                <input id="fecha" type="date" name="fecha" ng-model="item.fecha" placeholder="fecha"
-                                  class="form-control" placeholder="dd-MM-yyyy" required>
-                              </div>
-                            </td>
-
-
-                            <td><label for="precio">Precio/Unitario:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
-                                <input id="precio" type="number" name="precio" ng-model="item.precio" readonly
-                                  placeholder="precio" class="form-control" required>
-                              </div>
-                            </td>
-
-                            <td><label for="cantidad">Cantidad:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
-                                <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad"
-                                  placeholder="cantidad" class="form-control" required>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <!--ESPACIO-->
-                          <tr>
-                            <td>
-                              <br>
-                            </td>
-                          </tr>
-                          <!--FIN ESPACIO-->
-
-                          <tr>
-
-                            <td></td>
-                            <td><label for="observacion">Observación:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.observacion.$touched && formItem.observacion.$invalid }">
-                                <input id="observacion" type="text" name="observacion" ng-model="item.observacion"
-                                  placeholder="observacion" class="form-control" required>
-                              </div>
-                            </td>
-
-                            <td><label for="nombreproducto">Nombre Producto:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
-                                <input id="nombreproducto" type="text" name="nombreproducto"
-                                  ng-model="item.nombreproducto" placeholder="Nombre producto" class="form-control"
-                                  required>
-                              </div>
-                            </td>
-
-                            <td><label for="IDCompra">ID Compra:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
-                                <input id="IDCompra" type="text" readonly=»readonly» name="IDCompra"
-                                  ng-model="item.IDCompra" placeholder="IDCompra" class="form-control" required>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <!--ESPACIO-->
-                          <tr>
-                            <td>
-                              <br>
-                            </td>
-                          </tr>
-                          <!--FIN ESPACIO-->
-
-                          <tr>
-
-                            <td></td>
-                            <td><label for="IDInventario">ID Inventario:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
-                                <input id="IDInventario" type="text" name="IDInventario" ng-model="item.IDInventario"
-                                  placeholder="IDInventario" class="form-control" required>
-                              </div>
-                            </td>
-
-
-                            <td><label for="IDUsuario">ID Usuario:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
-
-                                <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario"
-                                  placeholder="IDUsuario" class="form-control" required>
-                              </div>
-                            </td>
-
-                            
-                            <td><label for="tipoCompra">Tipo de Compra:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
-
-                                <select class="form-control" id="tipoCompra">
-                                  <option id="elija">..Elija el tipo de compra..</option>
-                                  <option id="cheque">Cheque</option>
-                                  <option id="efectivo">Efectivo</option>
-                                  <option id="credito">Crédito</option>
-                                </select>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <!--ESPACIO-->
-                          <tr>
-                            <td>
-                              <br>
-                            </td>
-                          </tr>
-                          <!--FIN ESPACIO-->
-
-
-                          <tr>
-
-                            <td></td>
-                            <td><label for="tipoProducto">Tipo de Producto:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
-                                <select class="form-control" id="tipoProducto">
-                                  <option id="elija">..Elija el tipo de producto..</option>
-                                  <option id="efectivo">Insumo Oficina</option>
-                                  <option id="efectivo">Insumo Venta</option>
-                                </select>
-                              </div>
-                            </td>
-
-
-                            <td><label for="totalCompra">Total Compra:</label></td>
-                            <td>
-                              <div class="form-group"
-                                ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
-                                <input id="totalCompra" type="number" name="totalCompra" ng-model="item.totalCompra" readonly
-                                  placeholder="totalCompra" class="form-control" required>
-                              </div>
-                            </td>
-                          </tr>
-                </div>
 
         </tbody>
       </table>
-      <br>
-      <button class="btn btn-success" type="submit">Modificar</button>
+
+
+
+      </td>
+      </td>
+      </tr>
+      </table>
+
+
+      </tr>
+
+      </tr>
+      </tbody>
+      </table>
+
+      <!--<b> Tax Totals: </b> {{ taxTotals | sumFilter | currency }}-->
+      <p><b>Total de Items: </b> {{filteredItem.length}} de {{items.length}}</p>
+
+      <p ng-hide="filteredItem.length">No hay resultados de su busqueda</p>
+
+      <p><b>Total en compras</b> = {{filteredItem| sumOfValue:'totalCompra'| currency:"L." }} de {{ (totalCompra) |
+        currency:"L." }}</p>
+
     </div>
-    </td>
-    </td>
-    </tr>
-    </table>
-
-    <td><button type="button" class="btn btn-danger">Borrar</button></td>
-    </tr>
-
-    </tr>
-    </tbody>
-    </table>
-
-    <!--<b> Tax Totals: </b> {{ taxTotals | sumFilter | currency }}-->
-    <p><b>Total de Items: </b> {{filteredItem.length}} de {{items.length}}</p>
-
-    <p ng-hide="filteredItem.length">No hay resultados de su busqueda</p>
-
-    <p><b>Total en compras</b> = {{filteredItem| sumOfValue:'totalCompra'| currency:"L." }} de {{ (totalCompra) |
-      currency:"L." }}</p>
-
     </div>
     </div>
+
+    <div id="openModal2" class="modalDialogo">
+      <div><a href="#close" title="cerrar" class="cerrar">X</a>
+
+        <!--Modal-------------------->
+        <table border="0" width="900" style="margin: 0 auto;">
+          <tr>
+
+            <td>
+              <center>
+                <h3 class="text-success">Editar compra #1</h3>
+              </center><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table border="0">
+                <!--ESPACIO-->
+                <tr>
+                  <td>
+                    <br>
+                  </td>
+                </tr>
+
+                <!--FIN ESPACIO-->
+                <tr>
+
+                  <td></td>
+                  <td><label for="fecha">Fecha:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.fecha.$touched && formItem.fecha.$invalid }">
+                      <input id="fecha" type="date" name="fecha" ng-model="item.fecha" placeholder="fecha"
+                        class="form-control" placeholder="dd-MM-yyyy" required>
+                    </div>
+                  </td>
+
+
+                  <td><label for="precio">Precio/Unitario:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.precio.$touched && formItem.precio.$invalid }">
+                      <input id="precio" type="number" name="precio" ng-model="item.precio" readonly
+                        placeholder="precio" class="form-control" required>
+                    </div>
+                  </td>
+
+                  <td><label for="cantidad">Cantidad:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.cantidad.$touched && formItem.cantidad.$invalid }">
+                      <input id="cantidad" type="number" name="cantidad" ng-model="item.cantidad" placeholder="cantidad"
+                        class="form-control" required>
+                    </div>
+                  </td>
+                </tr>
+
+                <!--ESPACIO-->
+                <tr>
+                  <td>
+                    <br>
+                  </td>
+                </tr>
+                <!--FIN ESPACIO-->
+
+                <tr>
+
+                  <td></td>
+
+                  <td><label for="nombreproducto">Nombre Producto:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.nombreproducto.$touched && formItem.nombreproducto.$invalid }">
+                      <input id="nombreproducto" type="text" name="nombreproducto" ng-model="item.nombreproducto"
+                        placeholder="Nombre producto" class="form-control" required>
+                    </div>
+                  </td>
+
+                  <td><label for="IDCompra">ID Compra:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.IDCompra.$touched && formItem.IDCompra.$invalid }">
+                      <input id="IDCompra" type="text" readonly=»readonly» name="IDCompra" ng-model="item.IDCompra"
+                        placeholder="IDCompra" class="form-control" required>
+                    </div>
+                  </td>
+                </tr>
+
+                <!--ESPACIO-->
+                <tr>
+                  <td>
+                    <br>
+                  </td>
+                </tr>
+                <!--FIN ESPACIO-->
+
+                <tr>
+
+                  <td></td>
+                  <td><label for="IDInventario">ID Inventario:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.IDInventario.$touched && formItem.IDInventario.$invalid }">
+                      <input id="IDInventario" type="text" name="IDInventario" ng-model="item.IDInventario"
+                        placeholder="IDInventario" class="form-control" required>
+                    </div>
+                  </td>
+
+
+                  <td><label for="IDUsuario">ID Usuario:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.IDUsuario.$touched && formItem.IDUsuario.$invalid }">
+
+                      <input id="IDUsuario" type="text" name="IDUsuario" ng-model="item.IDUsuario"
+                        placeholder="IDUsuario" class="form-control" required>
+                    </div>
+                  </td>
+
+
+                  <td><label for="tipoCompra">Tipo de Compra:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.tipoCompra.$touched && formItem.tipoCompra.$invalid }">
+
+                      <select class="form-control" id="tipoCompra">
+                        <option id="elija">..Elija el tipo de compra..</option>
+                        <option id="cheque">Cheque</option>
+                        <option id="efectivo">Efectivo</option>
+                        <option id="credito">Crédito</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+
+                <!--ESPACIO-->
+                <tr>
+                  <td>
+                    <br>
+                  </td>
+                </tr>
+                <!--FIN ESPACIO-->
+
+
+                <tr>
+
+                  <td></td>
+                  <td><label for="tipoProducto">Tipo de Producto:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.tipoProducto.$touched && formItem.tipoProducto.$invalid }">
+                      <select class="form-control" id="tipoProducto">
+                        <option id="elija">..Elija el tipo de producto..</option>
+                        <option id="efectivo">Insumo Oficina</option>
+                        <option id="efectivo">Insumo Venta</option>
+                      </select>
+                    </div>
+                  </td>
+
+
+                  <td><label for="totalCompra">Total Compra:</label></td>
+                  <td>
+                    <div class="form-group"
+                      ng-class="{ 'has-error': formItem.totalCompra.$touched && formItem.totalCompra.$invalid }">
+                      <input id="totalCompra" type="number" name="totalCompra" ng-model="item.totalCompra" readonly
+                        placeholder="totalCompra" class="form-control" required>
+                    </div>
+                  </td>
+
+                  <td></td>
+                  <td>
+                    <br>
+                  </td>
+                </tr>
+              </table>
+        </table>
+        <br>
+        <center>
+          <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+          <a href="#close"><button class="btn btn-success glyphicon glyphicon-repeat "> Cancelar</button></a>
+        </center>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="openModal3" class="modalDialogo">
+      <div><a href="#close" title="cerrar" class="cerrar">X</a>
+              <div class="modal-dialog">
+              <br><br><br><br>
+                <div class="modal-content">
+                  <div class="modal-body"  >
+                    <center>
+                      <h2><b>Esta seguro que desea eliminar socio</b> </h2>
+                      <h3>
+                        Recuerde que la acción no se podrá deshacer..
+                      </h3><br><br>
+                    </center>
+                          
+                  </div>
+                  <div class="modal-footer">
+
+                  </div>
+                </div>
+              </div>
+        <center>
+          <button type="submit" class="btn btn-danger glyphicon glyphicon-trash  btn-lg"> Borrar</button>
+          <a href="#close"><button class="btn btn-success glyphicon glyphicon-repeat btn-lg "> Cancelar</button></a>
+        </center>
+      </div>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

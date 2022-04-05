@@ -234,7 +234,7 @@ i {
   height: 0.5em;
   padding: 0.5em;
   font-size: 0.8em;
-  color: rgb(14, 85, 218);
+  color:#00a4a2;
 }
 
 i.icon-checkmark {
@@ -283,21 +283,4 @@ i.delete:hover {
   clear: both;
 }
 
-.logo {
-  width: 75px;
-  float: left;
-  margin-right: 15px;
-}
-
-.form-group {
-  max-width: 500px;
-}
-
-.actions {
-  padding: 10px 0;
-}
-
-.glyphicon-euro {
-  font-size: 12px;
-}
 
