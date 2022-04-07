@@ -1,4 +1,5 @@
 body, html { 
+  background: url(https://images.unsplash.com/photo-1434064511983-18c6dae20ed5?q=80&fm=jpg&s=c45f3bff08de3f8509e90f66aab9393f) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
