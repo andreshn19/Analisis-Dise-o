@@ -1,0 +1,23 @@
+.popover {
+    width: 350px;
+    text-align: center;
+}
+
+.criteria-met {
+    color: #5cb85c;
+}
+
+.criteria-failed {
+    color: #d9534f;
+}
+.password-glyphicon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.initial-state {
+    display: none;
+}
+.white-background{
+    background-color: #fff;
+    cursor: pointer;
+}

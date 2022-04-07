@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login recuperacion</title>
+  <!-- JS ===================== -->
+        <!-- load angular -->
+        <script src="https://code.angularjs.org/1.5.5/angular.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+        <!--Load angular bootstrap -->        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.js"></script>
+        <script src="app.js"></script>
+        <!-- CSS ===================== -->
+ <!--load font awesome-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <!-- load bootstrap -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/> 
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            body    { padding-top:30px; }
+        </style>        <link rel="stylesheet" href="/CSS/Preguntas.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- apply angular app and controller to body -->
+
+<body data-ng-app="validationApp">
+  <div class="container" data-ng-controller="RegistrationController">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1 class="text-center">Formulario de recuperacion de contraseña</h1></div>
+    <data-uib-tabset data-active="activeJustified" data-justified="true">
+      <data-uib-tab data-heading="Recuperacion de contraseña con E-mail" data-index="0">
+        <br/>
+        <div class="col-sm-8">
+          <!-- FORM -->
+          <form name="forms.userForm" novalidate>
+            <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+            <!-- EMAIL ID -->
+            <div class="form-group">
+              <div class="input-group">
+                <input type="email" name="emailId" class="form-control" placeholder="usuario@gmail.com" data-ng-model="user.email" data-ng-keyup="validateEmail()" />
+                <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"
+                                                data-uib-popover="Aqui va tu correo"
+                                                data-popover-trigger="'mouseenter'">
+                                            <span class="glyphicon glyphicon-exclamation-sign">
+                                            </span>
+                </button>
+                </span>
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" data-ng-if="emailWrong">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> {{emailValidationError}}
+            </div>
+            <!-- FIRST AND LAST NAME-->
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input type="text" name="firstName" class="form-control" placeholder="Nombres" data-ng-model="user.firstName" />
+              </div>
+              <div class="col-sm-6 form-group">
+                <input type="text" name="lastName" class="form-control" placeholder="Apellidos" data-ng-model="user.lastName" />
+              </div>
+            </div>
+            <!--PASSWORD -->
+            <div class="form-group">
+              <div class="input-group">
+                <input type="{{typeForFirstPassword}}" name="userPassword" class="form-control" placeholder="Contraseña" data-ng-model="user.password" data-ng-change="checkPasswordCriteria(user.password)" data-ng-focus="isCollapsed = !isCollapsed" data-ng-blur="isCollapsed = !isCollapsed"
+                />
+                <span class="input-group-addon white-background">
+                                        <i class="fa fa-eye" data-ng-click="changeInputType(0,$event)"></i>
+                                    </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default" data-uib-collapse="isCollapsed">
+                  <div class="panel-body">
+                    <p class="lead">Su contraseña debe: </p>
+                    <div class="list-group">
+                      <a data-ng-diabled = "true" class="list-group-item">
+                        <span data-ng-class="passwordLengthClass" class="password-glyphicon"></span>
+                        <span>contener{{minimumPasswordLength}} o mas caracteres</span>
+                      </a>
+                      <a class="list-group-item">
+                        <span data-ng-class="caseClass" class="password-glyphicon"></span>
+                        <span>tener una letra mayúscula y minúscula</span>
+                      </a>
+                      <a class="list-group-item">
+                        <span data-ng-class="numberClass" class="password-glyphicon"></span>
+                        <span>contener al menos un número</span>
+                      </a>
+
+                      <!--<a class="list-group-item">
+                                                          <span data-ng-class="nameClass" class="password-glyphicon"></span>
+                                                          <span>not have first or last name</span>
+                                                          </a>
+                                                          -->
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <p class="text-muted">Fuerza: </p>
+                        <data-uib-progressbar class="progress-striped" max="99" value="progress" type="{{strengthType}}" title="{{passwordStrength}}">
+                        </data-uib-progressbar>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ONE MORE TIME-->
+            <div class="form-group">
+              <div class="input-group">
+                <input type="{{typeForSecondPassword}}" name="confirmedUserPassword" class="form-control" placeholder="Confirmar contraseña" data-ng-model="user.confirmedPassword" data-ng-change="confirmEnteredPassword(user.confirmedPassword)" />
+                <span class="input-group-addon white-background"><i class="fa fa-eye"
+                                                                                data-ng-click="changeInputType(1)"></i></span>
+              </div>
+
+            </div>
+            <div class="alert alert-danger" role="alert" data-ng-if="confirmedPasswordMatchError">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> 
+              Las contraseñas no coinciden
+            </div>
+            <!--Date Of Birth-->
+            <div class="form-group row">
+              <div class="col-md-6">
+                <p class="input-group">
+                  <input type="text" class="form-control"  placeholder="Fecha de Nacimiento" data-ng-focus="focusEvent()" data-ng-blur="leaveEvent()" data-uib-datepicker-popup="dd/MM/yyyy" data-ng-model="user.dateofbirth" data-is-open="popup1.opened" data-datepicker-options="dateOptions"
+                    data-ng-required="true" data-close-text="Close" data-alt-input-formats="altInputFormats" />
+                  <span class="input-group-btn">
+                                            <button type="button"
+                                                    class="btn btn-default"
+                                                    data-ng-click="open1()">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </button>
+                                        </span>
+                </p>
+
+              </div>
+              <div class="col-md-6">{{user.dateofbirth}}</div>
+            </div>
+
+            <!--Security Questions-->
+            <div class="row">
+              <div class="btn-group form-group col-sm-6" data-uib-dropdown is-open="status[0].isopen">
+                <button id="securityQuestionOne" type="button" class="btn btn-default" data-uib-dropdown-toggle data-ng-disabled="disabled" style="width: 100%;">
+                                {{selectedValue[0].initialValue}} <span class="caret"></span>
+                            </button>
+                <ul class="dropdown-menu" data-uib-dropdown-menu role="menu" aria-labelledby="Pregunta de seguridad 1" style="z-index: 99; left:0;">
+                  <li role="menuitem">
+                    <a data-ng-repeat="question in securityQuestions" data-ng-click="selectValue(question.question,0)">
+                                        {{question.question}}
+                                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group col-sm-6">
+                <input type="text" class="form-control" placeholder="Respuesta" data-ng-model="user.securityQuestions[0].answerProvided" data-ng-disabled="selectQuestion[0].initialState" data-ng-trim="true" />
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" data-ng-if="selectQuestion[0].alreadySelected">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> {{questionSelectedError}}
+            </div>
+            <div class="row">
+              <div class="btn-group form-group col-sm-6" data-uib-dropdown data-is-open="status[1].isopen">
+                <button id="securityQuestionTwo" type="button" class="btn btn-default" data-uib-dropdown-toggle data-ng-disabled="disabled" style="width: 100%;">
+                                {{selectedValue[1].initialValue}} <span class="caret"></span>
+                            </button>
+                <ul class="dropdown-menu" data-uib-dropdown-menu role="menu" aria-labelledby="Pregunta de seguridad 2" style="z-index: 99; left:0;">
+                  <li role="menuitem">
+                    <a data-ng-repeat="question in securityQuestions" data-ng-click="selectValue(question.question,1)">{{question.question}}
+                                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group col-sm-6">
+                <input type="text" class="form-control" placeholder="Respuesta" data-ng-model="user.securityQuestions[1].answerProvided" data-ng-disabled="selectQuestion[1].initialState" data-ng-trim="true" />
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" data-ng-if="selectQuestion[1].alreadySelected">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> {{questionSelectedError}}
+            </div>
+            <div class="row">
+              <div class="btn-group form-group col-sm-6" data-uib-dropdown is-open="status[2].isopen">
+                <button id="securityQuestionThree" type="button" class="btn btn-default" data-uib-dropdown-toggle data-ng-disabled="disabled" style="width: 100%;">
+                                {{selectedValue[2].initialValue}} <span class="caret"></span>
+                            </button>
+                <ul class="dropdown-menu" data-uib-dropdown-menu role="menu" aria-labelledby="Pregunta de seguridad 3" style="z-index: 99; left:0;">
+                  <li role="menuitem">
+                    <a data-ng-repeat="question in securityQuestions" data-ng-click="selectValue(question.question,2)">
+                                        {{question.question}}
+                                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group col-sm-6">
+                <input type="text" class="form-control" placeholder="Respuesta" data-ng-model="user.securityQuestions[2].answerProvided" data-ng-disabled="selectQuestion[2].initialState" data-ng-trim="true" />
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" data-ng-if="selectQuestion[2].alreadySelected">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> {{questionSelectedError}}
+            </div>
+            <p class="text-center text-muted">Si olvida su contraseña, estas preguntas de seguridad se utilizarán para restablecer la contraseña</p>
+            <hr/>
+            <!--USER CONSENT-->
+            <p class="lead">Con el consentimiento del usuario para que los términos y condiciones y la privacidad se agreguen más adelante aquí</p>
+            <!-- SUBMIT BUTTON -->
+            <a href="/Html/loging.html"><button  type="submit" class="btn btn-primary" data-ng-disabled="!(forms.userForm.validEmail &&
+                                      forms.userForm.validConfirmedPasswords &&
+                                      forms.userForm.allSecurityAnswered)">
+                        Guardar
+                    </button></a>
+
+          </form>
+        </div>
+
+      
+
+  </div>
+
+</body>
+
+  <script  src="/JS/Preguntas.js"></script>
+
+</body>
+</html>
