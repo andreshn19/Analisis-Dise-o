@@ -77,7 +77,13 @@
     </a>
 </nav>
 
-
+<div class="container">
+  <header class="page-header">
+    <div class="branding">
+      <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+      <h1>Registro de inventario de productos</h1>
+      <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+    </div>
 <br>
 
    <!-- Button trigger modal -->
@@ -124,6 +130,13 @@
                     </label>
                     <input class="form-control" id="add-name" v-model="product.name" required
                       placeholder="IdInventario.." />
+                  </div>
+                  <div class="form-group">
+                    <label for="add-name">
+                      <h5><b>Producto</b> </h5>
+                    </label>
+                    <input class="form-control" id="add-name" v-model="product.name" required
+                      placeholder="Producto.." />
                   </div>
                   <div class="form-group">
                     <label for="add-description">
@@ -187,13 +200,7 @@
     <br>
 </br>
  <!-- Tabla -->
- <div class="container">
-  <header class="page-header">
-    <div class="branding">
-      <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
-      <h1>Registro de inventario de productos</h1>
-      <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
-    </div>
+ 
   </header>
 
 
@@ -226,10 +233,114 @@
 
                 <!-- Botones -->
                 <td>
-                    <button @click="Inventario.cantidad++" class="btn btn btn-outline-info btn-sm">+</button>
-                </td>
+                <!-- Button trigger modal -->
+    <button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
+      Editar
+     </button>
+     
+     <script >
+         $(document).on("click", "#btnmodal",function () {
+             
+                var nombre =$(this).data('nom');
+               var apellido =$(this).data('ape');
+     
+             $("#nombre").val(nombre);
+             $("#apellido").val(apellido);
+             
+         })
+     
+     
+     
+     
+     
+     </script>
+     
+   
+ 
+       
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <div>
+                 <form v-on:submit="createProduct">
+                   <div class="text-left form-group">
+                     <label for="add-name">
+                       <h5><b>Id de Inventario</b> </h5>
+                     </label>
+                     <input class="text-left form-control" id="add-name" v-model="product.name" required
+                       placeholder="IdInventario.." />
+                   </div>
+                   <div class="text-left form-group">
+                    <label for="add-name">
+                      <h5><b>Producto</b> </h5>
+                    </label>
+                    <input class="form-control" id="add-name" v-model="product.name" required
+                      placeholder="Producto.." />
+                  </div>
+                   <div class="text-left form-group">
+                     <label for="add-description">
+                       <h5><b>Id de Producto</b> </h5>
+                     </label>
+                     <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.description"
+                       placeholder="IdProducto."></textarea>
+                   </div>
+                   <div class="text-left form-group">
+                     <label for="add-price">
+                       <h5><b>Id de Usuario</b> </h5>
+                     </label>
+                     <input type="text" class="text-left form-control" id="add-price" v-model="product.price"
+                       placeholder="IdUsuario" />
+                   </div>
+                   <div class="text-left form-group">
+                     <label for="add-price">
+                       <h5><b> Fecha de Ingreso</b></h5>
+                     </label>
+                     <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
+ 
+                   </div>
+                  
+                   <div class="text-left form-group">
+                     <label for="add-description">
+                       <h5><b>Cantidad</b> </h5>
+                     </label>
+                     <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota"
+                       placeholder="Cantidad."></textarea>
+                   </div>
+                   
+                  
+                  
+                   
+                  
+                 
+                  
+                   <center>
+                     <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Editar</button>
+                     <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                       Cancelar</button>
+                   </center>
+   
+   
+                 </form>
+               </div>
+ 
+ 
+           
+             
+           </div>
+         </div>
+       </div>
+     </div>
+                  </td>
                 <td>
-                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">-</button>
+                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">Eliminar</button>
                 </td>
             </tr>
             
@@ -246,10 +357,113 @@
 
                 <!-- Botones -->
                 <td>
-                    <button @click="Inventario.cantidad++" class="btn btn btn-outline-info btn-sm">+</button>
-                </td>
+<!-- Button trigger modal -->
+<button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
+  Editar
+ </button>
+ 
+ <script >
+     $(document).on("click", "#btnmodal",function () {
+         
+            var nombre =$(this).data('nom');
+           var apellido =$(this).data('ape');
+ 
+         $("#nombre").val(nombre);
+         $("#apellido").val(apellido);
+         
+     })
+ 
+ 
+ 
+ 
+ 
+ </script>
+ 
+
+
+   
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div>
+             <form v-on:submit="createProduct">
+               <div class="text-left form-group">
+                 <label for="add-name">
+                   <h5><b>Id de Inventario</b> </h5>
+                 </label>
+                 <input class="text-left form-control" id="add-name" v-model="product.name" required
+                   placeholder="IdInventario.." />
+               </div>
+               <div class="text-left form-group">
+                <label for="add-name">
+                  <h5><b>Producto</b> </h5>
+                </label>
+                <input class="form-control" id="add-name" v-model="product.name" required
+                  placeholder="Producto.." />
+              </div>
+               <div class="text-left form-group">
+                 <label for="add-description">
+                   <h5><b>Id de Producto</b> </h5>
+                 </label>
+                 <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.description"
+                   placeholder="IdProducto."></textarea>
+               </div>
+               <div class="text-left form-group">
+                 <label for="add-price">
+                   <h5><b>Id de Usuario</b> </h5>
+                 </label>
+                 <input type="text" class="text-left form-control" id="add-price" v-model="product.price"
+                   placeholder="IdUsuario" />
+               </div>
+               <div class="text-left form-group">
+                 <label for="add-price">
+                   <h5><b> Fecha de Ingreso</b></h5>
+                 </label>
+                 <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
+
+               </div>
+              
+               <div class="text-left form-group">
+                 <label for="add-description">
+                   <h5><b>Cantidad</b> </h5>
+                 </label>
+                 <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota"
+                   placeholder="Cantidad."></textarea>
+               </div>
+               
+              
+              
+               
+              
+             
+              
+               <center>
+                 <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Editar</button>
+                 <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                   Cancelar</button>
+               </center>
+
+
+             </form>
+           </div>
+
+
+       
+         
+       </div>
+     </div>
+   </div>
+ </div>                </td>
                 <td>
-                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">-</button>
+                    <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">Eliminar</button>
                 </td>
             </tr>
 
