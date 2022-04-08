@@ -36,13 +36,13 @@ validationApp.controller('RegistrationController', function ($scope) {
     $scope.emailWrong = false;
     $scope.selectedValue = [
         {
-            'initialValue': "Security Question 1"
+            'initialValue': "Pregunta de seguriadad 1"
         },
         {
-            'initialValue': "Security Question 2"
+            'initialValue': "Pregunta de seguriadad 2"
         },
         {
-            'initialValue': "Security Question 3"
+            'initialValue': "Pregunta de seguriadad 3"
         }
     ];
     $scope.selectQuestion = [
@@ -76,7 +76,7 @@ validationApp.controller('RegistrationController', function ($scope) {
             "question": "What is the name of your favorite pet?"
         }
     ];
-    $scope.dateBirthPlaceHolder = "Date of Birth";
+    $scope.dateBirthPlaceHolder = "Fecha de Nacimiento";
     $scope.questionSelectedError = "Sorry this question is already selected.";
     $scope.inputType = "number";
     $scope.isCollapsed = true;

@@ -1,5 +1,5 @@
 $("#newUser").click(function(){
-    $("h1").text("Registration");
+    $("h1").text("Registrarse");
     $(".logo").css({
       "width":"120px",
       "height":"120px",
@@ -11,7 +11,7 @@ $("#newUser").click(function(){
   });
   
   $("#signup-btn,#getpass-btn").click(function(){
-    $("h1").text("Log in");
+    $("h1").text("Iniciar Sesión");
     $(".logo").css({
       "width":"150px",
       "height":"150px",
