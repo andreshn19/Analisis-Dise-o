@@ -15,7 +15,7 @@ var initPermissionRootState = function (item) {
 }
 $("#permissionWrapper").on("click", "#addUser", function () {
     var template = '<tr class="addState">' +
-        '<td><span class="iconUser"></span><span contenteditable="true" class="userName"></span></td>' +
+        '<td><span class="iconUser" contenteditable="true" class="userName"></span></td>' +
         '<td><div class="permissionTag active" data-perm="view">Ver</div></td>' +
         '<td><div class="permissionTag" data-perm="edit">Editar</div></td>' +
         '<td><div class="permissionTag" data-perm="sales">Ventas</div></td>' +
@@ -24,7 +24,7 @@ $("#permissionWrapper").on("click", "#addUser", function () {
         '<td><div class="permissionTag" data-perm="production">Produccion</div></td>' +
         '<td><div class="permissionTag" data-perm="report">Reporte</div></td>' +
         '<td><div class="permissionTag" data-perm="admin">Administrador</div></td>' +
-        '<td><a href="#" class="iconRemove deleteUser" title="Remove this user"></a></td>' +
+        '<td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>' +
         '</tr>';
     var user = $(template);
     $("#permissionsBody").prepend(user);
