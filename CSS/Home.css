@@ -37,6 +37,12 @@
     margin-right: 15px;
   }
   
+  .logo1 {
+    width: 75px;
+    float: center;
+    margin-right: 15px;
+  }
+
   .form-group {
     max-width: 500px;
   }

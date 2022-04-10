@@ -1,269 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Seguridad</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'>
-        <link rel="stylesheet" href="/CSS/Seguridad.css">
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-        <link rel="stylesheet" href="/CSS/Home.css">
-        <link rel="stylesheet" href="/CSS/Menu.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Seguridad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="/CSS/Seguridad.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="/CSS/Home.css">
+  <link rel="stylesheet" href="/CSS/Menu.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <nav id="menu" class="left">
+  <nav id="menu" class="left">
+    <ul>
+      <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+      <li>
+        <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
             <ul>
-              <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-      
-              <li>
-                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                      <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                      <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                    </ul>
-                  </li>
-      
-                  <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/Compras.html">
-                          <aria-hidden="true"></i>Mis Compras
-                        </a></li>
-                      <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                      <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/ReporteCompra.html">
-                          <aria-hidden="true"></i>Reporte de Compras
-                        </a></li>
-                      <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                    </ul>
-                  </li> 
-                  <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-              <li><a href="/Html/Seguridad.html"><i class="fa fa-info-circle"></i>Seguridad</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+              <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+              <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+              <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
             </ul>
-            <a href="#" id="showmenu">
-              <i class="fa fa-align-justify"></i>
-            </a>
-        </nav>
+          </li>
 
-        <body style="background-color:#F4F6F6"></body>
-        <!-- partial:index.partial.html -->
-        <center>
-        <font face="times new roman">
-            <h1>Administración De Permisos</h1>
-            <Font size=4>
-            <p>Empresa De Servicios Múltiples JPLSLP</p>
-            </Font>
-        </font>
-        </center>
-        <div id="permissionWrapper" class="permissionWrapper">
-        <label for="inputFilterPermission" class="listFilterLabel">Buscar Usuario</label>
-        <input id="inputFilterPermission" type="text" class="listFilterInput" />
-        <a id="addUser" href="#" class="iconAdd" title="Agregar Nuevo Usuario"></a>
-        <div class="clear"></div>
-        <table id="listFilterPermission" class="listFilterContainer permissionsTable" cellspacing="0" cellpadding="0">
-            <thead id="permissionsHead">
-            <tr class="doNotFilter">
-                <th>Usuarios</th>
-                <th>
-                <div id="view" class="permissionTag" data-perm="view">Ver</div>
-                </th>
-                <th>
-                <div id="edit" class="permissionTag" data-perm="edit">Editar</div>
-                </th>
-                <th>
-                <div id="sales" class="permissionTag" data-perm="sales">Ventas</div>
-                </th>
-                <th>
-                <div id="shopping" class="permissionTag" data-perm="shopping">Compras</div>
-                </th>
-                <th>
-                <div id="inventories" class="permissionTag" data-perm="inventories">Inventario</div>
-                </th>
-                <th>
-                <div id="production" class="permissionTag" data-perm="production">Produccion</div>
-                </th>
-                <th>
-                <div id="report" class="permissionTag" data-perm="report">Reporte</div>
-                </th>
-                <th>
-                <div id="admin" class="permissionTag" data-perm="admin">Administrador</div>
-                </th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody id="permissionsBody">
-            <tr>
-                <td><span class="iconUser" contenteditable="true" class="userName">Mario Martínez</span></td>
-                <td>
-                <div class="permissionTag active" data-perm="view">Ver</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="edit">Editar</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="sales">Ventas</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="shopping">Compras</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="inventories">Inventario</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="production">Produccion</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="report">Reporte</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="admin">Administrador</div>
-                </td>
-                <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
-            </tr>
-            <tr>
-                <td><span class="iconUser" contenteditable="true" class="userName">Guadalupe Pineda</span></td>
-                <td>
-                <div class="permissionTag active" data-perm="view">Ver</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="edit">Editar</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="sales">Ventas</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="shopping">Compras</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="inventories">Inventario</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="production">Produccion</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="report">Reporte</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="admin">Administrador</div>
-                </td>
-                <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
-            </tr>
-            <tr>
-                <td><span class="iconUser" contenteditable="true" class="userName">Petronila Gaméz</span></td>
-                <td>
-                <div class="permissionTag active" data-perm="view">Ver</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="edit">Editar</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="sales">Ventas</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="shopping">Compras</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="inventories">Inventario</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="production">Produccion</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="report">Reporte</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="admin">Administrador</div>
-                </td>
-                <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
-            </tr>
-            <tr>
-                <td><span class="iconUser" contenteditable="true" class="userName">Alejandro Pérez</span></td>
-                <td>
-                <div class="permissionTag active" data-perm="view">Ver</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="edit">Editar</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="sales">Ventas</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="shopping">Compras</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="inventories">Inventario</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="production">Produccion</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="report">Reporte</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="admin">Administrador</div>
-                </td>
-                <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
-            </tr>
-            <tr>
-                <td><span class="iconUser" contenteditable="true" class="userName">Manuel Sauceda</span></td>
-                <td>
-                <div class="permissionTag active" data-perm="view">Ver</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="edit">Editar</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="sales">Ventas</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="shopping">Compras</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="inventories">Inventario</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="production">Produccion</div>
-                </td>
-                <td>
-                <div class="permissionTag" data-perm="report">Reporte</div>
-                </td>
-                <td>
-                <div class="permissionTag active" data-perm="admin">Administrador</div>
-                </td>
-                <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
-            </tr>
-            </tbody>
-        </table>
-        </div>
-        <!-- partial -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="/JS/Seguridad.js"></script>
-        <script src="/JS/Menu.js"></script>
-    </body>
+          <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+          <li>
+            <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li><a href="/Html/Compras.html">
+                  <aria-hidden="true"></i>Mis Compras
+                </a></li>
+              <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+              <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li><a href="/Html/ReporteCompra.html">
+                  <aria-hidden="true"></i>Reporte de Compras
+                </a></li>
+              <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+            </ul>
+          </li>
+          <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+      <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
+      <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+    </ul>
+    <a href="#" id="showmenu">
+      <i class="fa fa-align-justify"></i>
+    </a>
+  </nav>
+
+
+  <body style="background-color:#F4F6F6"></body>
+  <!-- partial:index.partial.html -->
+  <center>
+    <font face="times new roman">
+
+      <div id="page-wrapper">
+        <header class="page-header">
+          <div class="branding">
+            <div>
+                <br>
+                <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo1" />
+                <h1>Administración de permisos</h1>
+                <a href="/Html/Home.htm">Empresa de servicios multiples JPLSLP</a>
+            </div>
+          </div>
+        </header>
+    </Font>
+    </font>
+  </center>
+
+
+  <div id="permissionWrapper" class="permissionWrapper">
+    <label for="inputFilterPermission" class="listFilterLabel">Buscar Usuario</label>
+    <input id="inputFilterPermission" type="text" class="listFilterInput" />
+    <a id="addUser" href="#" class="iconAdd" title="Agregar Nuevo Usuario"></a>
+    <div class="clear"></div>
+    <table id="listFilterPermission" class="listFilterContainer permissionsTable" cellspacing="0" cellpadding="0">
+      <thead id="permissionsHead">
+        <tr class="doNotFilter">
+          <th>Usuarios</th>
+          <th>
+            <div id="view" class="permissionTag" data-perm="view">Ver</div>
+          </th>
+          <th>
+            <div id="edit" class="permissionTag" data-perm="edit">Editar</div>
+          </th>
+          <th>
+            <div id="sales" class="permissionTag" data-perm="sales">Ventas</div>
+          </th>
+          <th>
+            <div id="shopping" class="permissionTag" data-perm="shopping">Compras</div>
+          </th>
+          <th>
+            <div id="inventories" class="permissionTag" data-perm="inventories">Inventario</div>
+          </th>
+          <th>
+            <div id="production" class="permissionTag" data-perm="production">Produccion</div>
+          </th>
+          <th>
+            <div id="report" class="permissionTag" data-perm="report">Reporte</div>
+          </th>
+          <th>
+            <div id="admin" class="permissionTag" data-perm="admin">Administrador</div>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="permissionsBody">
+        <tr>
+          <td><span class="iconUser" contenteditable="true" class="userName">Mario Martínez</span></td>
+          <td>
+            <div class="permissionTag active" data-perm="view">Ver</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="edit">Editar</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="sales">Ventas</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="shopping">Compras</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="inventories">Inventario</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="production">Produccion</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="report">Reporte</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="admin">Administrador</div>
+          </td>
+          <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
+        </tr>
+        <tr>
+          <td><span class="iconUser" contenteditable="true" class="userName">Guadalupe Pineda</span></td>
+          <td>
+            <div class="permissionTag active" data-perm="view">Ver</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="edit">Editar</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="sales">Ventas</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="shopping">Compras</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="inventories">Inventario</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="production">Produccion</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="report">Reporte</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="admin">Administrador</div>
+          </td>
+          <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
+        </tr>
+        <tr>
+          <td><span class="iconUser" contenteditable="true" class="userName">Petronila Gaméz</span></td>
+          <td>
+            <div class="permissionTag active" data-perm="view">Ver</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="edit">Editar</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="sales">Ventas</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="shopping">Compras</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="inventories">Inventario</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="production">Produccion</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="report">Reporte</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="admin">Administrador</div>
+          </td>
+          <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
+        </tr>
+        <tr>
+          <td><span class="iconUser" contenteditable="true" class="userName">Alejandro Pérez</span></td>
+          <td>
+            <div class="permissionTag active" data-perm="view">Ver</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="edit">Editar</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="sales">Ventas</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="shopping">Compras</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="inventories">Inventario</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="production">Produccion</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="report">Reporte</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="admin">Administrador</div>
+          </td>
+          <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
+        </tr>
+        <tr>
+          <td><span class="iconUser" contenteditable="true" class="userName">Manuel Sauceda</span></td>
+          <td>
+            <div class="permissionTag active" data-perm="view">Ver</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="edit">Editar</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="sales">Ventas</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="shopping">Compras</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="inventories">Inventario</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="production">Produccion</div>
+          </td>
+          <td>
+            <div class="permissionTag" data-perm="report">Reporte</div>
+          </td>
+          <td>
+            <div class="permissionTag active" data-perm="admin">Administrador</div>
+          </td>
+          <td><a href="#" class="iconRemove deleteUser" title="Eliminar Usuario"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="/JS/Seguridad.js"></script>
+  <script src="/JS/Menu.js"></script>
+</body>
 
 </html>
