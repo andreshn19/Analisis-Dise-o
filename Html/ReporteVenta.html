@@ -1,181 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Reporte Compras</title>
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-        <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
-        <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'>
-        <link rel="stylesheet" href="/CSS/Finanzas.css">
-        <link rel="stylesheet" href="/CSS/Menu.css">
-        <link rel="stylesheet" href="/CSS/Home.css">
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Compras</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'>
+    <link rel="stylesheet" href="/CSS/Finanzas.css">
+    <link rel="stylesheet" href="/CSS/Menu.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <body style="background-color:#F7F9F9"></body>
+    <body style="background-color:#F7F9F9"></body>
 
-        <nav id="menu" class="left">
-            <ul>
-              <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-      
-              <li>
+    <nav id="menu" class="left">
+        <ul>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+            <li>
                 <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
                 <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                      <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                      <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                    </ul>
-                  </li>
-      
-                  <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/Compras.html">
-                          <aria-hidden="true"></i>Mis Compras
-                        </a></li>
-                      <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                      <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                    <ul>
-                      <li><a href="/Html/ReporteCompra.html">
-                          <aria-hidden="true"></i>Reporte de Compras
-                        </a></li>
-                      <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                    </ul>
-                  </li> 
-                  <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-                  </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/Compras.html">
+                                    <aria-hidden="true">
+                                        </i>Mis Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                            <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/ReporteCompra.html">
+                                    <aria-hidden="true">
+                                        </i>Reporte de Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+                    </li>
                 </ul>
-              </li>
-              <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-              <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-            </ul>
-            <a href="#" id="showmenu">
-              <i class="fa fa-align-justify"></i>
-            </a>
-        </nav>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
+            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+        </ul>
+        <a href="#" id="showmenu">
+            <i class="fa fa-align-justify"></i>
+        </a>
+    </nav>
 
-        <div class="container"> <header class="page-header">
+    <div class="container">
+        <header class="page-header">
             <div class="branding">
-            <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
-            <h1>Reporte de ventas</h1>
-            <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+                <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+                <h1>Reporte de ventas</h1>
+                <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
             </div>
-        </header></div>
-       
-  
-
-        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Orden</th>
-                    <th>Fecha</th>
-                    <th>Tipo de producto</th>
-                    <th>Nombre</th>
-                    <th>Cantidad</th>
-                    <th>Precio por Libra</th>
-                    <th>Subtotal</th>
-                    <th>Impuesto</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2016/01/15</td>
-                    <td>Carne de cerdo</td>
-                    <td>Chuleta</td>
-                    <td>3</td>
-                    <td>L. 60.00</td>
-                    <td>L. 180.00</td>
-                    <td>L.27.00</td>
-                    <td data-order="1000">L. 207.00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2019/01/15</td>
-                    <td>Carne de cerdo</td>
-                    <td>Chorizo</td>
-                    <td>3</td>
-                    <td>L. 30.00</td>
-                    <td>L. 90.00</td>
-                    <td>L. 13.50</td>
-                    <td data-order="1200">L. 103.50</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2019/01/15</td>
-                    <td>Carne de Res</td>
-                    <td>Costilla</td>
-                    <td>4</td>
-                    <td>L. 90.00</td>
-                    <td>L. 360.00</td>
-                    <td>L. 54.00</td>
-                    <td data-order="1300">L. 414.00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2016/01/17</td>
-                    <td>Carne de Pollo</td>
-                    <td>Pechuga</td>
-                    <td>7</td>
-                    <td>L. 30.00</td>
-                    <td>L. 210.00</td>
-                    <td>L. 31.50</td>
-                    <td data-order="1400">L. 241.50</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>2016/01/15</td>
-                    <td>Carne de cerdo</td>
-                    <td>Chuleta</td>
-                    <td>3</td>
-                    <td>L. 60.00</td>
-                    <td>L. 180.00</td>
-                    <td>L.27.00</td>
-                    <td data-order="1000">L. 207.00</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <center><a class="btn btn-primary" style="float:left;margin-right:20px;" href="/HTML/GraficoVenta.html"
-                target="_blank">Ver Gráfico de Venta</a></center>
+        </header>
+    </div>
 
 
-        <!-- partial -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-        <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
-        <script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
-        <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js'></script>
-        <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
-        <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
-        <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
-        <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
-        <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
-        <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
-        <script src="/JS/FinanzasCV.js"></script>
-        <script src="/JS/Menu.js"></script>
-    </body>
+
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Orden</th>
+                <th>Fecha</th>
+                <th>Tipo de producto</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio por Libra</th>
+                <th>Subtotal</th>
+                <th>Impuesto</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2016/01/15</td>
+                <td>Carne de cerdo</td>
+                <td>Chuleta</td>
+                <td>3</td>
+                <td>L. 60.00</td>
+                <td>L. 180.00</td>
+                <td>L.27.00</td>
+                <td data-order="1000">L. 207.00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2019/01/15</td>
+                <td>Carne de cerdo</td>
+                <td>Chorizo</td>
+                <td>3</td>
+                <td>L. 30.00</td>
+                <td>L. 90.00</td>
+                <td>L. 13.50</td>
+                <td data-order="1200">L. 103.50</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2019/01/15</td>
+                <td>Carne de Res</td>
+                <td>Costilla</td>
+                <td>4</td>
+                <td>L. 90.00</td>
+                <td>L. 360.00</td>
+                <td>L. 54.00</td>
+                <td data-order="1300">L. 414.00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2016/01/17</td>
+                <td>Carne de Pollo</td>
+                <td>Pechuga</td>
+                <td>7</td>
+                <td>L. 30.00</td>
+                <td>L. 210.00</td>
+                <td>L. 31.50</td>
+                <td data-order="1400">L. 241.50</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2016/01/15</td>
+                <td>Carne de cerdo</td>
+                <td>Chuleta</td>
+                <td>3</td>
+                <td>L. 60.00</td>
+                <td>L. 180.00</td>
+                <td>L.27.00</td>
+                <td data-order="1000">L. 207.00</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <center><a class="btn btn-primary" style="float:left;margin-right:20px;" href="/HTML/GraficoVenta.html" target="_blank">Ver Gráfico de Venta</a></center>
+
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
+    <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+    <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+    <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+    <script src="/JS/FinanzasCV.js"></script>
+    <script src="/JS/Menu.js"></script>
+</body>
 
 </html>

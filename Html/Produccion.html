@@ -20,56 +20,63 @@
 
     <nav id="menu" class="left">
         <ul>
-          <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-  
-          <li>
-            <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+            <li>
+                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
                 <ul>
-                  <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                  <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                  <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/Compras.html">
+                                    <aria-hidden="true">
+                                        </i>Mis Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                            <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/ReporteCompra.html">
+                                    <aria-hidden="true">
+                                        </i>Reporte de Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+                    </li>
                 </ul>
-              </li>
-  
-              <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-              <li>
-                <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="/Html/Compras.html">
-                      <aria-hidden="true"></i>Mis Compras
-                    </a></li>
-                  <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                  <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="/Html/ReporteCompra.html">
-                      <aria-hidden="true"></i>Reporte de Compras
-                    </a></li>
-                  <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                </ul>
-              </li> 
-              <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-          <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-          <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
+            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
         <a href="#" id="showmenu">
-          <i class="fa fa-align-justify"></i>
+            <i class="fa fa-align-justify"></i>
         </a>
     </nav>
 
@@ -78,103 +85,103 @@
     <form id="formulario">
         <div class="container">
             <header class="page-header">
-              <div class="branding">
-                <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
-                <h1>Registro de reportes de producción</h1>
-                <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
-              </div>
+                <div class="branding">
+                    <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+                    <h1>Registro de reportes de producción</h1>
+                    <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+                </div>
             </header><br>
-        <div id="produccion">
-            <div class="linea-container">
-                <div class="date-range">
-                    <fieldset>
-                        <label for="linea1-from">ID DEL PRODUCTO:</label>
-                        <input type="text" placeholder="ingrese id producto" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-to">CANTIDAD PRODUCTO:</label>
-                        <input type="text" placeholder="ingrese su cantidad" />
-                    </fieldset>
+            <div id="produccion">
+                <div class="linea-container">
+                    <div class="date-range">
+                        <fieldset>
+                            <label for="linea1-from">ID DEL PRODUCTO:</label>
+                            <input type="text" placeholder="ingrese id producto" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="linea1-to">CANTIDAD PRODUCTO:</label>
+                            <input type="text" placeholder="ingrese su cantidad" />
+                        </fieldset>
 
-                    <fieldset>
-                        <label for="linea1-from">NOMBRE DEL PRODUCTO:</label>
-                        <input type="text" placeholder="ingrese producto" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-from">FECHA EMISION:</label>
-                        <input type="date" placeholder="Date" />
-                    </fieldset>
+                        <fieldset>
+                            <label for="linea1-from">NOMBRE DEL PRODUCTO:</label>
+                            <input type="text" placeholder="ingrese producto" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="linea1-from">FECHA EMISION:</label>
+                            <input type="date" placeholder="Date" />
+                        </fieldset>
 
-                    <fieldset>
-                        <label for="linea1-to">FECHA VENCIMIENTO:</label>
-                        <input type="date" placeholder="Date" />
-                    </fieldset>
-                    <fieldset>
-                        <label for="linea1-from">USUARIO:</label>
-                        <input type="text" placeholder="Ingrese Username" />
-                    </fieldset>
+                        <fieldset>
+                            <label for="linea1-to">FECHA VENCIMIENTO:</label>
+                            <input type="date" placeholder="Date" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="linea1-from">USUARIO:</label>
+                            <input type="text" placeholder="Ingrese Username" />
+                        </fieldset>
+                    </div>
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th class="pieza text-center">Id del producto</th>
+                                <th class="fecha text-center">Cantidad del producto</th>
+                                <th class="orden text-center">Nombre del producto</th>
+                                <th class="linea text-center">Emision</th>
+                                <th class="linea text-center">Vencimiento</th>
+                                <th class="linea text-center">Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="Id del prodcuto text-center">5000</td>
+                                <td class="Tipo de inventario text-center">17</td>
+                                <td class="nombre del producto text-center">Costilla de cerdo</td>
+                                <td class="fecha emision text-center">15/03/2022</td>
+                                <td class="fecha vencimiento text-center">01/03/2023</td>
+                                <td class="usuario text-center">RJ45@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td class="Id del prodcuto text-center">6000</td>
+                                <td class="Tipo de inventario text-center">20</td>
+                                <td class="nombre del producto text-center">Tajo de cerdo</td>
+                                <td class="fecha emision text-center">20/03/2022</td>
+                                <td class="fecha vencimiento text-center">10/11/2023</td>
+                                <td class="usuario text-center">carmen@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td class="Id del prodcuto text-center">7000</td>
+                                <td class="Tipo de inventario text-center">55</td>
+                                <td class="nombre del producto text-center">Tajo de res</td>
+                                <td class="fecha emision text-center">11/11/2022</td>
+                                <td class="fecha vencimiento text-center">12/05/2023</td>
+                                <td class="usuario text-center">raul@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td class="Id del prodcuto text-center">8000</td>
+                                <td class="Tipo de inventario text-center">100</td>
+                                <td class="nombre del producto text-center">Molida</td>
+                                <td class="fecha emision text-center">03/03/2022</td>
+                                <td class="fecha vencimiento text-center">02/03/2023</td>
+                                <td class="usuario text-center">lagoss@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        <li class="current" style="background: linear-gradient(to bottom, #f1ff330e 0%, #99a3ff 100%);">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                    <div class="button-container" onclick=" validar()">
+                        <a class="button" href="/Html/GenerarOrdenProduc.html">Imprimir Reporte</a>
+                    </div>
+
                 </div>
-
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th class="pieza text-center">Id del producto</th>
-                            <th class="fecha text-center">Cantidad del producto</th>
-                            <th class="orden text-center">Nombre del producto</th>
-                            <th class="linea text-center">Emision</th>
-                            <th class="linea text-center">Vencimiento</th>
-                            <th class="linea text-center">Usuario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="Id del prodcuto text-center">5000</td>
-                            <td class="Tipo de inventario text-center">17</td>
-                            <td class="nombre del producto text-center">Costilla de cerdo</td>
-                            <td class="fecha emision text-center">15/03/2022</td>
-                            <td class="fecha vencimiento text-center">01/03/2023</td>
-                            <td class="usuario text-center">RJ45@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto text-center">6000</td>
-                            <td class="Tipo de inventario text-center">20</td>
-                            <td class="nombre del producto text-center">Tajo de cerdo</td>
-                            <td class="fecha emision text-center">20/03/2022</td>
-                            <td class="fecha vencimiento text-center">10/11/2023</td>
-                            <td class="usuario text-center">carmen@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto text-center">7000</td>
-                            <td class="Tipo de inventario text-center">55</td>
-                            <td class="nombre del producto text-center">Tajo de res</td>
-                            <td class="fecha emision text-center">11/11/2022</td>
-                            <td class="fecha vencimiento text-center">12/05/2023</td>
-                            <td class="usuario text-center">raul@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td class="Id del prodcuto text-center">8000</td>
-                            <td class="Tipo de inventario text-center">100</td>
-                            <td class="nombre del producto text-center">Molida</td>
-                            <td class="fecha emision text-center">03/03/2022</td>
-                            <td class="fecha vencimiento text-center">02/03/2023</td>
-                            <td class="usuario text-center">lagoss@gmail.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ul class="pagination">
-                    <li class="current" style="background: linear-gradient(to bottom, #f1ff330e 0%, #99a3ff 100%);">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                </ul>
-                <div class="button-container" onclick=" validar()">
-                    <a class="button" href="/Html/GenerarOrdenProduc.html">Imprimir Reporte</a>
-                </div>
-
-            </div>
     </form>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

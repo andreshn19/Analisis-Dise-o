@@ -1,183 +1,198 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Formulario ventas </title>
-  <meta name="viewport" content="width=device-width, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="/CSS/Ventas.css">
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-<link rel="stylesheet" href="/CSS/Menu.css">
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+    <meta charset="UTF-8">
+    <title>Formulario ventas </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="/CSS/Ventas.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+    <link rel="stylesheet" href="/CSS/Menu.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
     <link rel="stylesheet" href="/CSS/Inventarios.css">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/CSS/Menu.css">
-    
+
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
 
 
 <body>
-  <nav id="menu" class="left">
-    <ul>
-      <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-
-      <li>
-        <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+    <nav id="menu" class="left">
         <ul>
-          <li>
-            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-              <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-              <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-            </ul>
-          </li>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
 
-          <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-          <li>
-            <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li><a href="/Html/Compras.html">
-                  <aria-hidden="true"></i>Mis Compras
-                </a></li>
-              <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-              <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-            <ul>
-              <li><a href="/Html/ReporteCompra.html">
-                  <aria-hidden="true"></i>Reporte de Compras
-                </a></li>
-              <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-            </ul>
-          </li> 
-          <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-          </li>
+            <li>
+                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/Compras.html">
+                                    <aria-hidden="true">
+                                        </i>Mis Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                            <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="/Html/ReporteCompra.html">
+                                    <aria-hidden="true">
+                                        </i>Reporte de Compras
+                                </a>
+                            </li>
+                            <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
+            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
-      </li>
-      <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-      <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-      <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-    </ul>
-    <a href="#" id="showmenu">
-      <i class="fa fa-align-justify"></i>
-    </a>
-</nav>
-<!-- partial:index.partial.html -->
+        <a href="#" id="showmenu">
+            <i class="fa fa-align-justify"></i>
+        </a>
+    </nav>
+    <!-- partial:index.partial.html -->
 
 
 
 
-<html ng-app="root">
-<div class="container" ng-controller="index">
+    <html ng-app="root">
+    <div class="container" ng-controller="index">
 
-  
-          <div class="box margin-right" id="shopping-list">
-            <br><h1>Formulario Ventas</h1>
-            
+
+        <div class="box margin-right" id="shopping-list">
+            <br>
+            <h1>Formulario Ventas</h1>
+
             <div id="errorMessage"><i class="icon-cross"></i>por favor llenar todos los campos</div>
-            
+
             <div id="successMessage"><i class="icon-checkmark"></i>Ventas agregada A la Factura</div>
-            
-            <div class="half margin-right"  >
-              <label > Elija el Tipo de carne</label>
-                <select class="form-select" aria-label="Default select example" ng-model="itemName"  >
+
+            <div class="half margin-right">
+                <label> Elija el Tipo de carne</label>
+                <select class="form-select" aria-label="Default select example" ng-model="itemName">
                     <option >Carne de res</option>
                     <option >Carne de Cerdo</option>
                     <option >Carne de pollo</option>
                   </select></td>
-            </div><div class="half"><input type='text'   class="searchButton" placeholder='Nombre Producto' ng-model="itemShop" required></div>
-             <div class="half margin-right">
+            </div>
+            <div class="half"><input type='text' class="searchButton" placeholder='Nombre Producto' ng-model="itemShop" required></div>
+            <div class="half margin-right">
                 <input type='number' class="searchButton margin-right" placeholder='Cantidad' ng-model="itemQuantity" required>
-            </div><div class="dollar half"> 
-              <span>$</span>
-              <input type='number' class="searchButton" placeholder='Precio' ng-model="itemPrice" required>
             </div>
-            
+            <div class="dollar half">
+                <span>$</span>
+                <input type='number' class="searchButton" placeholder='Precio' ng-model="itemPrice" required>
+            </div>
+
             <button id="addItem" ng-click="addItem()">Añadir Venta a Fctura</button>
-        
+
             <div class="list">
-              <table border="0" cellspacing="0">
-                <tr class="table-header">
-                  <td ></td>
-                  <td class="left">Tipo Producto</td>
-                  <td class="left">Nombre Producto</td>
-                  <td>Cantidad</td>
-                  <td class="center">Precio</td>
-                  <td class="center">Eliminar</td>
-                </tr>
-            
-                <tr ng-repeat="item in list | orderBy: '-checked':true">
-                  <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
-                  <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
-                  <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
-                  <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
-                  <td ng-class="{selected: item.checked==true}">{{item.price | currency}}</td>
-                  <td><button class="icon-cross delete"  ng-click="remove(item)" >Eliminar</button></td>
-                </tr>
-              </table>
-              <div ng-hide="list.length" class="center">Ingrese un nuevo producto a la Factura.</div>
-              <div class="cost cf">
-                <span class="left">SubTotal</span>
-                <span class="right" ng-class="{subtotal:length!==0}">{{getSubtotal()| currency }} </span>
+                <table border="0" cellspacing="0">
+                    <tr class="table-header">
+                        <td></td>
+                        <td class="left">Tipo Producto</td>
+                        <td class="left">Nombre Producto</td>
+                        <td>Cantidad</td>
+                        <td class="center">Precio</td>
+                        <td class="center">Eliminar</td>
+                    </tr>
+
+                    <tr ng-repeat="item in list | orderBy: '-checked':true">
+                        <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
+                        <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+                        <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
+                        <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
+                        <td ng-class="{selected: item.checked==true}">{{item.price | currency}}</td>
+                        <td><button class="icon-cross delete" ng-click="remove(item)">Eliminar</button></td>
+                    </tr>
+                </table>
+                <div ng-hide="list.length" class="center">Ingrese un nuevo producto a la Factura.</div>
+                <div class="cost cf">
+                    <span class="left">SubTotal</span>
+                    <span class="right" ng-class="{subtotal:length!==0}">{{getSubtotal()| currency }} </span>
                 </div>
-              <div class="cost cf">
-                <span class="left">Impuesto</span>
-                <span class="right" ng-class="{ISV:length!==0}">{{getImpueto()| currency}} </span>
+                <div class="cost cf">
+                    <span class="left">Impuesto</span>
+                    <span class="right" ng-class="{ISV:length!==0}">{{getImpueto()| currency}} </span>
                 </div>
-              <div class="cost cf">
-                <span class="left">Costo Total</span>
-                <span class="right" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
-              </div>
-              <button class="clear" ng-click="clearAll(list)">Limpiar Fctura</button>
+                <div class="cost cf">
+                    <span class="left">Costo Total</span>
+                    <span class="right" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
+                </div>
+                <button class="clear" ng-click="clearAll(list)">Limpiar Fctura</button>
             </div>
-          </div>
-         
-          
-          <div class="box" id="inventory">
+        </div>
+
+
+        <div class="box" id="inventory">
             <h1>Registro de Productos Vendidos</h1>
             <div class="list">
-              <table border="0" cellspacing="0">
-                <div ng-hide="inventory.length" class="center">Productos vendidos</div>
-                <tr ng-repeat="item in inventory">
-                  <td>{{item.name}}</td>
-                  <td class="left">{{item.shop}}</td>
-                  <td class="center">{{item.quantity}}</td>
-                  <td class="center">{{item.price | currency}}</td>
-                  <td><i class="icon-cross delete" ng-click="removeInventory(item)"></i></td>
-                </tr>
-              </table>
-              <button class="clear" ng-click="clearAll(inventory)">Limpiar Registro</button>
-              <a href="/Html/ImpresionFactura.html"><button class="center" >Imprimir Factura</button></a>
-          </div>
-          </div>
+                <table border="0" cellspacing="0">
+                    <div ng-hide="inventory.length" class="center">Productos vendidos</div>
+                    <tr ng-repeat="item in inventory">
+                        <td>{{item.name}}</td>
+                        <td class="left">{{item.shop}}</td>
+                        <td class="center">{{item.quantity}}</td>
+                        <td class="center">{{item.price | currency}}</td>
+                        <td><i class="icon-cross delete" ng-click="removeInventory(item)"></i></td>
+                    </tr>
+                </table>
+                <button class="clear" ng-click="clearAll(inventory)">Limpiar Registro</button>
+                <a href="/Html/ImpresionFactura.html"><button class="center" >Imprimir Factura</button></a>
+            </div>
         </div>
-</html>
-<!-- partial -->
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script><script  src="/JS/venta.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="/JS/Menu.js"></script>
+    </div>
+
+    </html>
+    <!-- partial -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+    <script src="/JS/venta.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/JS/Menu.js"></script>
 
 </body>
+
 </html>
