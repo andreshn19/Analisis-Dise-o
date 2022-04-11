@@ -97,3 +97,8 @@ print {
         display: none
     }
 }
+table{
+    white-space: nowrap;
+               overflow-x: auto;
+               
+   }

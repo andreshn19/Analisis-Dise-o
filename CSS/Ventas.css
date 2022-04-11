@@ -4,29 +4,33 @@
   box-sizing: border-box;
 }
 
-html, body {
-  background: #AFC7B9;
-  font-family: 'Lato', sans-serif;
-  height: 100%;
-  padding: 1em;
+  
+.conditions {
+  font-size: 0.7em;
+  color: #666;
 }
+
 
 .left {
   text-align: left !important;
+  font-size: 1em;
 }
 
 .center {
   text-align: center !important;
+  font-size: 1em;
 }
 
 .right {
   text-align: right !important;
+  font-size: 1em;
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 2080px;
   margin: 0 auto;
   height: 100%;
+  font-size: 1em;
 }
 
 .box {
@@ -43,27 +47,25 @@ html, body {
   margin-right: 1%;
 }
 
-h1 {
-  color: #3a3a3a;
-  text-align: center;
-  margin: 1em 0;
-}
+
 
 table {
-  border: none;
+  border: black;
   outline: none;
   width: 100%;
   margin: 0.5em 0 1em;
 }
 table tr.table-header td {
-  font-size: 0.7em;
-  font-weight: bolder;
+  font-size: 0.10 em;
+  font-weight: bold;
+  text-align: center;
 }
 table td {
-  padding: 0.75em 0.5em;
+  padding: 0.85em 0.7 em;
+  
 }
 table td:first-child {
-  text-align: left;
+  text-align: justify;
 }
 table td:nth-child(3) {
   text-align: center;
@@ -95,18 +97,22 @@ table tr:nth-child(2n+2) {
 .half {
   width: 49.5%;
   display: inline-block;
+  font-size: 1em;
 }
 .half input {
   width: 100%;
+  font-size: 1em;
 }
 
 .half:first-child {
   margin-right: 2%;
+  font-size: 2em;
 }
 
 .selected {
   text-decoration: line-through;
   color: #aaa;
+  
 }
 
 .dollar {
@@ -116,6 +122,7 @@ table tr:nth-child(2n+2) {
 
 .dollar input {
   padding-left: 2em;
+
 }
 
 .dollar span {
@@ -155,15 +162,7 @@ input[type='checkbox'] {
   font-size: 1em;
 }
 
-button.clear {
-  background: #3f5872;
-  border-bottom: 4px solid #2b3c4e;
-}
 
-button.clear:hover {
-  background: #384e65;
-  border-bottom: 2px solid #2b3c4e;
-}
 
 button {
   margin: 0.25em 0;
@@ -173,17 +172,25 @@ button {
   border: none;
   padding: 1.1em;
   border-radius: 6px;
-  width: 100%;
+ 
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   border-bottom: 4px solid #fa7263;
 }
 button:hover {
-  border-bottom: 2px solid #fa7263;
+  border-bottom: 2px solid #2f41ba;
   margin-bottom: 0.9em;
   box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.2);
 }
+
+.selectAltura {
+  display:block;
+  height:40px;
+  width:10px;
+  font-size: 10vh;
+}
+
 
 .cost {
   margin-bottom: 1em;
@@ -200,23 +207,23 @@ button:hover {
 }
 
 .subtotal {
-  background: #fb887c;
-  color: white;
+  background: #6cce54;
+  color: rgb(10, 10, 10);
   font-weight: bolder;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .ISV {
-  background: #fb887c;
-  color: white;
+  background: #6cce54;
+  color: rgb(15, 14, 14);
   font-weight: bolder;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .total {
-  background: #fb887c;
-  color: white;
+  background: #6cce54;
+  color: rgb(6, 6, 6);
   font-weight: bolder;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 #successMessage, #errorMessage {
@@ -226,16 +233,11 @@ button:hover {
   transition: display 0.3s ease;
 }
 
-i {
-  vertical-align: baseline;
-  margin-right: 0.5em;
-  border-radius: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  padding: 0.5em;
-  font-size: 0.8em;
-  color:#00a4a2;
+option{
+  font-size: 1em;
 }
+
+
 
 i.icon-checkmark {
   background: green;
@@ -248,7 +250,7 @@ i.icon-cross {
 i.delete {
   color: #fcaca4;
   background: transparent;
-  font-size: 1.1em;
+  font-size: 2em;
   vertical-align: sub;
   cursor: pointer;
 }
@@ -263,6 +265,8 @@ i.delete:hover {
 #errorMessage {
   color: red;
 }
+
+
 
 @media (max-width: 800px) {
   .box {
@@ -284,3 +288,8 @@ i.delete:hover {
 }
 
 
+table{
+  white-space: nowrap;
+             overflow-x: auto;
+             
+ }

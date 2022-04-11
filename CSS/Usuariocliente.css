@@ -16,8 +16,10 @@
   font-size: 12px;
 }
 
-table{
-  white-space: nowrap;
-             overflow-x: auto;
-             
- }
+table {
+  border: none;
+  border-collapse: collapse;
+  width:auto; 
+  height:20px;
+}
+

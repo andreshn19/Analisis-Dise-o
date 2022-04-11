@@ -141,7 +141,7 @@ $(document).ready(function() {
                         className: 'btn btn-app export imprimir',
                        
                         exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
+                            columns: [ 0, 1, 2, 3, 4, 5 ]
                         }
                     },
                     {

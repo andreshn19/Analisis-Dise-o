@@ -2,465 +2,533 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-
-    <title>Inventario</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-    <link rel="stylesheet" href="/CSS/Inventarios.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/CSS/Menu.css">
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <title>I_Productos</title>
+  <link rel="stylesheet" href="/CSS/Home.css">
+  <link rel="stylesheet" href="/CSS/Menu.css">
+  <link rel="stylesheet" href="/CSS/Usuarios.css">
+  <link rel="stylesheet" href="/CSS/Inventarios.css">
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 </head>
 
 <body>
 
+
+  <div id="wrapper">
+    <!-- Navigation -->
     <nav id="menu" class="left">
-        <ul>
-            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
 
+      <ul>
+        <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+
+        <li>
+          <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+          <ul>
             <li>
-                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-                <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                    <li>
-                        <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li>
-                                <a href="/Html/Compras.html">
-                                    <aria-hidden="true">
-                                        </i>Mis Compras
-                                </a>
-                            </li>
-                            <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                            <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li>
-                                <a href="/Html/ReporteCompra.html">
-                                    <aria-hidden="true">
-                                        </i>Reporte de Compras
-                                </a>
-                            </li>
-                            <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                        </ul>
-                    </li>
-                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-                    </li>
-                </ul>
+              <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+              </ul>
             </li>
-            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
-            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-        </ul>
-        <a href="#" id="showmenu">
-            <i class="fa fa-align-justify"></i>
-        </a>
+
+            <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/Compras.html">
+                    <aria-hidden="true"></i>Mis Compras
+                  </a></li>
+                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/ReporteCompra.html">
+                    <aria-hidden="true"></i>Reporte de Compras
+                  </a></li>
+                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+              </ul>
+            </li>
+            <li><a href="/Html/Produccion.html"><i class="fa fa-check-square-o"
+                  aria-hidden="true"></i></i>Producción</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+        <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+      </ul>
+      <a href="#" id="showmenu">
+        <i class="fa fa-align-justify"></i>
+      </a>
     </nav>
 
-    <div class="container">
-        <header class="page-header">
-            <div class="branding">
-                <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
-                <h1>Registro de inventario de productos</h1>
-                <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
-            </div>
-            <br>
-
-            <!-- Button trigger modal -->
-            <button type="button" id="btnmodal" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal" data-nom="jose" data-ape="mendez">
-     Ingresar Datos de Inventario
-    </button>
-
-            <script>
-                $(document).on("click", "#btnmodal", function() {
-
-                    var nombre = $(this).data('nom');
-                    var apellido = $(this).data('ape');
-
-                    $("#nombre").val(nombre);
-                    $("#apellido").val(apellido);
-
-                })
-            </script>
-
-
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Inventario de Productos</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div>
-                                <form v-on:submit="createProduct">
-                                    <div class="form-group">
-                                        <label for="add-name">
-                      <h5><b>Id de Inventario</b> </h5>
-                    </label>
-                                        <input class="form-control" id="add-name" v-model="product.name" required placeholder="IdInventario.." />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="add-name">
-                      <h5><b>Producto</b> </h5>
-                    </label>
-                                        <input class="form-control" id="add-name" v-model="product.name" required placeholder="Producto.." />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="add-description">
-                      <h5><b>Id de Producto</b> </h5>
-                    </label>
-                                        <textarea class="form-control" id="add-name" rows="1" v-model="product.description" placeholder="IdProducto."></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="add-price">
-                      <h5><b>Id de Usuario</b> </h5>
-                    </label>
-                                        <input type="text" class="form-control" id="add-price" v-model="product.price" placeholder="IdUsuario" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="add-price">
-                      <h5><b> Fecha de Ingreso</b></h5>
-                    </label>
-                                        <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="add-description">
-                      <h5><b>Cantidad</b> </h5>
-                    </label>
-                                        <textarea class="form-control" id="add-name" rows="1" v-model="product.nota" placeholder="Cantidad."></textarea>
-                                    </div>
-
-
-
-
-
-
-
-                                    <center>
-                                        <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
-                                        <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
-                      Cancelar</button>
-                                    </center>
-
-
-                                </form>
-                            </div>
-
-
-
-
-                        </div>
-                    </div>
+    <div id="wrapper">
+        <nav class="navbar-toggleable-md ">
+        
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <font size="6"><i class="fa fa-lock fa-fw"></i></font> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/Html/Seguridad.html">Seguridad</a>
                 </div>
-            </div>
+              </li>
+  
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <font size="6"><i class="fa fa-cog fa-database fa-fw"></i></font> 
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/Html/Backup.html"> Backup</a>                  
+                  </div>
+                </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <font size="6"><i class="fa fa-user fa-fw"></i></font> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/Html/Roles.html">Roles de usuarios</a>
+                  <a class="dropdown-item" href="/Html/loging.html">Cerrar seccion</a>
+                </div>
+              </li>
+  
+             
+            </ul>
+          </div>
+        </nav>
+      </div>
+  </div>
 
 
+  <div id="permissionWrapper" class="permissionWrapper">
+    <div id="page-wrapper">
+      <!-- /menu vertical -->
 
-
-
-
-            <br>
-            </br>
-            <!-- Tabla -->
-
+      <div class="container">
+        <header class="page-header">
+          <div class="branding">
+            <img src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png"  alt="Logo" title="Home page" class="logo" />
+            <h1>Registro de Inventario de productos</h1>
+            <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+          </div>
         </header>
 
-
-        <section class="container mt-5 table-responsive-md">
-            <table class="table text-center">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">IdInventario</th>
-                        <th scope="col">Producto</th>
-                        <th scope="col">IdUsuario</th>
-                        <th scope="col">Fecha Entrante</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Stock</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Eliminar</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(Inventario, indice) of Inventario">
-                        <th scope="row">101010</th>
-                        <td> Res </td>
-                        <td> 1111111 </td>
-                        <td> 17/03/2022 </td>
-                        <td> 0010 </td>
-
-                        <!--  Stock -->
-                        <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad < 0">SI</td>
+        <!-- Button trigger modal -->
+        <button type="button" id="btnmodal" class="btn btn-primary float-right glyphicon glyphicon-floppy-save"
+          data-toggle="modal" data-target="#exampleModal" data-nom="jose" data-ape="mendez">
+          Nuevo Registro
+        </button>
+        <br><br>
+        <div class="input-group mb-3">
+          <button class="btn btn-primary glyphicon glyphicon-floppy-search" type="button"
+            id="button-addon1 glyphicon glyphicon-trash">Busqueda</button>
+          <input type="text" class="form-control" placeholder=" " aria-label="Example text with button addon"
+            aria-describedby="button-addon1">
 
 
-                        <!-- Botones -->
-                        <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
-      Editar
-     </button>
+        </div>
 
-                            <script>
-                                $(document).on("click", "#btnmodal", function() {
-
-                                    var nombre = $(this).data('nom');
-                                    var apellido = $(this).data('ape');
-
-                                    $("#nombre").val(nombre);
-                                    $("#apellido").val(apellido);
-
-                                })
-                            </script>
-
-
-
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-             </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <form v-on:submit="createProduct">
-                                                    <div class="text-left form-group">
-                                                        <label for="add-name">
-                       <h5><b>Id de Inventario</b> </h5>
-                     </label>
-                                                        <input class="text-left form-control" id="add-name" v-model="product.name" required placeholder="IdInventario.." />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-name">
-                      <h5><b>Producto</b> </h5>
-                    </label>
-                                                        <input class="form-control" id="add-name" v-model="product.name" required placeholder="Producto.." />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-description">
-                       <h5><b>Id de Producto</b> </h5>
-                     </label>
-                                                        <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.description" placeholder="IdProducto."></textarea>
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-price">
-                       <h5><b>Id de Usuario</b> </h5>
-                     </label>
-                                                        <input type="text" class="text-left form-control" id="add-price" v-model="product.price" placeholder="IdUsuario" />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-price">
-                       <h5><b> Fecha de Ingreso</b></h5>
-                     </label>
-                                                        <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-
-                                                    </div>
-
-                                                    <div class="text-left form-group">
-                                                        <label for="add-description">
-                       <h5><b>Cantidad</b> </h5>
-                     </label>
-                                                        <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota" placeholder="Cantidad."></textarea>
-                                                    </div>
-
-
-
-
-
-
-
-                                                    <center>
-                                                        <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Editar</button>
-                                                        <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
-                       Cancelar</button>
-                                                    </center>
-
-
-                                                </form>
-                                            </div>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">Eliminar</button>
-                        </td>
-                    </tr>
-
-                    <tr v-for="(Inventario, indice) of Inventario">
-                        <th scope="row">123456</th>
-                        <td> Cerdo </td>
-                        <td> 1212121 </td>
-                        <td> 17/03/2022 </td>
-                        <td> 0005 </td>
-
-                        <!--  Stock -->
-                        <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad < 0">SI</td>
-
-
-                        <!-- Botones -->
-                        <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm" data-toggle="modal" data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
-  Editar
- </button>
-
-                            <script>
-                                $(document).on("click", "#btnmodal", function() {
-
-                                    var nombre = $(this).data('nom');
-                                    var apellido = $(this).data('ape');
-
-                                    $("#nombre").val(nombre);
-                                    $("#apellido").val(apellido);
-
-                                })
-                            </script>
-
-
-
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <form v-on:submit="createProduct">
-                                                    <div class="text-left form-group">
-                                                        <label for="add-name">
-                   <h5><b>Id de Inventario</b> </h5>
-                 </label>
-                                                        <input class="text-left form-control" id="add-name" v-model="product.name" required placeholder="IdInventario.." />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-name">
-                  <h5><b>Producto</b> </h5>
-                </label>
-                                                        <input class="form-control" id="add-name" v-model="product.name" required placeholder="Producto.." />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-description">
-                   <h5><b>Id de Producto</b> </h5>
-                 </label>
-                                                        <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.description" placeholder="IdProducto."></textarea>
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-price">
-                   <h5><b>Id de Usuario</b> </h5>
-                 </label>
-                                                        <input type="text" class="text-left form-control" id="add-price" v-model="product.price" placeholder="IdUsuario" />
-                                                    </div>
-                                                    <div class="text-left form-group">
-                                                        <label for="add-price">
-                   <h5><b> Fecha de Ingreso</b></h5>
-                 </label>
-                                                        <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data" class="form-control" placeholder="dd-MM-yyyy" required>
-
-                                                    </div>
-
-                                                    <div class="text-left form-group">
-                                                        <label for="add-description">
-                   <h5><b>Cantidad</b> </h5>
-                 </label>
-                                                        <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota" placeholder="Cantidad."></textarea>
-                                                    </div>
-
-
-
-
-
-
-
-                                                    <center>
-                                                        <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Editar</button>
-                                                        <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
-                   Cancelar</button>
-                                                    </center>
-
-
-                                                </form>
-                                            </div>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <button @click="Inventario.cantidad--" class="btn btn btn-outline-danger btn-sm">Eliminar</button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-            <!-- Total -->
-            <h4>Cantidad de Productos: <b class="text-danger">002</b></h4>
-
-        </section>
-
-        </section>
-
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="/JS/Inventarios.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        <script>
+          $(document).on("click", "#btnmodal", function () {
+            var nombre = $(this).data('nom');
+            var apellido = $(this).data('ape');
+            $("#nombre").val(nombre);
+            $("#apellido").val(apellido);
+          })
         </script>
-        <script src="/JS/Menu.js"></script>
 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Inventario de Productos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <form v-on:submit="createProduct">
+                    <div class="form-group">
+                      <label for="add-name">
+                        <h5><b>Id de Inventario</b> </h5>
+                      </label>
+                      <input class="form-control" id="add-name" v-model="product.name" required
+                        placeholder="IdInventario.." />
+                    </div>
+                    <div class="form-group">
+                      <label for="add-name">
+                        <h5><b>Producto</b> </h5>
+                      </label>
+                      <input class="form-control" id="add-name" v-model="product.name" required
+                        placeholder="Producto.." />
+                    </div>
+                    <div class="form-group">
+                      <label for="add-description">
+                        <h5><b>Id de Producto</b> </h5>
+                      </label>
+                      <textarea class="form-control" id="add-name" rows="1" v-model="product.description"
+                        placeholder="IdProducto."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="add-price">
+                        <h5><b>Id de Usuario</b> </h5>
+                      </label>
+                      <input type="text" class="form-control" id="add-price" v-model="product.price"
+                        placeholder="IdUsuario" />
+                    </div>
+                    <div class="form-group">
+                      <label for="add-price">
+                        <h5><b> Fecha de Ingreso</b></h5>
+                      </label>
+                      <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data"
+                        class="form-control" placeholder="dd-MM-yyyy" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="add-description">
+                        <h5><b>Cantidad</b> </h5>
+                      </label>
+                      <textarea class="form-control" id="add-name" rows="1" v-model="product.nota"
+                        placeholder="Cantidad."></textarea>
+                    </div>
+                    <center>
+                      <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "> Guardar</button>
+                      <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close"
+                        data-dismiss="modal">
+                        Cancelar</button>
+                    </center>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla -->
+        </header>
+        <section class="container mt-5 table-responsive-md">
+          <table class="table  table-striped caption-top">
+            <thead>
+              <tr class="table-success">
+                <th scope="col">Codigo</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Fecha Entrante</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(Inventario, indice) of Inventario">
+                <th scope="row">101010</th>
+                <td> Res </td>
+                <td> 1111111 </td>
+                <td> 17/03/2022 </td>
+                <td> 0010 </td>
+                <!--  Stock -->
+                <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad 0">SI</td>
+                <!-- Botones -->
+                <td>
+                  <!-- Button trigger modal -->
+                  <button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm glyphicon glyphicon-pencil" data-toggle="modal"
+                    data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
+                   
+                  </button>
+
+                  <script>
+                    $(document).on("click", "#btnmodal", function () {
+                      var nombre = $(this).data('nom');
+                      var apellido = $(this).data('ape');
+                      $("#nombre").val(nombre);
+                      $("#apellido").val(apellido);
+                    })
+                  </script>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div>
+                            <form v-on:submit="createProduct">
+                              <div class="text-left form-group">
+                                <label for="add-name">
+                                  <h5><b>Id de Inventario</b> </h5>
+                                </label>
+                                <input class="text-left form-control" id="add-name" v-model="product.name" required
+                                  placeholder="IdInventario.." />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-name">
+                                  <h5><b>Producto</b> </h5>
+                                </label>
+                                <input class="form-control" id="add-name" v-model="product.name" required
+                                  placeholder="Producto.." />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-description">
+                                  <h5><b>Id de Producto</b> </h5>
+                                </label>
+                                <textarea class="text-left form-control" id="add-name" rows="1"
+                                  v-model="product.description" placeholder="IdProducto."></textarea>
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-price">
+                                  <h5><b>Id de Usuario</b> </h5>
+                                </label>
+                                <input type="text" class="text-left form-control" id="add-price" v-model="product.price"
+                                  placeholder="IdUsuario" />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-price">
+                                  <h5><b> Fecha de Ingreso</b></h5>
+                                </label>
+                                <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data"
+                                  class="form-control" placeholder="dd-MM-yyyy" required>
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-description">
+                                  <h5><b>Cantidad</b> </h5>
+                                </label>
+                                <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota"
+                                  placeholder="Cantidad."></textarea>
+                              </div>
+                              <center>
+                                <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save ">
+                                  Editar</button>
+                                <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close"
+                                  data-dismiss="modal">
+                                  Cancelar</button>
+                              </center>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  
+              <button data-toggle="modal" href="#mi_modal" class="btn btn-danger glyphicon glyphicon-trash "></button>
+              <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                  </button>
+                  <div class="modal-content">
+
+
+                    <div class="modal-body"  >
+                      <center>
+                        <h4><b>¿Esta seguro que desea eliminar producto?</b> </h4>
+                        <h5>
+                          Recuerde que la acción no se podrá deshacer..
+                        </h5><br>
+                      </center>
+
+                      <center>
+                                
+                        <button type="submit" class="btn btn-danger iconRemove deleteUser "> Eliminar</button>
+                        <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                          Cancelar</button>
+                      </center>
+                    
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+                </td>
+              </tr>
+              <tr v-for="(Inventario, indice) of Inventario">
+                <th scope="row">123456</th>
+                <td> Cerdo </td>
+                <td> 1212121 </td>
+                <td> 17/03/2022 </td>
+                <td> 0005 </td>
+                <!--  Stock -->
+                <td class="text-danger" v-if="Inventario.cantidad == 0 || Inventario.cantidad  0">SI</td>
+                <!-- Botones -->
+                <td>
+                  <!-- Button trigger modal -->
+                  <button type="button" id="btnmodal" class="btn btn btn-outline-info btn-sm glyphicon glyphicon-pencil" data-toggle="modal"
+                    data-target="#exampleModal2" data-nom="jose" data-ape="mendez">
+                  </button>
+
+                  <script>
+                    $(document).on("click", "#btnmodal", function () {
+                      var nombre = $(this).data('nom');
+                      var apellido = $(this).data('ape');
+                      $("#nombre").val(nombre);
+                      $("#apellido").val(apellido);
+                    })
+                  </script>
+
+<!-- Modal -->
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Editar Producto de Inventario</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div>
+                            <form v-on:submit="createProduct">
+                              <div class="text-left form-group">
+                                <label for="add-name">
+                                  <h5><b>Id de Inventario</b> </h5>
+                                </label>
+                                <input class="text-left form-control" id="add-name" v-model="product.name" required
+                                  placeholder="IdInventario.." />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-name">
+                                  <h5><b>Producto</b> </h5>
+                                </label>
+                                <input class="form-control" id="add-name" v-model="product.name" required
+                                  placeholder="Producto.." />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-description">
+                                  <h5><b>Id de Producto</b> </h5>
+                                </label>
+                                <textarea class="text-left form-control" id="add-name" rows="1"
+                                  v-model="product.description" placeholder="IdProducto."></textarea>
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-price">
+                                  <h5><b>Id de Usuario</b> </h5>
+                                </label>
+                                <input type="text" class="text-left form-control" id="add-price" v-model="product.price"
+                                  placeholder="IdUsuario" />
+                              </div>
+                              <div class="text-left form-group">
+                                <label for="add-price">
+                                  <h5><b> Fecha de Ingreso</b></h5>
+                                </label>
+                                <input id="text" type="date" name="data" ng-model="item.data" placeholder="Data"
+                                  class="form-control" placeholder="dd-MM-yyyy" required>
+                              </div>
+
+                              <div class="text-left form-group">
+                                <label for="add-description">
+                                  <h5><b>Cantidad</b> </h5>
+                                </label>
+                                <textarea class="text-left form-control" id="add-name" rows="1" v-model="product.nota"
+                                  placeholder="Cantidad."></textarea>
+                              </div>
+
+                              <center>
+                                <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save ">
+                                  Editar</button>
+                                <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close"
+                                  data-dismiss="modal">
+                                  Cancelar</button>
+                              </center>
+
+                            </form>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <button data-toggle="modal" href="#mi_modal" class="btn btn-danger glyphicon glyphicon-trash "></button>
+                  <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+                      </button>
+                      <div class="modal-content">
+    
+    
+                        <div class="modal-body"  >
+                          <center>
+                            <h4><b>¿Esta seguro que desea eliminar cliente?</b> </h4>
+                            <h5>
+                              Recuerde que la acción no se podrá deshacer..
+                            </h5><br>
+                          </center>
+    
+                          <center>
+                                    
+                            <button type="submit" class="btn btn-danger iconRemove deleteUser "> Eliminar</button>
+                            <button type="button" class="btn btn-success glyphicon glyphicon-repeat " class="close" data-dismiss="modal">
+                              Cancelar</button>
+                          </center>
+                        
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- Total -->
+          <h4>Cantidad de Productos: <b class="text-danger">002</b></h4>
+        </section>
+      </div>
+      <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="/JS/Menu.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      
 </body>
-
+<script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
 </html>

@@ -5,6 +5,7 @@
   <title>Login recuperacion</title>
   <!-- JS ===================== -->
         <!-- load angular -->
+
         <script src="https://code.angularjs.org/1.5.5/angular.js"></script> 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
         <!--Load angular bootstrap -->        
@@ -21,6 +22,8 @@
             body    { padding-top:30px; }
         </style>        <link rel="stylesheet" href="/CSS/Preguntas.css">
 
+<link rel="stylesheet" href="/CSS/Menu.css">
+<link rel="stylesheet" href="/CSS/Home.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -29,9 +32,16 @@
 <body data-ng-app="validationApp">
   <div class="container" data-ng-controller="RegistrationController">
 
+    
     <!-- PAGE HEADER -->
-    <div class="page-header">
-      <h1 class="text-center">Formulario de recuperacion de contraseña</h1></div>
+   
+      <header class="page-header">
+        <div class="branding">
+          <img src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png"  alt="Logo" title="Home page" class="logo" />
+          <h1>Recuperación de contraseña</h1>
+          <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+        </div>
+      </header>
     <data-uib-tabset data-active="activeJustified" data-justified="true">
       <data-uib-tab data-heading="Recuperacion de contraseña con E-mail" data-index="0">
         <br/>

@@ -61,23 +61,23 @@ validationApp.controller('RegistrationController', function ($scope) {
     ];
     $scope.securityQuestions = [
         {
-            "question": "What is the name of your first boyfriend/girlfriend?"
+            "question": " Cual es tu color favorito ?"
         },
         {
-            "question": "What is the phone number from your childhood?"
+            "question": " Quien fue tu primer maestr@ de primaria?"
         },
         {
-            "question": "What was your favorite place to visit as a child?"
+            "question": "Cual es tu pelicula favorita?"
         },
         {
-            "question": "Who is your favorite actor, musician, or artist?"
+            "question": " Cual musica prefieres bailar?"
         },
         {
-            "question": "What is the name of your favorite pet?"
+            "question": "Como se llama tu mascota?"
         }
     ];
     $scope.dateBirthPlaceHolder = "Fecha de Nacimiento";
-    $scope.questionSelectedError = "Sorry this question is already selected.";
+    $scope.questionSelectedError = "Esa pregunta ya fue seccionada.";
     $scope.inputType = "number";
     $scope.isCollapsed = true;
     $scope.focusEvent = function () {

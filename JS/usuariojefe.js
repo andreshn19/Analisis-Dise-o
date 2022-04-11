@@ -14,9 +14,9 @@ $("select#metodo_pago").change(function(e) {
 });
 
 var products = [
-  {id: 1, name: 'Mario Martenez', description: 'Superheroic JavaScript MVW Framework.', price: 990853533, date:'10/10/2022', email:'fm@gmail.com',nota:'Compras',obs:'Ninguna'},
-  {id: 2, name: 'Guadalupe Pineda', description: 'A framework for creating ambitious web applications.', price: 100},
-  {id: 3, name: 'Petronila Gamez', description: 'A JavaScript Library for building user interfaces.', price: 100}
+  {id: 1, name: 'Mario Martenez', description: 'Col aleman.', price: 99083533, date:'10/10/2022', email:'fm@gmail.com',nota:'Compras',rol:'G0012',obs:'Ninguna'},
+  {id: 2, name: 'Guadalupe Pineda', description: 'Avenida centroamerica.', price: 90654532,date:'10/10/2022',email:'h6h@gmail.com',nota:'Ventas',rol:'G0013',obs:'Ninguna'},
+  {id: 3, name: 'Petronila Gamez', description: 'Col 15 septiembre', price: 99865645,date:'10/10/2022', email:'hrg8@gmail.com',nota:'Invenatario',rol:'G0014',obs:'Ninguna'}
 ];
 
 function findProduct (productId) {

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Socios</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Clientes</title>
+        <link rel="stylesheet" href="/CSS/Home.css">
+        <link rel="stylesheet" href="/CSS/Menu.css">
+        <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'><link rel="stylesheet" href="/CSS/Usuariocliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> 
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-  <link rel="stylesheet" href="/CSS/Home.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -17,8 +24,6 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/CSS/Home.css">
-  <link rel="stylesheet" href="/CSS/Menu.css">
   <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'><link rel="stylesheet" href="/CSS/Usuariocliente.css">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
@@ -26,11 +31,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> 
 
+
+
 </head>
 
-<body>
-  <!-- partial:index.partial.html -->
-  <!-- menu vertical -->
+    <body>
+
+      
   <div id="wrapper">
 
 
@@ -119,7 +126,6 @@
                <font size="6"><i class="fa fa-user fa-fw"></i></font> 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/Html/Roles.html">Roles de usuarios</a>
                 <a class="dropdown-item" href="/Html/loging.html">Cerrar seccion</a>
               </div>
             </li>
@@ -131,13 +137,23 @@
     </div>
   </div>
        
-  <!-- /menu vertical -->
- 
+
+  
+<div id="permissionWrapper" class="permissionWrapper">
+  <div id="page-wrapper">
+      <!-- /menu vertical -->
+
+  
+  <!-- contenido de pagina, realmente no importa -->
+  
+  
+
+
   <div class="container">
     <header class="page-header">
       <div class="branding">
         <img src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png"  alt="Logo" title="Home page" class="logo" />
-        <h1>Registro de socios</h1>
+        <h1>Registro de Roles</h1>
         <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
       </div>
     </header>
@@ -151,67 +167,51 @@
         </button>
 
         <div class="modal-content">
-
           <div class="modal-header">
-            <h4><b>Añadir Nuevo socio</b></h4>
+            <h4><b>Añadir Nuevo Rol</b></h4>
           </div>
+         
 
           <div class="modal-body">
             <div>
               <form v-on:submit="createProduct">
                 <div class="form-group">
                   <label for="add-name">
-                    <h5><b>Nombre completo</b> </h5>
+                    <h5><b>Id Rol</b> </h5>
                   </label>
-                  <input class="form-control" id="add-name" v-model="product.name" required
-                    placeholder="Nombre completo.." />
+                  <input type="text" class="form-control" id="add-name" v-model="product.name" required
+                    placeholder=" Codigo.." />
                 </div>
                 <div class="form-group">
                   <label for="add-description">
-                    <h5><b>Dirección</b> </h5>
+                    <h5><b>Nombre</b> </h5>
                   </label>
-                  <textarea class="form-control" id="add-name" rows="1" v-model="product.description"
-                    placeholder="Dirección.."></textarea>
+                  <input class="form-control" id="add-name" rows="1" v-model="product.description"
+                    placeholder="Dirección.."/>
                 </div>
-                <div class="form-group">
-                  <label for="add-price">
-                    <h5><b>Telefono</b> </h5>
-                  </label>
-                  <input type="number" class="form-control" id="add-price" v-model="product.price"
-                    placeholder="+504 00000000" />
-                </div>
-                <div class="form-group">
-                  <label for="add-price">
-                    <h5><b> Email</b></h5>
-                  </label>
-                  <input type="text" class="form-control" id="add-email" v-model="product.email"
-                    placeholder="micorreo@gmail.com" />
-                </div>
-                <div class="form-group">
-                  <label for="add-description">
-                    <h5><b>Fecha de registro</b> </h5>
-                  </label>
-                  <input type="date" id="Lat" class="form-control" v-model="product.date" placeholder="Fecha registro"
-                    class="form-control" placeholder="dd-MM-yyyy" required>
 
-                </div>
+
                 <div class="form-group">
-                  <label for="add-description">
-                    <h5><b>EStado</b> </h5>
-                  </label>
-                    <select class="form-control" name="" id="">
-                      <option value="">Activo</option>
-                      <option value="">Inactivo</option>
+                    <label for="add-description">
+                      <h5><b>Estado</b> </h5>
+                    </label>
+                    <select class="form-control" id="add-name" rows="1" v-model="product.nota">
+                      <option id="elija">..Elija el estado de rol..</option>
+                      <option id="cheque">Activo</option>
+                      <option id="efectivo">Inactivo</option>
                     </select>
-                   
-                </div>
+  
+                  </div>
+  
+             
 
+               
                 <div class="form-group">
                   <label for="add-description">
-                    <h5><b>Rol</b> </h5>
+                    <h5><b>Nota</b> </h5>
                   </label>
-                  <textarea class="form-control" id="add-name" rows="1" v-model="product.rol"
-                    placeholder="Rol.."></textarea>
+                  <input class="form-control" id="add-name" rows="1" v-model="product.nota"
+                    placeholder="Observación.."/>
                 </div>
                 
                 <center>
@@ -272,7 +272,7 @@
                       <div>{{ product.description }}</div><br>
                     </h4>
 
-                    <h4><b>Telefono:</b></h4>
+                   
 
                     <h4>
                       <div>{{ product.price }}</div><br>
@@ -283,23 +283,16 @@
                       <div>{{ product.email }}</div><br>
                     </h4>
 
-                    <h4><b>Fecha de registro:</b></h4>
-                    <h4>
-                      <div>{{ product.date }}</div><br>
-                    </h4>
+                  
 
-                    <h4><b>Estado:</b></h4>
+                    <h4><b>Nota:</b></h4>
                     <h4>
                       <div>{{ product.nota }}</span></div><br>
                     </h4>
 
-                    <h4><b>Rol:</b></h4>
-                    <h4>
-                      <div>{{ product.rol }}</span></div><br>
-                    </h4>
 
                     <h4> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                      <router-link v-bind:to="'/'"><b>Volver a la lista de socios</b> </router-link>
+                      <router-link v-bind:to="'/'"><b>Volver a la lista de clientes</b> </router-link>
                     </h4>
                   </div>
                 </template>
@@ -319,47 +312,30 @@
 
   <template id="product-list">
     <div>
-
-      
- <div class="actions">
-  <DIV align="right">
-    <button data-toggle="modal" href="#add-produc" class="btn btn-success glyphicon glyphicon-plus"><b> Nuevo Registro</b> </button>
-  </DIV>
-</div>
-
-<div class="filters row">
-  <div class="form-group col-sm-6">
-    <label for="search-element"><h5><b>Busqueda por nombre</b></h5></label>
-    <input v-model="searchKey" class="form-control" id="search-element" requred />
-  </div>
-</div>
+      <div class="actions">
+       <DIV align="right">
+         <button data-toggle="modal" href="#add-produc" class="btn btn-success glyphicon glyphicon-plus"><b> Nuevo Registro</b></button>
+       </DIV>
+     </div>
+     
+     <div class="filters row">
+       <div class="form-group col-sm-6">
+         <label for="search-element"><h5><b>Busqueda por codigo</b></h5></label>
+         <input v-model="searchKey" class="form-control" id="search-element" requred />
+       </div>
+     </div>
 
       <table class="table  table-striped caption-top  ">
         <thead>
           <tr class="table-success">
             <th>
               <center>
-                <h5><b>Nombre completo</b> </h5>
+                <h5><b>Codigo rol</b> </h5>
               </center>
             </th>
             <th>
               <center>
-                <h5><b>Dirección</b> </h5>
-              </center>
-            </th>
-            <th>
-              <center>
-                <h5><b>Telefono</b> </h5>
-              </center>
-            </th>
-            <th>
-              <center>
-                <h5><b>Email</b> </h5>
-              </center>
-            </th>
-            <th>
-              <center>
-                <h5><b>Fecha de registro</b> </h5>
+                <h5><b> Nombre</b> </h5>
               </center>
             </th>
             <th>
@@ -367,13 +343,13 @@
                 <h5><b>Estado</b> </h5>
               </center>
             </th>
-            
-            <th>
+         
+         <th>
               <center>
-                <h5><b>Rol</b> </h5>
+                <h5><b>Nota</b> </h5>
               </center>
             </th>
-
+            
             <th class="col-sm-2">
               <center>
                 <h5><b></b> </h5>
@@ -393,24 +369,17 @@
               <h5>{{ product.description }}</h5>
             </td>
             <td>
-              <h5> {{ product.price }}</h5>
+              <h5> {{ product.nota}}</h5>
             </td>
             <td>
               <h5> {{ product.email }}</h5>
             </td>
-            <td>
-              <h5>{{ product.date}}</h5>
-            </td>
-            <td>
-              <h5> {{ product.nota}}</h5>
-            </td>
+         
+         
           
             <td>
-              <h5> {{ product.rol}}</h5>
-            </td>
-            <td>
 
-              <button data-toggle="modal" href="#mi_moda" class="btn btn-primary glyphicon glyphicon-pencil"></button>
+              <button data-toggle="modal" href="#mi_moda" class="btn btn-primary glyphicon glyphicon-pencil"> </button>
               <div class="modal fade" id="mi_moda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -422,7 +391,7 @@
 
                     <div class="modal-header">
                       <center>
-                        <h3><b>Editar socio</b> </h3>
+                        <h3><b>Editar Rol</b></h3>
                       </center>                    
                     </div>
 
@@ -432,54 +401,31 @@
                           <form v-on:submit="updateProd">
                             <div class="form-group">
                               <label for="edit-name">
-                                <h5><b>Nombre completo</b> </h5>
+                                <h5><b>Id Rol</b> </h5>
                               </label>
                               <input class="form-control" id="edit-name" v-model="product.name" required  readonly/>
                             </div>
                             <div class="form-group">
                               <label for="edit-description">
-                                <h5><b>Dirección</b> </h5>
+                                <h5><b>Nombre</b> </h5>
                               </label>
-                              <textarea class="form-control" id="edit-description" rows="1"
-                                v-model="product.description"></textarea>
+                              <input class="form-control" id="edit-description" rows="1"
+                                v-model="product.description"/>
                             </div>
-                            <div class="form-group">
-                              <label for="edit-price">
-                                <h5><b>Telefono</b> </h5>
-                              </label>
-                              <input type="number" class="form-control" id="edit-price" v-model="product.price" />
-                            </div>
+                          
 
                             <div class="form-group">
                               <label for="add-price">
-                                <h5><b>Email</b> </h5>
+                                <h5><b>Estado</b> </h5>
                               </label>
                               <input type="text" class="form-control" id="add-price" v-model="product.email" />
                             </div>
+                          
                             <div class="form-group">
                               <label for="add-description">
-                                <h5><b>Fecha de registro</b> </h5>
+                                <h5><b> Nota</b></h5>
                               </label>
-                              <input type="text" id="Lat" class="form-control" v-model="product.date" readonly
-                                placeholder="Fecha registro" class="form-control" placeholder="dd-MM-yyyy" required>
-                            </div>
-
-
-                            <div class="form-group">
-                              <label for="add-description">
-                                <h5><b> Estado</b></h5>
-                              </label>
-                              <select  class="form-control" id="add-nota"  v-model="product.nota" name="" id="">
-                                <option value="">Activo</option>
-                                <option value="">inactivo</option>
-                              </select>
-                            </div>
-
-                            <div class="form-group">
-                              <label for="add-description">
-                                <h5><b>Rol</b></h5>
-                              </label>
-                              <textarea readonly class="form-control" id="add-nota" rows="1" v-model="product.rol"></textarea>
+                              <input class="form-control" id="add-nota" rows="1" v-model="product.nota" />
                             </div>
 
                             <center>
@@ -513,7 +459,7 @@
 
                     <div class="modal-body"  >
                       <center>
-                        <h4><b>¿Esta seguro que desea eliminar socio?</b> </h4>
+                        <h4><b>¿Esta seguro que desea eliminar Rol?</b> </h4>
                       </center>
                       <div class="row" style="padding:15px">
                         <template id="product-delete">
@@ -551,16 +497,16 @@
   </template>
 
 
-
-
-
-   <!-- partclienteial -->
+  
+</div>
+        <!-- partial -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="/JS/Seguridad.js"></script>
         <script src="/JS/Menu.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>     
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-          <script src="/JS/usuariosocio.js"></script>
+          <script src="/JS/rol.js"></script>
     </body>
 
     <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
@@ -570,5 +516,7 @@
 
 
 
+  
 
+  
 </html>

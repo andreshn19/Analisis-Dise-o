@@ -1,119 +1,244 @@
-/*Validacion de envio informacion*/
-function validar() {
-
-    console.log("Se enviaron datos");
-
-    formulario.reset();
-}
-
-/*Funciones de impresion de reporte de produccion*/
-function remove(obj) {
-    console.log($(obj).parents('tr').remove());
-    calculate();
-}
-
-function addrow() {
-    var clon = $('#items > tbody > tr:eq(0)').clone();
-    var btn = '<button type="button" onclick="remove(this)" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>';
-    clon.find('input,textarea').val('');
-    clon.find('td:last-child').append(btn);
-    clon.insertBefore($('tr.noprint'));
-    console.log(clon);
-    calculate();
-}
-
-function calculate() {
-    var total = 0;
-    var tax = $('#taxval').val();
-
-    $('#text-taxval').html(tax);
-
-    $('.ItemCosto').each(function(i) {
-        price = $(this).val();
-        if (!isNaN(price)) total += Number(price);
-        // console.log(price);
+//+++++++++++++
+$("select#metodo_pago").change(function(e) {
+    var metodo = $("#metodo_pago option:selected").val();
+    if(metodo=="Efectivo") {
+      $(".cheque, .vale-vista").fadeOut().find("input, select").removeClass("tabber");
+      $(".efectivo").fadeIn().find("input, select").addClass("tabber");
+    } else if(metodo=="Transbank") {
+      $(".efectivo, .cheque, .vale-vista").fadeOut().find("input, select").removeClass("tabber");
+      $(".transbank").fadeIn().find("input, select").addClass("tabber");
+    } else {
+      $(".efectivo").fadeOut().find("input, select").removeClass("tabber");
+      $(".cheque, .vale-vista").fadeIn().find("input, select").addClass("tabber");
+    }
+  });
+  /*============================
+  $(function () {
+    var operation = "C"; //"C"=Crear
+    var selected_index = -1; // Indice do elemento selecionado na lista
+    var tblPersons = localStorage.getItem("tblPersons"); //retornar os dados armazenados
+    tblPersons = JSON.parse(tblPersons); //converteer string em objeto
+    if (tblPersons === null) // se não tem dados iniciar um array vazio
+        tblPersons = [];
+  
+    function Create() {
+      //Obter os valores inputados no html e converte-los em string
+      var person = JSON.stringify({
+         Nome: $("#Nome").val(),
+          CPF: $("#CPF").val(),
+          Telefone: $("#Telefone").val(),
+          Email: $("#Email").val(),
+          Latitude: $("#Lat").val(),
+          Longitude: $("#Lng").val()
+      }); 
+      //Inserir o objeto na tabela
+      tblPersons.push(person);
+      //Armazenar os dados localStorage
+      localStorage.setItem("tblPersons", JSON.stringify(tblPersons));
+      alert("Os dados foram armazenados"); //Mensageme de alerta
+      return true;
+    }
+  
+    function Edit() {
+      // Editar o item selecionado na tabela
+      tblPersons[selected_index] = JSON.stringify({
+          Nome: $("#Nome").val(),
+          CPF: $("#CPF").val(),
+          Telefone: $("#Telefone").val(),
+          Email: $("#Email").val(),
+          Latitude: $("#Lat").val(),
+          Longitude: $("#Lng").val()
+      });
+      //Armazenar os itens em localStorage
+      localStorage.setItem("tblPersons", JSON.stringify(tblPersons)); 
+      alert("Los datos han sido editados"); //Mensaje de alerta
+      return true;
+    }
+  
+    function Delete() {
+      //Eliminar el elemento seleccionado en la tabla
+      tblPersons.splice(selected_index, 1); 
+      //Actualizar los datos del Local Storage
+      localStorage.setItem("tblPersons", JSON.stringify(tblPersons)); 
+      alert("Persona Eliminada"); //Mensaje de alerta
+    }
+  
+    function List() {
+      $("#tblList").html("");
+      $("#tblList").html(
+              "<thead>" +
+              "<tr>" +                
+              "<th>Nombre</th>" +
+              "<th>Dirección</th>" +
+              "<th>Telefono</th>" +
+              "<th>Email</th>" +
+               "<th>Fecha de registro</th>" +
+               "<th>Nota</th>" +
+              "<th> </th>" +
+              "</tr>" +
+              "</thead>" +
+              "<tbody>" +
+              "</tbody>"
+              ); //Agregar a tabela a estrutura HTML
+      for (var i in tblPersons) {
+          var per = JSON.parse(tblPersons[i]);
+          $("#tblList tbody").append("<tr>" +                    
+                  "<td>" + per.Nome + "</td>" +
+                  "<td>" + per.CPF + "</td>" +
+                  "<td>" + per.Telefone + "</td>" +
+                  "<td>" + per.Email + "</td>" +
+                   "<td>" + per.Lat + "</td>" + 
+                    "<td>" + per.Lng + "</td>" +                  
+                                     
+                   "<td><img src='http://res.cloudinary.com/demeloweb/image/upload/v1497537879/edit_n51oto.png' alt='Edit" + i + "' class='btnEdit'/>&nbsp &nbsp<img src='http://res.cloudinary.com/demeloweb/image/upload/v1497537882/delete_ntuxjl.png' alt='Delete" + i + "' class='btnDelete'/></td>" +                  
+                  
+                  "</tr>"
+                  );
+      } //carregar e inserir os itens na tabela
+    }
+  
+    $("#frmPerson").bind("submit", function () {
+      if (operation === "C")
+          return Create();
+      else
+          return Edit();
+    }); 
+    
+    List();
+  
+    $(".btnEdit").bind("click", function () {
+      operation = "E"; //"E" = Editar
+      //Obter o identificador do item a ser editado
+      selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
+      //Converter JSON no formato adequado para os itens serem editados
+      var per = JSON.parse(tblPersons[selected_index]); 
+      $("#Nome").val(per.Nome);
+      $("#CPF").val(per.CPF);
+      $("#Telefone").val(per.Telefone);
+      $("#Email").val(per.Email);
+       $("#Lat").val(per.Lat);
+       $("#Lng").val(per.Lng);
+    
     });
+  
+    $(".btnDelete").bind("click", function () {
+      //OObter o identificador do item a ser deletado
+      selected_index = parseInt($(this).attr("alt").replace("Delete", "")); 
+      Delete(); //eliminar o item
+      List(); //Voltar aos itens listados na tabela
+    });
+  });*/
+  var products = [
+    {id: 1, name: '5000', description: 'Costilla de cerdo', price: 17, date:'10/10/2022', email:'Lb',nota:'14/10/2022',user:'RJ45'},
+    {id: 2, name: '6000', description: 'Tajo de cerdo', price: 20, date:'10/10/2022', email:'Kg',nota:'14/10/2022',user:'RJ45'},
+    {id: 3, name: '7000', description: 'Chorizo', price: 55, date:'10/10/2022', email:'Paquetes',nota:'14/10/2022',user:'RJ45'},
+    {id: 3, name: '8000', description: 'Carne molida', price: 100, date:'10/10/2022', email:'Lb',nota:'14/10/2022',user:'RJ45'}
 
-    totaliva = parseFloat(total) * tax;
-
-    $('#subtotal').val(roundNumber(total, 2));
-    $('#tax').val(roundNumber(totaliva, 2));
-    $('#total').val(roundNumber(total + totaliva, 2));
-
-    // console.log((roundNumber(total,2)));
-    // console.log((roundNumber(totaliva,2)));
-    // console.log((roundNumber(total+totaliva,2))); 
-}
-
-$('#items, #taxval').keyup(function() {
-    calculate();
-})
-
-$('[name="colcant"]').change(function() {
-    if ($(this).prop('checked')) {
-        $('#items').find('tr th:nth-child(2)').hide();
-        $('#items').find('tr td:nth-child(2)').hide();
-    } else {
-        $('#items').find('tr th:nth-child(2)').show();
-        $('#items').find('tr td:nth-child(2)').show();
+];
+  
+  function findProduct (productId) {
+    return products[findProductKey(productId)];
+  };
+  
+  function findProductKey (productId) {
+    for (var key = 0; key < products.length; key++) {
+      if (products[key].id == productId) {
+        return key;
+      }
     }
-});
-
-$('[name="taxinput"]').change(function() {
-    if ($(this).prop('checked')) {
-        $('#totales').find('#tax').parents('tr').hide();
-        $('#taxval').val('');
-    } else {
-        $('#totales').find('#tax').parents('tr').show();
-        $('#taxval').val('');
+  };
+  
+  var List = Vue.extend({
+    template: '#product-list',
+    data: function () {
+      return {products: products, searchKey: ''};
+    },
+    computed: {
+      filteredProducts: function () {
+        return this.products.filter(function (product) {
+          return this.searchKey=='' || product.name.indexOf(this.searchKey) !== -1;
+        },this);
+      }
     }
-    calculate();
-});
-
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-// from http://www.mediacollege.com/internet/javascript/number/round.html
-function roundNumber(number, decimals) {
-    var newString; // The new rounded number
-    decimals = Number(decimals);
-    if (decimals < 1) {
-        newString = (Math.round(number)).toString();
-    } else {
-        var numString = number.toString();
-        if (numString.lastIndexOf(".") == -1) { // If there is no decimal point
-            numString += "."; // give it one at the end
-        }
-        var cutoff = numString.lastIndexOf(".") + decimals; // The point at which to truncate the number
-        var d1 = Number(numString.substring(cutoff, cutoff + 1)); // The value of the last decimal place that we'll end up with
-        var d2 = Number(numString.substring(cutoff + 1, cutoff + 2)); // The next decimal, after the last one we want
-        if (d2 >= 5) { // Do we need to round up at all? If not, the string will just be truncated
-            if (d1 == 9 && cutoff > 0) { // If the last digit is 9, find a new cutoff point
-                while (cutoff > 0 && (d1 == 9 || isNaN(d1))) {
-                    if (d1 != ".") {
-                        cutoff -= 1;
-                        d1 = Number(numString.substring(cutoff, cutoff + 1));
-                    } else {
-                        cutoff -= 1;
-                    }
-                }
-            }
-            d1 += 1;
-        }
-        if (d1 == 10) {
-            numString = numString.substring(0, numString.lastIndexOf("."));
-            var roundedNum = Number(numString) + 1;
-            newString = roundedNum.toString() + '.';
-        } else {
-            newString = numString.substring(0, cutoff) + d1.toString();
-        }
+  });
+  
+  var Product = Vue.extend({
+    template: '#product',
+    data: function () {
+      return {product: findProduct(this.$route.params.product_id)};
     }
-    if (newString.lastIndexOf(".") == -1) { // Do this again, to the new string
-        newString += ".";
+  });
+  
+  var ProductEdit = Vue.extend({
+    template: '#product-edit',
+    data: function () {
+      return {product: findProduct(this.$route.params.product_id)};
+    },
+    methods: {
+      updateProduct: function () {
+        var product = this.product;
+        products[findProductKey(product.id)] = {
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          email:product.email,
+          date:product.date,
+          nota:product.nota,
+          user:product.user
+        };
+        router.push('/');
+      }
     }
-    var decs = (newString.substring(newString.lastIndexOf(".") + 1)).length;
-    for (var i = 0; i < decimals - decs; i++) newString += "0";
-    //var newNumber = Number(newString);// make it a number if you like
-    return newString; // Output the result to the form field (change for your purposes)
-}
+  });
+  
+  var ProductDelete = Vue.extend({
+    template: '#product-delete',
+    data: function () {
+      return {product: findProduct(this.$route.params.product_id)};
+    },
+    methods: {
+      deleteProduct: function () {
+        products.splice(findProductKey(this.$route.params.product_id), 1);
+        router.push('/');
+      }
+    }
+  });
+  
+  var AddProduct = Vue.extend({
+   template: '#add-product',
+  
+    data: function () {
+      return {product: {name: '', description: '', price: ''}}
+    },
+    methods: {
+      createProduct: function() {
+        var product = this.product;
+        products.push({
+          id: Math.random().toString().split('.')[1],
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          email:product.email,
+          date:product.date,
+          nota:product.nota,
+          user:product.user
+        });
+        router.push('/');
+      }
+    }
+    
+  });
+  
+  
+  
+  var router = new VueRouter({routes:[
+    { path: '/', component: List},
+    { path: '/product/:product_id', component: Product, name: 'product'},
+    { path: '/add-product', component: AddProduct},
+    { path: '/product/:product_id/edit', component: ProductEdit, name: 'product-edit'},
+    { path: '/product/:product_id/delete', component: ProductDelete, name: 'product-delete'}
+  ]});
+  app = new Vue({
+    router:router
+  }).$mount('#app')

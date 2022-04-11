@@ -32,3 +32,8 @@
     font-size: 12px;
   }
  
+  table{
+    white-space: nowrap;
+   
+    font-size: 18px;
+  }

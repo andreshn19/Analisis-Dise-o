@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Inicio</title>
+    <title>Orden de compra</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
     <link rel="stylesheet" href="/CSS/Menu.css">
@@ -14,283 +14,340 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap"
+            rel="stylesheet">
         </link>
 
+      
+      
 
     </head>
 
-    <body>
+<body>
 
-        <!-- partial:index.partial.html -->
+    <!-- partial:index.partial.html -->
+    <div id="wrapper">
+
+
+
+        <!-- Navigation -->
         <nav id="menu" class="left">
-            <ul>
-                <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-
+  
+          <ul>
+            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+  
+            <li>
+              <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+              <ul>
                 <li>
-                    <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                            <ul>
-                                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                        <li>
-                            <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                            <ul>
-                                <li>
-                                    <a href="/Html/Compras.html">
-                                        <aria-hidden="true">
-                                            </i>Mis Compras
-                                    </a>
-                                </li>
-                                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                            <ul>
-                                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                            <ul>
-                                <li>
-                                    <a href="/Html/ReporteCompra.html">
-                                        <aria-hidden="true">
-                                            </i>Reporte de Compras
-                                    </a>
-                                </li>
-                                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                            </ul>
-                        </li>
-                        <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-                        </li>
-                    </ul>
+                  <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                    <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                    <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+                  </ul>
                 </li>
-                <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-                <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-                <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
-                <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-            </ul>
-            <a href="#" id="showmenu">
-                <i class="fa fa-align-justify"></i>
-            </a>
+  
+                <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a href="/Html/Compras.html">
+                        <aria-hidden="true"></i>Mis Compras
+                      </a></li>
+                    <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                    <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a href="/Html/ReporteCompra.html">
+                        <aria-hidden="true"></i>Reporte de Compras
+                      </a></li>
+                    <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+                  </ul>
+                </li>
+                <li><a href="/Html/Produccion.html"><i class="fa fa-check-square-o"
+                      aria-hidden="true"></i></i>Producción</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+          </ul>
+          <a href="#" id="showmenu">
+            <i class="fa fa-align-justify"></i>
+          </a>
         </nav>
-        <!-- /menu vertical -->
+  
+        <div id="wrapper">
+          <nav class="navbar-toggleable-md ">
+  
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+               
+                
 
-        <div class="toolbar noprint">
-            <section class="container-fluid">
-                <div class="row" style="padding:1rem 0;">
-                    <article class="col-xs-2">
-                        <label>
-                        <input type="checkbox" name="colcant">
-                        columna cant
-                    </label>
-                    </article>
-                    <article class="col-xs-2">
-                        <label>
-                        <input type="checkbox" name="taxinput">
-                        Impuesto
-                    </label>
-                    </article>
-                    <article class="col-xs-2">
-                        <div class="form-group">
-                            <label for="taxval">% impuesto:</label>
-                            <input type="text" class="form-control" id="taxval" name="taxval[]" placeholder="taxval" value="0.12">
-                        </div>
-                    </article>
-                    <article class="col-xs-2">
-                        <button type="button" onclick="window.print();" class="btn btn-primary"><span
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/Html/Home.htm" id="navbarDropdownMenuLink"
+                      data-toggle="">
+                      <font size="6"><i  href="/Html/Home.htm" class="fa fa-home fa-fw"></i></font>
+                    </a>
+                   
+                  </li>
+                  <article class="col-xs-2">
+                    <button type="button" onclick="window.print();" class="btn btn-primary"><span
                             class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir</button>
-                    </article>
-                </div>
-            </section>
+                </article>
+              </ul>
+            </div>
+          </nav>
         </div>
-        <form>
+      </div>
+  
+    <!-- /menu vertical -->
 
-            <section class="container-fluid">
+    <div class="toolbar noprint">
+        
+        <article class="col-xs-12" style="background:#000000 !important;">
+            <h4 class="text-center" style="color:#ffffff !important;font-weight: bold">
+                <input type="text" class="form-control" id="factura" name="factura[]"
+                    placeholder="Orden de Compra">
+            </h4>
+        </article>
+        
+        <br><br><br>
+        <article class="col-xs-4 text-center">
+            <img  src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png" alt="logo" style="height:100px;width:100px;">
+        </article>
+        <h3>Empresa de servicios multiples JPLSLP</h3>
+        <h4>Zacate Blanco Yarula, La Paz, Honduras </h4>
+        <article class="col-xs-12">
+            <small>
+                <p class="pull-left*" style="margin-bottom: -1px"><b>RIF: J-40705120-2 </b></p>
+            </small>
+            <small>
+                <p class="pull-right*" style="margin-bottom: -1px"><b>www.jovenesdeprof.com |
+                        cel 8967-4566</b></p><br>
+            </small>
+        </article>
 
-                <div class="row" style="padding:1rem 0;">
-                    <article class="col-xs-12" style="background:#000000 !important;">
-                        <h4 class="text-center" style="color:#ffffff !important;font-weight: bold">
-                            <input type="text" class="form-control" id="factura" name="factura[]" placeholder="Orden de Compra">
-                        </h4>
-                    </article>
-                    <!-- ldoev -->
-                    <article class="col-xs-4 text-center">
-                        <img src="\Logo.jpeg" alt="logo" style="height:100px;width:270px;">
-                    </article>
-                    <article class="col-xs-4">&nbsp;</article>
-                    <article class="col-xs-4">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><b>#</b></td>
-                                    <td class="form-group">
-                                        <input type="text" class="form-control" id="control" name="control[]" placeholder="control" value="000000000000">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Fecha</td>
-                                    <td class="form-group">
-                                        <input type="date" class="form-control" id="date" name="date[]" value="">
+        <section class="container-fluid"><br>
+            <div class="row" style="padding:1rem 0;">
+              <center>
+                  <table>
+                      <tr>
+                        <article class="col-xs-2">
+                            <label>
+                                <input type="checkbox" name="colcant">
+                                 cantidad
+                            </label>
+                        </article>
+                      </tr>
+                      <tr>
+                        <article class="col-xs-2">
+                            <label>
+                                <input type="checkbox" name="taxinput">
+                                Impuesto
+                            </label>
+                        </article>
 
-                                    </td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </article>
-                    <article class="col-xs-12">
-                        <small>
-                        <p class="pull-left*" style="margin-bottom: -1px"><b>RIF: J-40705120-2 </b></p>
-                    </small>
-                        <small>
-                        <p class="pull-right*" style="margin-bottom: -1px"><b>www.lodevelopers.com |
-                                info@lodeveloper.com</b></p>
-                    </small>
-                    </article>
-                </div>
+                      </tr>
+                      <tr>
+                        <article class="col-xs-2">
+                            <div class="form-group">
+                                <label for="taxval">% impuesto:</label>
+                                <input type="text" class="form-control" id="taxval" name="taxval[]" placeholder="taxval"
+                                    value="0.12">
+                            </div>
+                        </article>
+                      </tr>
+                  </table>
+               
+              
+               
+           
+              </center>
+              <article class="col-xs-4">&nbsp;</article>
+              <article class="col-xs-4">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                             <td>Datos </td>
+                          </tr>
+                          <tr>
+                              <td><b>#</b></td>
+                              <td class="form-group">
+                                  <input type="text" class="form-control" id="control" name="control[]"
+                                      placeholder="control" value="000000000000">
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Fecha</td>
+                              <td class="form-group">
+                                  <input type="date" class="form-control" id="date" name="date[]" value="">
 
+                              </td>
+                          </tr>
+                      </thead>
+                  </table>
+              </article>
+            </div>
+        </section>
+    </div>
+    <form>
+        
+        <section class="container-fluid">
+            
+        
 
-                <div class="row " style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
-                    <article class="col-xs-2 text-center">
-                        <img src="\Logo.jpeg" alt="logo" style="height:50px;width:100px;">
-                    </article>
-                    <article class="col-xs-3">
+            
+            <div class="row "
+                style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
+                
+                <article class="col-xs-3">
+                    <div class="form-group">
                         <div class="form-group">
-                            <div class="form-group">
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre[]" placeholder="nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre">empresa:</label>
-                                <input type="text" class="form-control" id="empresa" name="empresa[]" placeholder="nombre">
-                            </div>
+                            <label for="nombre">Nombre Cliente:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre[]" placeholder="nombre">
                         </div>
-                    </article>
-                    <article class="col-xs-3">
+                       
+                    </div>
+                </article>
+                <article class="col-xs-3">
+                    <div class="form-group">
                         <div class="form-group">
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="text" class="form-control" id="email" name="email[]" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="tel">Tel:</label>
-                                <input type="text" class="form-control" id="tel" name="tel[]" placeholder="tel">
-                            </div>
+                            <label for="email">DNI:</label>
+                            <input type="text" class="form-control" id="email" name="email[]" placeholder="email">
                         </div>
-                    </article>
-                    <article class="col-xs-4">
-                        <label for="notes">Ubicación de envío:</label>
-                        <textarea class="form-control" name="Proyect" rows="3"></textarea>
-                    </article>
-                </div>
-                <div class="row " style="padding:1rem 0;background:rgba(199,199,199,.0);border-top:1px solid black">
-                    <article class="col-xs-12 ">
-                        <table class="table" id="items">
-                            <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th style="width:80px;">Cantidad</th>
-                                    <th style="width:150px;">Costo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="form-group">
-                                        <input type="text" class="form-control" id="producto" name="producto[]" placeholder="producto">
-                                        <!-- <textarea class="form-control" id="producto" name="producto[]"  rows="1"> descripcion</textarea> -->
-                                    </td>
-                                    <td class="form-group">
-                                        <input type="number" class="form-control text-right" id="cantidad" name="cantidad[]" placeholder="cantidad">
-                                    </td>
-                                    <td class="form-group">
-                                        <input type="number" class="form-control text-right ItemCosto" id="costo" name="costo[]" placeholder="costo">
-                                    </td>
-                                    <td class="noprint"></td>
-                                </tr>
-                                <!--  -->
-                                <tr class="noprint">
-                                    <td colspan="4">
-                                        <button type="button" onclick="addrow()" class="btn btn-primary"><span
+                       
+                    </div>
+                </article>
+                <article class="col-xs-4">
+                    <label for="notes">Ubicación de envío:</label>
+                    <textarea class="form-control" name="Proyect" rows="1"></textarea>
+                </article>
+            </div>
+            <div class="row " style="padding:1rem 0;background:rgba(199,199,199,.0);border-top:1px solid black">
+                <article class="col-xs-12 ">
+                    <table class="table" id="items">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th style="width:80px;">Cantidad</th>
+                                <th style="width:150px;">Costo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="form-group">
+                                    <input type="text" class="form-control" id="producto" name="producto[]"
+                                        placeholder="producto">
+                                    <!-- <textarea class="form-control" id="producto" name="producto[]"  rows="1"> descripcion</textarea> -->
+                                </td>
+                                <td class="form-group">
+                                    <input type="number" class="form-control text-right" id="cantidad" name="cantidad[]"
+                                        placeholder="cantidad">
+                                </td>
+                                <td class="form-group">
+                                    <input type="number" class="form-control text-right ItemCosto" id="costo"
+                                        name="costo[]" placeholder="costo">
+                                </td>
+                                <td class="noprint"></td>
+                            </tr>
+                            <!--  -->
+                            <tr class="noprint">
+                                <td colspan="4">
+                                    <button type="button" onclick="addrow()" class="btn btn-primary"><span
                                             class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
-                                    </td>
-                                </tr>
-                                <!--  -->
-                            </tbody>
-                        </table>
-                    </article>
-                </div>
-                <div class="row">
-                    <article class="col-xs-4 col-xs-offset-8">
-                        <table class="table" id="totales">
-                            <thead>
-                                <tr>
-                                    <td class="text-right">Subtotal</td>
-                                    <td class="form-group">
-                                        <input type="number" class="form-control text-right" readonly id="subtotal" name="subtotal[]" placeholder="subtotal">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        Impuesto <b id="text-taxval">%</b>
-                                    </td>
-                                    <td class="form-group">
-                                        <input type="number" class="form-control text-right" readonly id="tax" name="tax[]" placeholder="tax">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><b>Total</b></td>
-                                    <td class="form-group">
-                                        <input type="number" class="form-control text-right" readonly id="total" name="total[]" placeholder="total">
-                                    </td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </article>
-                </div>
-                <div class="row " style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
-                    <article class="col-xs-12">
-                        <!-- <div class="form-group">
+                                </td>
+                            </tr>
+                            <!--  -->
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+            <div class="row">
+                <article class="col-xs-4 col-xs-offset-8">
+                    <table class="table" id="totales">
+                        <thead>
+                            <tr>
+                                <td class="text-right">Subtotal</td>
+                                <td class="form-group">
+                                    <input type="number" class="form-control text-right" readonly id="subtotal"
+                                        name="subtotal[]" placeholder="subtotal">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Isv<b id="text-taxval">%</b>
+                                </td>
+                                <td class="form-group">
+                                    <input type="number" class="form-control text-right" readonly id="tax" name="tax[]"
+                                        placeholder="tax">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><b>Total</b></td>
+                                <td class="form-group">
+                                    <input type="number" class="form-control text-right" readonly id="total"
+                                        name="total[]" placeholder="total">
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </article>
+            </div>
+            <div class="row "
+                style="padding:1rem 0;background:#FAFAFA !important;border-top:1px solid black !important">
+                <article class="col-xs-12">
+                    <!-- <div class="form-group">
                       <label for="notes">Notas:</label>
                       <textarea class="form-control" name="notes"  rows="3"></textarea>
                   </div> -->
-                        <div class="form-group">
-                            <label for="notes">Nota:</label>
-                            <textarea class="form-control" name="notes" rows="5">
+                    <div class="form-group">
+                        <label for="notes">Nota:</label>
+                        <textarea class="form-control" name="notes" rows="2">
 - Validez de la cotización 7 días, para iniciar el trabajo es necesaria una orden de compra y el 60% del valor del trabajo, el 40% restante al momento de la entrega final.
 - Para mayor información o dudas contáctenos.
-- ¿¿¿LAS ORDENES DE COMPRA YA VAN REALIZADAS MEDIANTE UNA PREVIA COTIZACIÓN??? 
+ 
                       </textarea>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <article class="col-xs-12">
+            <small>
+            <p class="pull-left*" style="margin-bottom: -1px"><b>REPORTE NO: J-40705120-2 </b></p>
+            <p class="pull-left*" style="margin-bottom: -1px"><b>EMITIDO POR: G563F </b></p>
+        </small>
+            <small>
+            <p class="pull-left*" style="margin-bottom: -1px"><b>www.jovesplsl.com |
+                    jovenesprofesionaleslecassl@gmail.com</b></p><br>
+        </small>
+    </form>
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="/JS/Menu.js"></script>
-    </body>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-    <script src="/JS/OrdenCompra.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/JS/Menu.js"></script>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="/JS/OrdenCompra.js"></script>
+
+
 
 </html>

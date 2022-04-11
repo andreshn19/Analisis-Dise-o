@@ -82,9 +82,9 @@
     font-size: 12px;
   }
  
-  table{
+  table,label,div,td,th,a,h2,h3,button,input,div,.actions,.cerrar,.form-group,.glyphicon-euro,.logo,.modalDialogo,.modalDialogo:target,option,::placeholder{
     white-space: nowrap;
-               overflow-x: auto;
-                
-   }
-
+   
+    font-size: 18px;
+  }
+  h1,:-ms-input-placeholder,input{ font-size: 24px;}

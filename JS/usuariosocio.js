@@ -12,7 +12,8 @@ $("select#metodo_pago").change(function(e) {
     $(".cheque, .vale-vista").fadeIn().find("input, select").addClass("tabber");
   }
 });
-/*============================
+
+
 $(function () {
   var operation = "C"; //"C"=Crear
   var selected_index = -1; // Indice do elemento selecionado na lista
@@ -127,11 +128,11 @@ $(function () {
     Delete(); //eliminar o item
     List(); //Voltar aos itens listados na tabela
   });
-});*/
+});
 var products = [
-  {id: 1, name: 'Mario Martenez', description: 'Superheroic JavaScript MVW Framework.', price: 990853533, date:'10/10/2022', email:'fm@gmail.com',nota:'activo'},
-  {id: 2, name: 'Guadalupe Pineda', description: 'A framework for creating ambitious web applications.', price: 100},
-  {id: 3, name: 'Petronila Gamez', description: 'A JavaScript Library for building user interfaces.', price: 100}
+  {id: 1, name: 'Mario Martenez', description: 'Av republica de Honduras', price: 99083533, date:'9/10/2022', email:'fm@gmail.com',nota:'activo',rol:'usuario'},
+  {id: 2, name: 'Guadalupe Pineda', description: 'Col el pedregal', price: 92929100, date:'9/10/2022', email:'gtd@gmail.com',nota:'activo',rol:'usuario'},
+  {id: 3, name: 'Petronila Gamez', description: 'Col Las lomas', price: 98764567, date:'9/10/2022', email:'tyb@gmail.com',nota:'activo',rol:'usuario'}
 ];
 
 function findProduct (productId) {

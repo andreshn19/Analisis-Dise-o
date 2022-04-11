@@ -1,198 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario ventas </title>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="/CSS/Ventas.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-    <link rel="stylesheet" href="/CSS/Menu.css">
-    <!-- CSS only -->
+    <head>
+      <meta charset="UTF-8">
+      <title>ventas</title>
+      <link rel="stylesheet" href="/CSS/Home.css">
+<link rel="stylesheet" href="/CSS/Ventas.css">
+<link rel="stylesheet" href="/CSS/Inventarios.css">
+<link rel="stylesheet" href="/CSS/Menu.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-    <link rel="stylesheet" href="/CSS/Inventarios.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/CSS/Menu.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> 
 
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css'><link rel="stylesheet" href="/CSS/Usuariocliente.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> 
+
 
 </head>
 
+    <body>
 
-<body>
+      
+  <div id="wrapper">
+
+
+    
+    <!-- Navigation -->
     <nav id="menu" class="left">
-        <ul>
-            <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+      
+      <ul>
+        <li><a href="/Html/Home.htm" class="active"><i class="fa fa-home"></i>Inicio</a></li>
 
+        <li>
+          <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
+          <ul>
             <li>
-                <a href="#"><i class="fa fa-laptop"></i>Servicios <i class="fa fa-caret-down"></i></a>
-                <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
-                            <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
-                            <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
-                    <li>
-                        <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li>
-                                <a href="/Html/Compras.html">
-                                    <aria-hidden="true">
-                                        </i>Mis Compras
-                                </a>
-                            </li>
-                            <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
-                            <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
-                        <ul>
-                            <li>
-                                <a href="/Html/ReporteCompra.html">
-                                    <aria-hidden="true">
-                                        </i>Reporte de Compras
-                                </a>
-                            </li>
-                            <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
-                        </ul>
-                    </li>
-                    <li><a href="/Html/loginProduc.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
-                    </li>
-                </ul>
+              <a href="#"><i class="fa fa-user"></i>Personas <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/usuariocliente.html">Registro de clientes </a> </li>
+                <li><a href="/Html/Usuariosocio.html">Registro de socios</a></li>
+                <li><a href="/Html/Usuariojefe.html">Registro de jefe de area</a></li>
+              </ul>
             </li>
-            <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
-            <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
-        </ul>
-        <a href="#" id="showmenu">
-            <i class="fa fa-align-justify"></i>
-        </a>
+
+            <li><a href="/Html/Ventas.html"><i class="fa fa-money" aria-hidden="true"></i>Ventas</a></li>
+            <li>
+              <a href="#"><i class="fa fa-shopping-cart"></i>Compras<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/Compras.html">
+                    <aria-hidden="true"></i>Mis Compras
+                  </a></li>
+                <li><a href="/Html/OrdenCompra.html">Generar orden de compra</a> </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cubes"></i>Inventarios <i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/InventarioProductos.html">Inventario de Productos</a> </li>
+                <li><a href="/Html/InventarioMateriaP.html">Inventario de Materia Prima</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-usd"></i>Reporte<i class="fa fa-caret-down"></i></a>
+              <ul>
+                <li><a href="/Html/ReporteCompra.html">
+                    <aria-hidden="true"></i>Reporte de Compras
+                  </a></li>
+                <li><a href="/Html/ReporteVenta.html">Reporte de Ventas</a> </li>
+              </ul>
+            </li> 
+            <li><a href="/Html/Produccion.html"><i class="fa fa-check-square-o" aria-hidden="true"></i></i>Producción</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
+        <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
+      </ul>
+      <a href="#" id="showmenu">
+        <i class="fa fa-align-justify"></i>
+      </a>
     </nav>
-    <!-- partial:index.partial.html -->
+
+    <div id="wrapper">
+        <nav class="navbar-toggleable-md ">
+        
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <font size="6"><i class="fa fa-lock fa-fw"></i></font> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/Html/Seguridad.html">Seguridad</a>
+                </div>
+              </li>
+  
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <font size="6"><i class="fa fa-cog fa-database fa-fw"></i></font> 
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/Html/Backup.html"> Backup</a>                  
+                  </div>
+                </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <font size="6"><i class="fa fa-user fa-fw"></i></font> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/Html/Roles.html">Roles de usuarios</a>
+                  <a class="dropdown-item" href="/Html/loging.html">Cerrar seccion</a>
+                </div>
+              </li>
+  
+             
+            </ul>
+          </div>
+        </nav>
+      </div>
+  </div>
+       
+ 
 
 
-
-
-    <html ng-app="root">
-    <div class="container" ng-controller="index">
-
-
-        <div class="box margin-right" id="shopping-list">
-            <br>
-            <h1>Formulario Ventas</h1>
-
-            <div id="errorMessage"><i class="icon-cross"></i>por favor llenar todos los campos</div>
-
-            <div id="successMessage"><i class="icon-checkmark"></i>Ventas agregada A la Factura</div>
-
-            <div class="half margin-right">
-                <label> Elija el Tipo de carne</label>
-                <select class="form-select" aria-label="Default select example" ng-model="itemName">
-                    <option >Carne de res</option>
-                    <option >Carne de Cerdo</option>
-                    <option >Carne de pollo</option>
-                  </select></td>
-            </div>
-            <div class="half"><input type='text' class="searchButton" placeholder='Nombre Producto' ng-model="itemShop" required></div>
-            <div class="half margin-right">
-                <input type='number' class="searchButton margin-right" placeholder='Cantidad' ng-model="itemQuantity" required>
-            </div>
-            <div class="dollar half">
-                <span>$</span>
+  <html ng-app="root">
+    
+  <div class="container" ng-controller="index">
+    <header class="page-header">
+      <div class="branding">
+        <img src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png"  alt="Logo" title="Home page" class="logo" />
+        <h1> Registro de ventas</h1>
+        <p> <a href="https://codepen.io/-a/pen/amOYGp">Empresa de servicios multiples JPLSLP</a></p>
+      </div>
+    </header>
+    
+    
+            <div class="box margin-right" id="shopping-list">
+              <h3><b>Formulario Ventas</b> </h3><br>
+              
+              <div id="errorMessage"><i class="icon-cross"></i>por favor llenar todos los campos</div>
+              
+              <div id="successMessage"><i class="icon-checkmark"></i>Ventas agregada A la Factura</div>
+              
+              <div class="half margin-right"  >
+                
+                <label > Tipo de producto   </label>
+                  <select class="form-select selectAltura" aria-label="Default select example" ng-model="itemName" >
+                    <option >a Producto a</option>
+                    <option >Producto b</option>
+                    <option >Producto c</option>
+                    </select></td>
+                    
+              </div><div class="half"><label > Presentación  </label>
+                <select type='text'   class="form-select selectAltura"  ng-model="itemShop" required>
+                <option >Libras</option>
+                    <option >onzas</option>
+                    <option >Docenas</option>
+                    </select></td>
+              </div>
+           
+              <div class="half margin-right">
+                  <input type='number' class="searchButton margin-right" placeholder='Cantidad' ng-model="itemQuantity" required>
+              </div><div class="dollar half"> 
                 <input type='number' class="searchButton" placeholder='Precio' ng-model="itemPrice" required>
-            </div>
-
-            <button id="addItem" ng-click="addItem()">Añadir Venta a Fctura</button>
-
-            <div class="list">
+              </div>
+              <br><br>
+           <center><button id="addItem" ng-click="addItem()" class="btn btn-success glyphicon glyphicon-floppy-save "><b> Añadir a Factura</b> </button></center>   
+              <p class="conditions">*Debe seleccionar los registros para llevarlos a facturación <br></p>
+              <div class="list"><br>
                 <table border="0" cellspacing="0">
-                    <tr class="table-header">
-                        <td></td>
-                        <td class="left">Tipo Producto</td>
-                        <td class="left">Nombre Producto</td>
-                        <td>Cantidad</td>
-                        <td class="center">Precio</td>
-                        <td class="center">Eliminar</td>
-                    </tr>
-
-                    <tr ng-repeat="item in list | orderBy: '-checked':true">
-                        <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
-                        <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
-                        <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
-                        <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
-                        <td ng-class="{selected: item.checked==true}">{{item.price | currency}}</td>
-                        <td><button class="icon-cross delete" ng-click="remove(item)">Eliminar</button></td>
-                    </tr>
+                  <tr class="table-header">
+                    <td ></td>
+                    <td class="left">Nombre Producto</td>
+                    <td class="left">Unidad de medidad</td>
+                    <td>Cantidad</td>
+                    <td class="center">Precio</td>
+                    <td class="center"> </td>
+                    <td class="center">Total</td>
+                    
+                  </tr>
+              
+                  <tr ng-repeat="item in list | orderBy: '-checked':true">
+                    <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
+                    <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+                    <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
+                    <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
+                    <td ng-class="{selected: item.checked==true}">{{item.price | currency}}</td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td><button class="btn btn-danger glyphicon glyphicon-trash" class="icon-cross delete "  ng-click="remove(item)" ></button></td>
+                  </tr>
                 </table>
-                <div ng-hide="list.length" class="center">Ingrese un nuevo producto a la Factura.</div>
+                <div ng-hide="list.length" class="center">Ingrese  productos a la Factura.</div>
                 <div class="cost cf">
-                    <span class="left">SubTotal</span>
-                    <span class="right" ng-class="{subtotal:length!==0}">{{getSubtotal()| currency }} </span>
-                </div>
+                  <span class="right"><b>SubTotal</b> </span>
+                  <span class="right" ng-class="{subtotal:length!==0}">{{getSubtotal()| currency }} </span>
+                  </div>
+  
                 <div class="cost cf">
-                    <span class="left">Impuesto</span>
-                    <span class="right" ng-class="{ISV:length!==0}">{{getImpueto()| currency}} </span>
-                </div>
+                  <span class="right"><b> Impuesto</b></span>
+                  <span class="right" ng-class="{ISV:length!==0}">{{getImpueto()| currency}} </span>
+                  </div>
+  
                 <div class="cost cf">
-                    <span class="left">Costo Total</span>
-                    <span class="right" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
+                  <span class="right"><b>Costo Total</b> </span>
+                  <span class="right" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
                 </div>
-                <button class="clear" ng-click="clearAll(list)">Limpiar Fctura</button>
+  
+             
+                <button  class="btn btn-danger glyphicon glyphicon-trash" class="clear btn-sm" ng-click="clearAll(list)"> Borrar registros</button>
+              
+              </div>
             </div>
-        </div>
-
-
-        <div class="box" id="inventory">
-            <h1>Registro de Productos Vendidos</h1>
-            <div class="list">
+           
+            
+            <div class="box" id="inventory">
+              <h3><b>Descripción  Productos a facturar</b> </h3><br>
+  
+  
+              <div class="list">
+                <center>
+                  <button  class="btn btn-danger glyphicon glyphicon-trash" class="clear " ng-click="clearAll(inventory)"> Limpiar</button>
+                  <button type="button" class="btn btn-success glyphicon glyphicon-floppy-saved " class="close" data-dismiss="modal">
+                   Guardar </button>
+  
+                    <a href="/Html/ImpresionFactura.html"><button    class="btn btn-primary glyphicon glyphicon-print" class="center" ></button></a>
+  
+                </center>
+  
                 <table border="0" cellspacing="0">
-                    <div ng-hide="inventory.length" class="center">Productos vendidos</div>
-                    <tr ng-repeat="item in inventory">
-                        <td>{{item.name}}</td>
-                        <td class="left">{{item.shop}}</td>
-                        <td class="center">{{item.quantity}}</td>
-                        <td class="center">{{item.price | currency}}</td>
-                        <td><i class="icon-cross delete" ng-click="removeInventory(item)"></i></td>
-                    </tr>
+              
+                 
+                  <tr ng-repeat="item in inventory">
+                    <td>{{item.name}}  </td><br>
+                    <td class="left">{{item.shop}} </td>
+                    <td class="center">{{item.quantity}} </td>
+                    <td class="center">{{item.price | currency}} </td>
+                    <td><i class="icon-cross delete" ng-click="removeInventory(item)"></i></td>
+                  </tr>
                 </table>
-                <button class="clear" ng-click="clearAll(inventory)">Limpiar Registro</button>
-                <a href="/Html/ImpresionFactura.html"><button class="center" >Imprimir Factura</button></a>
+  
             </div>
-        </div>
-    </div>
+  
+            </div>
+            
+          </div>
+  
+        
+  
+  
+         
+         
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script><script  src="/JS/venta.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="/JS/Menu.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+         
+         
 
-    </html>
-    <!-- partial -->
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
-    <script src="/JS/venta.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="/JS/Menu.js"></script>
 
-</body>
+         <!-- partclienteial -->
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js'></script>
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>     
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     </body>
+     <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+     
+          </html>
+  
 
+          
+
+    </body>
+
+  
+
+
+
+  
+
+  
 </html>

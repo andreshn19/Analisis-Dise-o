@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/CSS/Menu.css">
     <link rel="stylesheet" href="/CSS/Home.css">
 
-
+    <link rel="stylesheet" href="/CSS/GenerarProduccion.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/CSS/ImpresioFactura.css">
 
@@ -70,25 +70,56 @@
                 </ul>
             </li>
             <li><a href="/Html/Informacion.html"><i class="fa fa-info-circle"></i>Información</a></li>
-            <li><a href="/Html/Seguridad.html"><i class="fa fa-lock"></i>Seguridad</a></li>
-            <li><a href="/Html/Backup.html"><i class="fa fa-database"></i>Bitacora/Backup</a></li>
             <li><a href="#"><i class="fa fa-phone"></i>Contactos</a></li>
         </ul>
         <a href="#" id="showmenu">
             <i class="fa fa-align-justify"></i>
         </a>
+
+        
     </nav>
     <!-- partial:index.partial.html -->
     <div class="container">
+        
         <div class="invoice">
+            <div id="wrapper">
+                <nav class="navbar-toggleable-md ">
+        
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                     
+                      
+      
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="/Html/Home.htm" id="navbarDropdownMenuLink"
+                            data-toggle="">
+                            <font size="6"><i  href="/Html/Home.htm" class="fa fa-home fa-fw"></i></font>
+                          </a>
+                         
+                        </li>
+                        <article class="col-xs-2">
+                          <button type="button" onclick="window.print();" class="btn btn-primary"><span
+                                  class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir</button>
+                      </article>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            <article class="col-xs-12" style="background:#000000 !important;">
+                <h4 class="text-center" style="color:#ffffff !important;font-weight: bold">
+                    <input type="text" class="form-control" id="factura" name="factura[]" placeholder="Facturación">
+                </h4>
+            </article>
             <div class="row">
                 <div class="col-7">
 
                 </div>
+                
                 <div class="col-12">
+                    
                     <header class="page-header">
                         <div class="branding">
-                            <img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="logo" />
+                            <img src="https://cdn.pixabay.com/photo/2019/06/27/21/14/logo-4303138_960_720.png" alt="Logo" title="Home page" class="logo" />
                             <h2>Empresa de servicios multiples JPLSLP</h2>
                             <h4>Zacate Blanco Yarula, La Paz, Honduras </h4>
                             <center>
