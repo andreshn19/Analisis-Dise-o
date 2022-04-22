@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>CodePen - FormulariodeRegistro</title>
     <link rel="stylesheet" href="/CSS/newuser.css">
+    <link rel="stylesheet" href="/CSS/Compras.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         
@@ -97,15 +98,6 @@
                         </div>
                     </li>
 
-                    <li>
-                        <label class="titulo" for="email">Email</label>
-
-                        <div class="controles">
-                            <span class="completo">
-                                <input id="email" name="email" value="" />
-                            </span>
-                        </div>
-                    </li>
 
                     <li>
                         <label class="titulo" for="telefonofijo">Teléfono</label>
@@ -127,38 +119,41 @@
                         <label class="titulo" for="telefonofijo">Seguridad</label>
 
                         <div class="controles">
-                            <span class="mitad">
-                                <input id="telefonofijo" name="telefonofijo"  type="password" name="pass" value="" />
-                                <label for="telefonofijo">contraseña</label>
-                            </span>
 
                             <span class="mitad">
-                                <input id="telefonomovil" name="telefonomovil" value="" />
-                                <label for="telefonomovil">Correo de referencia</label>
+                                <input id="correo" name="telefonomovil" value="" />
+                                <label for="telefonomovil">Correo Electronico para confirmación</label>
                             </span>
-
-                            <span class="mitad">
-                                <input id="telefonomovil" name="telefonomovil" value="" />
-                                <label for="telefonomovil">Indicio de contraseña</label>
-                            </span>
-
-
 
                         </div>
 
                     </li>
 
                     <li>
-                        <label class="titulo" for="telefonofijo">Tipo de rol</label>
+                        <label class="titulo" for="telefonofijo">Función</label>
 
                         <div class="controles">
                             <span class="tercio">
                                 <select id="provincia" name="provincia">
                                   <option value=""></option>
                                   <option value="provincia1">Socio</option>
+                                  <option value="provincia1">Jefe</option>
+                                  <option value="provincia1">Socio/Usuario</option>
                                   
                                 </select>
                               </span>
+
+                            <span class="dostercios">
+                                <input id="municipio" name="municipio" value="" />
+                                <label for="municipio">Area asignado(a)</label>
+                            </span>
+
+                            <span class="completo">
+                                <input type="date"  />
+                                <label for="apellido2">Fecha de ingreso</label>
+                            </span>
+
+                            
 
 
                         </div>
@@ -168,16 +163,40 @@
                         <button id="alta" type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "><a
                             href="/Html/loging.html" >Regresar</a></button>
                         <button id="alta" type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save "><a
-                                href="/Html/Home.htm" >Iniciar sesión</a></button>
+                                href="#openModal3" >Confirmar</a></button>
                     </li>
-
-
-
 
                 </ul>
             </form>
 
         </div>
+
+        <div id="openModal3" class="modalDialogo">
+            <div><a href="#close" title="cerrar" class="cerrar">X</a>
+              <div class="modal-dialog">
+                <br><br><br><br>
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <center>
+                      <h2><b>Se ha enviado un correo para que pueda realizar la confirmación</b> </h2>
+                      <h3>
+                        Por favor ingrese a su correo y confirme su registro...
+                      </h3><br><br>
+                    </center>
+      
+                  </div>
+                  <div class="modal-footer">
+      
+                  </div>
+                </div>
+              </div>
+              <center>
+                <a href="/Html/loging.html"><button class="btn btn-success glyphicon glyphicon-repeat btn-lg "> Aceptar </button></a>
+              </center>
+            </div>
+          </div>
+              
+          <script src="/JS/Compras.js"></script>
     </body>
 
     </html>
