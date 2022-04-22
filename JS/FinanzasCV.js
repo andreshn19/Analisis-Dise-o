@@ -74,11 +74,13 @@ $(document).ready(function() {
                     {
                         extend:    'copyHtml5',
                         text:      '<i class="fa fa-clipboard"></i>Copiar',
-                        title:'Titulo de tabla copiada',
+                        messageTop:'Empresa de Servicios multiples JPLS',
                         titleAttr: 'Copiar',
                         className: 'btn btn-app export barras',
+                        title: 'Reporte de ventas emitido por  usuario: G657f',
+                        messageBottom: ' ====== Fin de reporte #89389 ========',
                         exportOptions: {
-                            columns: [ 0, 1 ]
+                            columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
                         }
                     },
 
@@ -88,10 +90,20 @@ $(document).ready(function() {
                         title:'Empresa de Servicios multiples JPLS',
                         titleAttr: 'PDF',
                         className: 'btn btn-app export pdf',
+                        messageTop: 'Reporte de ventas emitido por  usuario: G657f',
+                        messageBottom: ' ====== Fin de reporte #89389 ========',
                         exportOptions: {
-                            columns: [ 0, 1]
+                            columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
                         },
                         customize:function(doc) {
+
+                            var cols = [];
+                            cols[0] = { text: 'Emitido el : 10/08/2022', alignment: 'left', margin: [20] };
+                            cols[1] = { text: 'Emitido por: G67ty', alignment: 'left', margin: [20] };
+                            cols[2] = { text: 'Valido hasta:  12/08/2022', alignment: 'left', margin: [20] };
+                            var objFooter = {};
+                            objFooter['columns'] = cols;
+                            doc['footer'] = objFooter;
 
                             doc.styles.title = {
                                 color: '#4c8aa0',
@@ -116,11 +128,13 @@ $(document).ready(function() {
                     {
                         extend:    'excelHtml5',
                         text:      '<i class="fa fa-file-excel-o"></i>Excel',
-                        title:'Titulo de tabla en excel',
+                        title:'Empresa de Servicios multiples JPLS',
                         titleAttr: 'Excel',
                         className: 'btn btn-app export excel',
+                        messageTop: 'Reporte de ventas emitido por  usuario: G657f',
+                        messageBottom: ' ====== Fin de reporte #89389 ========',    
                         exportOptions: {
-                            columns: [ 0, 1 ]
+                            columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
                         },
                     },
                     {
@@ -129,8 +143,11 @@ $(document).ready(function() {
                         title:'Titulo de tabla en CSV',
                         titleAttr: 'CSV',
                         className: 'btn btn-app export csv',
+                        messageTop: 'Reporte de ventas emitido por  usuario: G657f',
+                        messageBottom: ' ====== Fin de reporte #89389 ========',
+    
                         exportOptions: {
-                            columns: [ 0, 1 ]
+                            columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
                         }
                     },
                     {
@@ -139,7 +156,9 @@ $(document).ready(function() {
                         title:'Empresa de Servicios Multiples Jovenes Profesionales',
                         titleAttr: 'Imprimir',
                         className: 'btn btn-app export imprimir',
-                       
+                        messageTop: 'Reporte de ventas emitido por  usuario: G657f',
+                        messageBottom: ' ====== Fin de reporte #89389 ========',
+    
                         exportOptions: {
                             columns: [ 0, 1, 2, 3, 4, 5,6,7,8 ]
                         }

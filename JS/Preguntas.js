@@ -36,13 +36,13 @@ validationApp.controller('RegistrationController', function ($scope) {
     $scope.emailWrong = false;
     $scope.selectedValue = [
         {
-            'initialValue': "Pregunta de seguriadad 1"
+            'initialValue': "Pregunta de seguridad 1"
         },
         {
-            'initialValue': "Pregunta de seguriadad 2"
+            'initialValue': "Pregunta de seguridad 2"
         },
         {
-            'initialValue': "Pregunta de seguriadad 3"
+            'initialValue': "Pregunta de seguridad 3"
         }
     ];
     $scope.selectQuestion = [
@@ -61,19 +61,13 @@ validationApp.controller('RegistrationController', function ($scope) {
     ];
     $scope.securityQuestions = [
         {
-            "question": " Cual es tu color favorito ?"
+            "question": " Indicio de contraseña ?"
         },
         {
-            "question": " Quien fue tu primer maestr@ de primaria?"
+            "question": " Número de telefono "
         },
         {
-            "question": "Cual es tu pelicula favorita?"
-        },
-        {
-            "question": " Cual musica prefieres bailar?"
-        },
-        {
-            "question": "Como se llama tu mascota?"
+            "question": " Correo electronico de Referencia"
         }
     ];
     $scope.dateBirthPlaceHolder = "Fecha de Nacimiento";

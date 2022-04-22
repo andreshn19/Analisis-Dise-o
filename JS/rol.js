@@ -15,9 +15,15 @@ $("select#metodo_pago").change(function(e) {
   /*============================*/
   
   var products = [
-    {id: 1, name: 'G0011', description: 'Usuario', price: 9908-5353, date:'10/10/2022', email:'--------------------',nota:'Activo'},
-    {id: 2, name: 'G0012', description: 'Administrador', price:9906-1234,date:'10/10/2022',email:'---------------------',nota:'Inactivo'},
-    {id: 3, name: 'G0013', description: 'Usuario', price: 8893-2314,date:'10/10/2022',email:'-----------------------------',nota:'Activo'}
+    {id: 1, name: 'G0011', description: 'Administrador', price: 9908-5353, date:'10/10/2022', email:'--------------------',nota:'Activo'},
+    {id: 2, name: 'G0012', description: 'Socio', price:9906-1234,date:'10/10/2022',email:'---------------------',nota:'Activo'},
+    {id: 3, name: 'G0013', description: 'cliente', price: 8893-2314,date:'10/10/2022',email:'-----------------------------',nota:'Activo'},
+    {id: 3, name: 'G0014', description: 'Compra', price: 8893-2314,date:'10/10/2022',email:'-----------------------------',nota:'Activo'},
+    {id: 3, name: 'G0015', description: 'Ventas', price: 8893-2314,date:'10/10/2022',email:'-----------------------------',nota:'Activo'},
+    {id: 3, name: 'G0016', description: 'Inventario', price: 8893-2314,date:'10/10/2022',email:'-----------------------------',nota:'Activo'}
+
+
+
   ];
   
   function findProduct (productId) {

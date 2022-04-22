@@ -17,75 +17,75 @@ var initPermissionRootState = function(item){
     var template = '<tr class="addState">' +
                      '<td><span class="iconUser"></span><span contenteditable="true" class="userName"></span></td>' + 
                      '<td><div class="permissionTag " data-perm="view"><select id="tipoProducto">'+
-                       '<option>Editar</option>'+
+                       '<option>Ninguno</option>'+
                        '<option >Borrar</option>'+
                        '<option>Eliminar</option>'+
                        '<option>Ver</option>'+
                        '<option>Administrador</option>'+
-                       '<option>Ninguno</option>'+
+                       '<option>Editar</option>'+
                      '</select>'+
                              '</div></td>' +
                      '<td><div class="permissionTag" data-perm="edit"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
                      '<option>Ninguno</option>'+
+                       '<option >Borrar</option>'+
+                       '<option>Eliminar</option>'+
+                       '<option>Ver</option>'+
+                       '<option>Administrador</option>'+
+                       '<option>Editar</option>'+
                    '</select>'+
                            '</div></td>' +
                      '<td><div class="permissionTag" data-perm="delete"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
+                     '<option>Ninguno</option>'+
                      '<option >Borrar</option>'+
                      '<option>Eliminar</option>'+
                      '<option>Ver</option>'+
                      '<option>Administrador</option>'+
-                     '<option>Ninguno</option>'+
+                     '<option>Editar</option>'+
                    '</select>'+
                            '</div></td>' +
                      '<td><div class="permissionTag" data-perm="owner"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
                      '<option>Ninguno</option>'+
+                       '<option >Borrar</option>'+
+                       '<option>Eliminar</option>'+
+                       '<option>Ver</option>'+
+                       '<option>Administrador</option>'+
+                       '<option>Editar</option>'+
                    '</select>'+
                            '</div></td>' +
                      '<td><div class="permissionTag" data-perm="admin"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
                      '<option>Ninguno</option>'+
+                       '<option >Borrar</option>'+
+                       '<option>Eliminar</option>'+
+                       '<option>Ver</option>'+
+                       '<option>Administrador</option>'+
+                       '<option>Editar</option>'+
                    '</select>'+
                    
                    '<td><div class="permissionTag " data-perm="view"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
-                     '<option>Ninguno</option>'+
+                   '<option>Ninguno</option>'+
+                   '<option >Borrar</option>'+
+                   '<option>Eliminar</option>'+
+                   '<option>Ver</option>'+
+                   '<option>Administrador</option>'+
+                   '<option>Editar</option>'+
                    '</select>'
                    + 
                    '<td><div class="permissionTag " data-perm="view"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
-                     '<option>Ninguno</option>'+
+                   '<option>Ninguno</option>'+
+                   '<option >Borrar</option>'+
+                   '<option>Eliminar</option>'+
+                   '<option>Ver</option>'+
+                   '<option>Administrador</option>'+
+                   '<option>Editar</option>'+
                    '</select>'+
                            '</div></td>' +
                            '<td><div class="permissionTag " data-perm="view"><select id="tipoProducto">'+
-                     '<option>Editar</option>'+
-                     '<option >Borrar</option>'+
-                     '<option>Eliminar</option>'+
-                     '<option>Ver</option>'+
-                     '<option>Administrador</option>'+
-                     '<option>Ninguno</option>'+
+                           '<option>Ninguno</option>'+
+                           '<option >Borrar</option>'+
+                           '<option>Eliminar</option>'+
+                           '<option>Ver</option>'+
+                           '<option>Administrador</option>'+
+                           '<option>Editar</option>'+
                    '</select>'+
                            '</div></td>' +
                      '<td><a href="#" class="iconRemove deleteUser" title="Remove this user"></a></td>' +

@@ -53,15 +53,8 @@
             <!-- EMAIL ID -->
             <div class="form-group">
               <div class="input-group">
-                <input type="email" name="emailId" class="form-control" placeholder="usuario@gmail.com" data-ng-model="user.email" data-ng-keyup="validateEmail()" />
-                <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button"
-                                                data-uib-popover="Aqui va tu correo"
-                                                data-popover-trigger="'mouseenter'">
-                                            <span class="glyphicon glyphicon-exclamation-sign">
-                                            </span>
-                </button>
-                </span>
+               
+              
               </div>
             </div>
             <div class="alert alert-danger" role="alert" data-ng-if="emailWrong">
@@ -79,32 +72,13 @@
             </div>
             <!--PASSWORD -->
             <div class="form-group">
-              <div class="input-group">
-                <input type="{{typeForFirstPassword}}" name="userPassword" class="form-control" placeholder="Contraseña" data-ng-model="user.password" data-ng-change="checkPasswordCriteria(user.password)" data-ng-focus="isCollapsed = !isCollapsed" data-ng-blur="isCollapsed = !isCollapsed"
-                />
-                <span class="input-group-addon white-background">
-                                        <i class="fa fa-eye" data-ng-click="changeInputType(0,$event)"></i>
-                                    </span>
-              </div>
+             
             </div>
             <div class="row">
               <div class="col-sm-12">
                 <div class="panel panel-default" data-uib-collapse="isCollapsed">
                   <div class="panel-body">
-                    <p class="lead">Su contraseña debe: </p>
-                    <div class="list-group">
-                      <a data-ng-diabled = "true" class="list-group-item">
-                        <span data-ng-class="passwordLengthClass" class="password-glyphicon"></span>
-                        <span>contener{{minimumPasswordLength}} o mas caracteres</span>
-                      </a>
-                      <a class="list-group-item">
-                        <span data-ng-class="caseClass" class="password-glyphicon"></span>
-                        <span>tener una letra mayúscula y minúscula</span>
-                      </a>
-                      <a class="list-group-item">
-                        <span data-ng-class="numberClass" class="password-glyphicon"></span>
-                        <span>contener al menos un número</span>
-                      </a>
+                   
 
                       <!--<a class="list-group-item">
                                                           <span data-ng-class="nameClass" class="password-glyphicon"></span>
@@ -127,9 +101,6 @@
             <!-- ONE MORE TIME-->
             <div class="form-group">
               <div class="input-group">
-                <input type="{{typeForSecondPassword}}" name="confirmedUserPassword" class="form-control" placeholder="Confirmar contraseña" data-ng-model="user.confirmedPassword" data-ng-change="confirmEnteredPassword(user.confirmedPassword)" />
-                <span class="input-group-addon white-background"><i class="fa fa-eye"
-                                                                                data-ng-click="changeInputType(1)"></i></span>
               </div>
 
             </div>
@@ -228,7 +199,7 @@
             <a href="/Html/loging.html"><button  type="submit" class="btn btn-primary" data-ng-disabled="!(forms.userForm.validEmail &&
                                       forms.userForm.validConfirmedPasswords &&
                                       forms.userForm.allSecurityAnswered)">
-                        Guardar
+                        Enviar 
                     </button></a>
 
           </form>

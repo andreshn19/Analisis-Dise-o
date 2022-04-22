@@ -130,9 +130,9 @@ $(function () {
   });
 });
 var products = [
-  {id: 1, name: 'Mario Martenez', description: 'Av republica de Honduras', price: 99083533, date:'9/10/2022', email:'fm@gmail.com',nota:'activo',rol:'usuario'},
-  {id: 2, name: 'Guadalupe Pineda', description: 'Col el pedregal', price: 92929100, date:'9/10/2022', email:'gtd@gmail.com',nota:'activo',rol:'usuario'},
-  {id: 3, name: 'Petronila Gamez', description: 'Col Las lomas', price: 98764567, date:'9/10/2022', email:'tyb@gmail.com',nota:'activo',rol:'usuario'}
+  {id: 1, name: 'Mario Martenez', description: 'Av republica de Honduras', price: 99083533, date:'9/10/2022', email:'fm@gmail.com',nota:'activo',rol:'G0012'},
+  {id: 2, name: 'Guadalupe Pineda', description: 'Col el pedregal', price: 92929100, date:'9/10/2022', email:'gtd@gmail.com',nota:'activo',rol:'G0012'},
+  {id: 3, name: 'Petronila Gamez', description: 'Col Las lomas', price: 98764567, date:'9/10/2022', email:'tyb@gmail.com',nota:'activo',rol:'G0012'}
 ];
 
 function findProduct (productId) {
